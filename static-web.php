@@ -1,0 +1,188 @@
+<?php
+$plan = [
+  'name'           => 'Static Website',
+  'badge'          => 'Standard Plan',
+  'badge_bg'       => 'rgba(255,255,255,0.07)',
+  'badge_color'    => '#aaa',
+  'badge_border'   => 'rgba(255,255,255,0.15)',
+  'title_gradient' => 'linear-gradient(90deg,#fff,#aaa)',
+  'accent'         => '#ffffff',
+  'description'    => 'A clean, professional school website built and fully managed by the Schoozie team. You focus on running your school — we handle everything digital.',
+  'price_display'  => 'Rs. 5,999',
+  'price_period'   => 'one-time setup fee',
+  'price_old'      => '',
+  'price_save'     => '',
+  'domain_note'    => '* Domain registration charges are excluded',
+  'btn_bg'         => 'linear-gradient(90deg,#555,#333)',
+  'btn_text'       => 'Contact Us to Get Started',
+  'tab_color'      => 'green',
+  'features' => [
+    ['🖥️','Professional school website'],
+    ['📱','Mobile responsive design'],
+    ['📋','Admissions inquiry form'],
+    ['🖼️','Photo gallery & news'],
+    ['✏️','Content managed by Schoozie'],
+    ['🔄','Free updates on request'],
+    ['🌐','1 year hosting included'],
+    ['⚙️','Domain setup assistance'],
+  ],
+  'tc' => [
+
+    /* ====== ENGLISH ====== */
+    'en' => [
+      ['title'=>'Service Overview','text'=>'Under this plan, Schoozie will design, develop, and publish a professional static website for your school. The website will be hosted on our servers and all content will be managed exclusively by the Schoozie team on your behalf.'],
+      ['title'=>'Payment Terms','points'=>[
+        'Full payment of Rs. 5,999 is required before work begins.',
+        'Payment can be made via bank transfer, JazzCash, or EasyPaisa.',
+        'Work will commence within 24 hours of confirmed payment.',
+        'Domain registration and renewal charges are NOT included and will be billed separately.',
+      ]],
+      ['title'=>'What Is Included','points'=>[
+        'Custom-designed school website (up to 6 pages).',
+        'Mobile-friendly, responsive layout.',
+        'School name, logo, photo gallery, and contact page.',
+        'Admissions inquiry form.',
+        'News and announcements section.',
+        'First year of web hosting.',
+        'Domain setup and configuration (client must purchase domain).',
+      ]],
+      ['title'=>'What Is NOT Included','points'=>[
+        'Domain name purchase or annual renewal.',
+        'Student or fee management features.',
+        'Admin login panel for the school.',
+        'Custom email accounts.',
+        'Third-party integrations (payment gateways, maps, etc.) unless agreed separately.',
+      ]],
+      ['title'=>'Content Updates Policy','points'=>[
+        'Up to 2 free content update requests are included per month.',
+        'Updates must be submitted via WhatsApp with clear instructions.',
+        'Additional updates beyond 2 per month will be charged at Rs. 300 per update.',
+        'Updates will be applied within 2–3 working days.',
+      ]],
+      ['title'=>'Delivery Timeline','text'=>'Your website will be delivered within 7–10 working days from the date of payment and after you have submitted all required content (logo, photos, school information). Delays caused by late content submission are not Schoozie\'s responsibility.'],
+      ['title'=>'Hosting & Renewal','points'=>[
+        'First year of hosting is included in the package price.',
+        'Annual renewal charge from second year: <strong>Rs. 4,800/year</strong> (domain excluded).',
+        'Client will be notified 30 days before renewal is due.',
+        'Schoozie reserves the right to take down the website if hosting is not renewed.',
+      ]],
+      ['title'=>'Ownership Rights','points'=>[
+        'Website content (text, photos) provided by the client remains the client\'s property.',
+        'Website design, template, and code remain the property of Schoozie.',
+        'Schoozie may display the website in its portfolio unless the client explicitly requests otherwise.',
+      ]],
+      ['title'=>'Cancellation & Refund Policy','points'=>[
+        'No refund will be issued once design work has begun.',
+        'If work has not yet started, a full refund may be requested within 24 hours of payment.',
+        'Schoozie reserves the right to cancel the service if the client provides false or inappropriate content.',
+      ]],
+      ['title'=>'Support Policy','text'=>'Basic support is available via WhatsApp during business hours (Mon–Sat, 10am–6pm IST). Response time is within 24 hours. This plan does not include priority or 24/7 support.'],
+      ['title'=>'Governing Terms','text'=>'These terms are governed under Indian law. Any dispute will first be resolved through mutual discussion. Schoozie reserves the right to update these terms at any time with prior notice via WhatsApp or email.'],
+    ],
+
+    /* ====== URDU ====== */
+    'ur' => [
+      ['title'=>'خدمت کا جائزہ','text'=>'اس پلان کے تحت، اسکوزی آپ کے اسکول کے لیے ایک پیشہ ورانہ اسٹیٹک ویب سائٹ ڈیزائن، تیار اور شائع کرے گا۔ ویب سائٹ ہمارے سرورز پر ہوسٹ ہوگی اور تمام مواد خصوصی طور پر اسکوزی ٹیم آپ کی جانب سے منظم کرے گی۔'],
+      ['title'=>'ادائیگی کی شرائط','points'=>[
+        'کام شروع ہونے سے پہلے ۵،۹۹۹ روپے کی مکمل ادائیگی ضروری ہے۔',
+        'ادائیگی بینک ٹرانسفر، جاز کیش یا ایزی پیسہ کے ذریعے کی جا سکتی ہے۔',
+        'ادائیگی کی تصدیق کے ۲۴ گھنٹوں کے اندر کام شروع ہو جائے گا۔',
+        'ڈومین رجسٹریشن اور تجدید کے اخراجات شامل نہیں ہیں اور انہیں الگ سے بل کیا جائے گا۔',
+      ]],
+      ['title'=>'کیا شامل ہے','points'=>[
+        'حسب ضرورت اسکول ویب سائٹ ڈیزائن (۶ صفحات تک)۔',
+        'موبائل فرینڈلی، ریسپانسیو لے آؤٹ۔',
+        'اسکول کا نام، لوگو، فوٹو گیلری اور رابطہ صفحہ۔',
+        'داخلہ انکوائری فارم۔',
+        'خبریں اور اعلانات کا سیکشن۔',
+        'پہلے سال کی ویب ہوسٹنگ۔',
+        'ڈومین سیٹ اپ اور کنفیگریشن (کلائنٹ کو ڈومین خریدنا ہوگا)۔',
+      ]],
+      ['title'=>'کیا شامل نہیں ہے','points'=>[
+        'ڈومین نام کی خریداری یا سالانہ تجدید۔',
+        'طلبا یا فیس مینجمنٹ کی سہولیات۔',
+        'اسکول کے لیے ایڈمن لاگ ان پینل۔',
+        'کسٹم ای میل اکاؤنٹس۔',
+        'تھرڈ پارٹی انٹیگریشن (پیمنٹ گیٹ وے، نقشہ جات وغیرہ) الگ معاہدے کے بغیر۔',
+      ]],
+      ['title'=>'مواد کی اپڈیٹ پالیسی','points'=>[
+        'ہر ماہ ۲ مفت مواد اپڈیٹ کی درخواستیں شامل ہیں۔',
+        'اپڈیٹس واٹس ایپ کے ذریعے واضح ہدایات کے ساتھ جمع کرائی جائیں۔',
+        'ماہانہ ۲ سے زیادہ اپڈیٹس کے لیے فی اپڈیٹ ۳۰۰ روپے چارج ہوگا۔',
+        'اپڈیٹس ۲ سے ۳ کاری دنوں میں لاگو کی جائیں گی۔',
+      ]],
+      ['title'=>'ڈیلیوری ٹائم لائن','text'=>'آپ کی ویب سائٹ ادائیگی کی تاریخ سے ۷ سے ۱۰ کاری دنوں میں فراہم کی جائے گی، بشرطیکہ آپ تمام مطلوبہ مواد (لوگو، تصاویر، اسکول کی معلومات) جمع کرا چکے ہوں۔ دیر سے مواد جمع کرانے کی ذمہ داری اسکوزی پر نہیں ہوگی۔'],
+      ['title'=>'ہوسٹنگ اور تجدید','points'=>[
+        'پہلے سال کی ہوسٹنگ پیکج کی قیمت میں شامل ہے۔',
+        'دوسرے سال سے سالانہ تجدید: <strong>۴،۸۰۰ روپے/سال</strong> (ڈومین کے بغیر)۔',
+        'تجدید کی تاریخ سے ۳۰ دن پہلے کلائنٹ کو مطلع کیا جائے گا۔',
+        'اگر ہوسٹنگ تجدید نہ ہو تو اسکوزی ویب سائٹ ہٹانے کا حق رکھتا ہے۔',
+      ]],
+      ['title'=>'ملکیت کے حقوق','points'=>[
+        'کلائنٹ کا فراہم کردہ مواد (متن، تصاویر) کلائنٹ کی ملکیت رہتا ہے۔',
+        'ویب سائٹ ڈیزائن، ٹیمپلیٹ اور کوڈ اسکوزی کی ملکیت رہتی ہے۔',
+        'اسکوزی ویب سائٹ کو اپنے پورٹ فولیو میں دکھا سکتا ہے جب تک کلائنٹ اعتراض نہ کرے۔',
+      ]],
+      ['title'=>'منسوخی اور واپسی کی پالیسی','points'=>[
+        'ڈیزائن کام شروع ہونے کے بعد کوئی واپسی نہیں ہوگی۔',
+        'اگر کام ابھی شروع نہیں ہوا تو ادائیگی کے ۲۴ گھنٹوں کے اندر مکمل واپسی کی درخواست کی جا سکتی ہے۔',
+        'اگر کلائنٹ غلط یا نامناسب مواد فراہم کرے تو اسکوزی سروس منسوخ کرنے کا حق رکھتا ہے۔',
+      ]],
+      ['title'=>'سپورٹ پالیسی','text'=>'بنیادی سپورٹ واٹس ایپ کے ذریعے کاروباری اوقات (پیر تا ہفتہ، صبح ۱۰ بجے تا شام ۶ بجے IST) میں دستیاب ہے۔ جواب کا وقت ۲۴ گھنٹوں کے اندر ہے۔ اس پلان میں ترجیحی یا ۲۴/۷ سپورٹ شامل نہیں ہے۔'],
+      ['title'=>'حاکم شرائط','text'=>'یہ شرائط بھارتی قانون کے تحت ہیں۔ کسی بھی تنازع کو پہلے باہمی گفتگو سے حل کیا جائے گا۔ اسکوزی واٹس ایپ یا ای میل کے ذریعے پیشگی اطلاع دے کر ان شرائط کو کسی بھی وقت اپ ڈیٹ کرنے کا حق رکھتا ہے۔'],
+    ],
+
+    /* ====== HINDI ====== */
+    'hi' => [
+      ['title'=>'सेवा का अवलोकन','text'=>'इस प्लान के तहत, Schoozie आपके स्कूल के लिए एक पेशेवर स्टेटिक वेबसाइट डिज़ाइन, विकसित और प्रकाशित करेगा। वेबसाइट हमारे सर्वर पर होस्ट की जाएगी और सभी सामग्री विशेष रूप से Schoozie टीम द्वारा आपकी ओर से प्रबंधित की जाएगी।'],
+      ['title'=>'भुगतान की शर्तें','points'=>[
+        'काम शुरू होने से पहले Rs. 5,999 का पूरा भुगतान आवश्यक है।',
+        'भुगतान बैंक ट्रांसफर, JazzCash या EasyPaisa के माध्यम से किया जा सकता है।',
+        'पुष्टि के 24 घंटों के भीतर काम शुरू हो जाएगा।',
+        'डोमेन पंजीकरण और नवीनीकरण शुल्क शामिल नहीं हैं, इन्हें अलग से बिल किया जाएगा।',
+      ]],
+      ['title'=>'क्या शामिल है','points'=>[
+        'कस्टम-डिज़ाइन की गई स्कूल वेबसाइट (6 पृष्ठों तक)।',
+        'मोबाइल-फ्रेंडली, रिस्पॉन्सिव लेआउट।',
+        'स्कूल का नाम, लोगो, फोटो गैलरी और संपर्क पृष्ठ।',
+        'प्रवेश जांच फॉर्म।',
+        'समाचार और घोषणाएं अनुभाग।',
+        'पहले वर्ष की वेब होस्टिंग।',
+        'डोमेन सेटअप और कॉन्फ़िगरेशन (क्लाइंट को डोमेन खरीदना होगा)।',
+      ]],
+      ['title'=>'क्या शामिल नहीं है','points'=>[
+        'डोमेन नाम की खरीद या वार्षिक नवीनीकरण।',
+        'छात्र या शुल्क प्रबंधन सुविधाएं।',
+        'स्कूल के लिए एडमिन लॉगिन पैनल।',
+        'कस्टम ईमेल खाते।',
+        'थर्ड-पार्टी एकीकरण (भुगतान गेटवे, मानचित्र आदि) अलग समझौते के बिना।',
+      ]],
+      ['title'=>'सामग्री अपडेट नीति','points'=>[
+        'प्रति माह 2 मुफ्त सामग्री अपडेट अनुरोध शामिल हैं।',
+        'अपडेट WhatsApp के माध्यम से स्पष्ट निर्देशों के साथ जमा करें।',
+        'प्रति माह 2 से अधिक अपडेट के लिए प्रति अपडेट Rs. 300 शुल्क लगेगा।',
+        'अपडेट 2-3 कार्य दिवसों के भीतर लागू किए जाएंगे।',
+      ]],
+      ['title'=>'डिलीवरी समयसीमा','text'=>'आपकी वेबसाइट भुगतान की तारीख से 7-10 कार्य दिवसों के भीतर वितरित की जाएगी, बशर्ते आपने सभी आवश्यक सामग्री (लोगो, फ़ोटो, स्कूल की जानकारी) जमा कर दी हो। देरी से सामग्री जमा करने की जिम्मेदारी Schoozie की नहीं होगी।'],
+      ['title'=>'होस्टिंग और नवीनीकरण','points'=>[
+        'पहले वर्ष की होस्टिंग पैकेज मूल्य में शामिल है।',
+        'दूसरे वर्ष से वार्षिक नवीनीकरण शुल्क: <strong>Rs. 4,800/वर्ष</strong> (डोमेन शुल्क अलग)।',
+        'नवीनीकरण से 30 दिन पहले क्लाइंट को सूचित किया जाएगा।',
+        'यदि होस्टिंग नवीनीकृत नहीं की जाती तो Schoozie वेबसाइट हटाने का अधिकार रखता है।',
+      ]],
+      ['title'=>'स्वामित्व अधिकार','points'=>[
+        'क्लाइंट द्वारा प्रदान की गई सामग्री (पाठ, फ़ोटो) क्लाइंट की संपत्ति रहती है।',
+        'वेबसाइट डिज़ाइन, टेम्पलेट और कोड Schoozie की संपत्ति रहते हैं।',
+        'Schoozie वेबसाइट को अपने पोर्टफोलियो में दिखा सकता है जब तक क्लाइंट आपत्ति न करे।',
+      ]],
+      ['title'=>'रद्दीकरण और धनवापसी नीति','points'=>[
+        'डिज़ाइन कार्य शुरू होने के बाद कोई धनवापसी नहीं होगी।',
+        'यदि कार्य अभी शुरू नहीं हुआ है तो भुगतान के 24 घंटों के भीतर पूर्ण धनवापसी का अनुरोध किया जा सकता है।',
+        'यदि क्लाइंट गलत या अनुचित सामग्री प्रदान करे तो Schoozie सेवा रद्द करने का अधिकार रखता है।',
+      ]],
+      ['title'=>'सहायता नीति','text'=>'बुनियादी सहायता WhatsApp के माध्यम से व्यावसायिक घंटों (सोम-शनि, सुबह 10 बजे - शाम 6 बजे IST) में उपलब्ध है। प्रतिक्रिया समय 24 घंटों के भीतर है। इस प्लान में प्राथमिकता या 24/7 सहायता शामिल नहीं है।'],
+      ['title'=>'शासी नियम','text'=>'ये शर्तें भारतीय कानून के तहत हैं। किसी भी विवाद को पहले आपसी बातचीत से सुलझाया जाएगा। Schoozie WhatsApp या ईमेल के माध्यम से पूर्व सूचना देकर इन शर्तों को कभी भी अपडेट करने का अधिकार रखता है।'],
+    ],
+  ],
+];
+include '_plan_layout.php';
