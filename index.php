@@ -8,444 +8,183 @@ require_once 'config.php';
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Schoozie — School Website & ERP Solutions</title>
+<title>Schoozie — Take Your School Digital in Minutes</title>
+<meta name="description" content="Schoozie helps Indian schools go digital with professional school websites, dynamic CMS, and school ERP software. Starting at ₹10 per student per month. WhatsApp support included.">
+<meta name="keywords" content="school website india, school ERP software india, school management software, dynamic school website, school CMS india, school website design india, urdu medium school website, hindi medium school website, school ERP roorkee, school website uttarakhand, affordable school website india">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://schoozie.in/">
+<link rel="icon" type="image/svg+xml" href="assets/svg/schoozie-logo.svg">
+<link rel="apple-touch-icon" href="assets/svg/schoozie-logo.svg">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Schoozie — School Website & ERP Software for Indian Schools">
+<meta property="og:description" content="Schoozie helps Indian schools go digital with professional school websites, dynamic CMS, and school ERP software. Starting at ₹10 per student per month.">
+<meta property="og:url" content="https://schoozie.in/">
+<meta property="og:image" content="https://schoozie.in/assets/svg/schoozie-logo.svg">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<style>
-
-/* ── RESET ── */
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-
-/* ── BODY ── */
-body{
-  font-family:'Inter',sans-serif;
-  background:#07071a;
-  color:#e8e8f0;
-  overflow-x:hidden;
-  min-height:100vh;
-}
-
-/* ── STAR BG ── */
-body::before{
-  content:"";
-  position:fixed;inset:0;
-  background:
-    radial-gradient(ellipse at 15% 30%,rgba(111,66,255,0.18) 0%,transparent 55%),
-    radial-gradient(ellipse at 85% 70%,rgba(0,183,255,0.12) 0%,transparent 55%),
-    radial-gradient(ellipse at 50% 10%,rgba(255,0,180,0.08) 0%,transparent 50%);
-  pointer-events:none;z-index:0;
-}
-body::after{
-  content:"";
-  position:fixed;inset:0;
-  background:url('https://www.transparenttextures.com/patterns/stardust.png');
-  opacity:0.18;pointer-events:none;z-index:0;
-  animation:stars 80s linear infinite;
-}
-@keyframes stars{from{transform:translate(0,0)}to{transform:translate(-300px,-300px)}}
-
-/* ── HEADER ── */
-header{
-  position:fixed;top:0;width:100%;z-index:1000;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:16px 60px;
-  background:rgba(7,7,26,0.7);
-  backdrop-filter:blur(24px);
-  border-bottom:1px solid rgba(255,255,255,0.06);
-}
-.logo{
-  font-family:'Orbitron';font-size:22px;font-weight:900;
-  letter-spacing:3px;
-  background:linear-gradient(135deg,#bf5fff,#00b7ff);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
-  text-decoration:none;
-}
-nav a{
-  margin:0 14px;font-size:13px;font-weight:500;
-  color:#9999bb;text-decoration:none;transition:.2s;
-  letter-spacing:.3px;
-}
-nav a:hover{color:#fff}
-.header-btn{
-  padding:9px 22px;border-radius:8px;
-  background:linear-gradient(135deg,#bf5fff,#6f42ff);
-  border:none;color:#fff;font-size:13px;font-weight:600;
-  cursor:pointer;font-family:'Inter';transition:.25s;
-  letter-spacing:.3px;
-}
-.header-btn:hover{opacity:.85;transform:translateY(-1px)}
-
-/* ── HERO ── */
-.hero{
-  position:relative;z-index:1;
-  min-height:100vh;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:120px 60px 80px;
-  gap:50px;
-}
-.hero-left{max-width:54%}
-.hero-tag{
-  display:inline-flex;align-items:center;gap:8px;
-  background:rgba(111,66,255,0.12);
-  border:1px solid rgba(111,66,255,0.3);
-  border-radius:20px;padding:6px 16px;
-  font-size:12px;font-weight:600;color:#bf5fff;
-  letter-spacing:.5px;text-transform:uppercase;
-  margin-bottom:24px;
-}
-.hero-tag .dot{width:6px;height:6px;border-radius:50%;background:#bf5fff;animation:blink 1.2s step-start infinite}
-@keyframes blink{50%{opacity:0}}
-.hero h1{
-  font-family:'Orbitron';font-weight:900;
-  font-size:58px;line-height:1.15;
-  margin-bottom:20px;
-}
-.hero h1 span{
-  background:linear-gradient(135deg,#ff5fcb,#bf5fff,#00b7ff);
-  background-size:200%;
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
-  animation:hshift 5s ease infinite alternate;
-}
-@keyframes hshift{from{background-position:0%}to{background-position:100%}}
-.hero p{
-  font-size:16px;line-height:1.8;
-  color:#9999bb;max-width:460px;margin-bottom:32px;
-}
-.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
-.btn-primary{
-  padding:13px 28px;border-radius:10px;border:none;
-  background:linear-gradient(135deg,#bf5fff,#6f42ff);
-  color:#fff;font-size:14px;font-weight:600;
-  cursor:pointer;font-family:'Inter';
-  box-shadow:0 8px 32px rgba(111,66,255,0.35);
-  transition:.25s;
-}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(111,66,255,0.5)}
-.btn-outline{
-  padding:13px 28px;border-radius:10px;
-  background:transparent;
-  border:1.5px solid rgba(255,255,255,0.15);
-  color:#ccc;font-size:14px;font-weight:600;
-  cursor:pointer;font-family:'Inter';transition:.25s;
-}
-.btn-outline:hover{border-color:rgba(255,255,255,0.4);color:#fff}
-
-/* offers box */
-.offers-box{
-  flex-shrink:0;min-width:280px;
-  background:rgba(255,255,255,0.03);
-  border:1px solid rgba(255,255,255,0.08);
-  border-radius:20px;padding:28px 30px;
-  backdrop-filter:blur(20px);
-}
-.offers-box-head{
-  font-family:'Orbitron';font-size:11px;letter-spacing:2px;
-  text-transform:uppercase;margin-bottom:18px;
-  display:flex;align-items:center;gap:8px;
-}
-.offers-box-head .fire{font-size:15px}
-.offer-row{
-  display:flex;justify-content:space-between;align-items:center;
-  padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.05);
-  gap:12px;
-}
-.offer-row:last-of-type{border-bottom:none}
-.offer-row .o-plan{
-  display:flex;align-items:center;gap:8px;
-  font-size:13px;color:#c0c0d8;
-}
-.offer-row .o-plan .o-icon{font-size:16px}
-.offer-row .o-price{
-  font-family:'Orbitron';font-size:13px;font-weight:700;
-  white-space:nowrap;
-}
-.offers-note{
-  font-size:11px;color:#555;margin-top:14px;margin-bottom:16px;
-  text-align:center;
-}
-.offers-btn{
-  width:100%;padding:11px;border-radius:12px;border:none;
-  font-family:'Inter';font-size:13px;font-weight:700;cursor:pointer;
-  background:linear-gradient(135deg,#6f42ff,#bf5fff);
-  color:#fff;transition:.3s;
-}
-.offers-btn:hover{box-shadow:0 6px 24px rgba(111,66,255,0.4);transform:translateY(-1px)}
-
-/* ── SECTION COMMONS ── */
-section{position:relative;z-index:1}
-.section-head{text-align:center;margin-bottom:50px}
-.section-head h2{
-  font-family:'Orbitron';font-size:32px;font-weight:700;
-  margin-bottom:10px;
-  background:linear-gradient(135deg,#ff5fcb,#00b7ff);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
-}
-.section-head p{font-size:14px;color:#7777aa;letter-spacing:.3px}
-
-/* ── PRICING ── */
-.pricing{padding:80px 60px 100px}
-
-.offer-ribbon{
-  display:inline-flex;align-items:center;gap:10px;
-  background:rgba(255,95,100,0.1);
-  border:1px solid rgba(255,95,100,0.25);
-  border-radius:30px;padding:8px 20px;
-  font-size:12px;font-weight:600;color:#ff7b7f;
-  margin-bottom:18px;letter-spacing:.4px;
-}
-.offer-ribbon .dot{width:7px;height:7px;border-radius:50%;background:#ff7b7f;animation:blink 1s step-start infinite}
-
-/* grid */
-.cards{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:20px;
-  max-width:1280px;
-  margin:0 auto;
-  align-items:stretch;
-}
-
-/* ── CARD BASE ── */
-.card{
-  border-radius:20px;
-  padding:30px 26px;
-  background:rgba(255,255,255,0.03);
-  border:1px solid rgba(255,255,255,0.08);
-  display:flex;flex-direction:column;
-  position:relative;overflow:hidden;
-  transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease;
-}
-.card:hover{
-  transform:translateY(-10px);
-  box-shadow:0 24px 64px rgba(0,0,0,0.45);
-}
-
-/* card top glow line */
-.card::before{
-  content:"";
-  position:absolute;top:0;left:10%;right:10%;height:1px;
-  background:var(--glow);
-  opacity:.7;
-}
-
-/* card variants */
-.card-white{--glow:linear-gradient(90deg,transparent,rgba(200,200,255,0.5),transparent)}
-.card-white:hover{border-color:rgba(200,200,255,0.2)}
-
-.card-pink{
-  --glow:linear-gradient(90deg,transparent,#bf5fff,transparent);
-  background:rgba(191,95,255,0.05);
-  border-color:rgba(191,95,255,0.2);
-}
-.card-pink:hover{border-color:rgba(191,95,255,0.45);box-shadow:0 24px 64px rgba(191,95,255,0.2)}
-
-.card-cyan{
-  --glow:linear-gradient(90deg,transparent,#00b7ff,transparent);
-  background:rgba(0,183,255,0.04);
-  border-color:rgba(0,183,255,0.18);
-}
-.card-cyan:hover{border-color:rgba(0,183,255,0.4);box-shadow:0 24px 64px rgba(0,183,255,0.18)}
-
-.card-gold{
-  --glow:linear-gradient(90deg,transparent,#ffc94d,transparent);
-  background:rgba(255,200,0,0.04);
-  border-color:rgba(255,200,0,0.18);
-}
-.card-gold:hover{border-color:rgba(255,200,0,0.4);box-shadow:0 24px 64px rgba(255,200,0,0.15)}
-
-/* badge */
-.c-badge{
-  display:inline-block;
-  font-size:10px;font-weight:700;letter-spacing:1px;
-  text-transform:uppercase;padding:4px 12px;
-  border-radius:20px;margin-bottom:18px;width:fit-content;
-}
-.badge-offer{background:rgba(255,100,100,0.12);color:#ff7b7f;border:1px solid rgba(255,100,100,0.25)}
-.badge-popular{background:linear-gradient(135deg,#bf5fff,#6f42ff);color:#fff}
-.badge-hot{background:rgba(0,183,255,0.12);color:#00c8ff;border:1px solid rgba(0,183,255,0.25)}
-.badge-deal{background:rgba(255,200,0,0.1);color:#ffc94d;border:1px solid rgba(255,200,0,0.25)}
-
-/* plan name */
-.c-icon{font-size:34px;margin-bottom:12px;display:block}
-.c-name{
-  font-family:'Orbitron';font-size:17px;font-weight:700;
-  color:#fff;margin-bottom:6px;
-}
-.c-tagline{font-size:12px;color:#7777aa;margin-bottom:18px;line-height:1.5}
-
-/* price block */
-.c-price{margin-bottom:6px}
-.c-price .amount{
-  font-family:'Orbitron';font-weight:900;font-size:40px;
-  line-height:1;
-}
-.c-price .rs{font-size:18px;font-weight:400;color:#aaa;vertical-align:super}
-.c-price .per{font-size:12px;color:#7777aa;margin-top:5px}
-.c-price .strike{font-size:12px;color:#555;text-decoration:line-through;margin-top:3px}
-.c-save{
-  display:inline-block;font-size:11px;font-weight:600;
-  color:#4dff91;background:rgba(0,255,100,0.08);
-  border:1px solid rgba(0,255,100,0.15);
-  border-radius:6px;padding:3px 10px;margin-top:5px;
-}
-.c-domain{font-size:11px;color:#555;font-style:italic;margin-top:4px;display:block}
-
-.c-divider{
-  height:1px;
-  background:linear-gradient(90deg,transparent,rgba(255,255,255,0.07),transparent);
-  margin:18px 0;
-}
-
-/* features */
-.c-feats{list-style:none;flex:1;margin-bottom:22px}
-.c-feats li{
-  font-size:13px;color:#c0c0d8;
-  padding:7px 0;
-  display:flex;align-items:center;gap:10px;
-  border-bottom:1px solid rgba(255,255,255,0.04);
-}
-.c-feats li:last-child{border:none}
-.c-feats li::before{
-  content:"✓";
-  width:18px;height:18px;flex-shrink:0;
-  border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  font-size:10px;font-weight:700;
-}
-.card-white .c-feats li::before{background:rgba(200,200,255,0.1);color:#9999dd}
-.card-pink  .c-feats li::before{background:rgba(191,95,255,0.12);color:#bf5fff}
-.card-cyan  .c-feats li::before{background:rgba(0,183,255,0.1);color:#00b7ff}
-.card-gold  .c-feats li::before{background:rgba(255,200,0,0.1);color:#ffc94d}
-
-/* card button */
-.c-btn{
-  width:100%;padding:13px;border-radius:10px;border:none;
-  font-family:'Inter';font-size:13px;font-weight:700;
-  cursor:pointer;transition:.25s;letter-spacing:.4px;
-}
-.c-btn:hover{transform:translateY(-2px)}
-.btn-ghost{background:rgba(255,255,255,0.06);color:#ccc;border:1px solid rgba(255,255,255,0.12)}
-.btn-ghost:hover{background:rgba(255,255,255,0.1);color:#fff}
-.btn-red{background:linear-gradient(135deg,#ff5f6d,#ff2d55);color:#fff;box-shadow:0 6px 24px rgba(255,45,85,0.28)}
-.btn-red:hover{box-shadow:0 10px 32px rgba(255,45,85,0.48)}
-.btn-pink{background:linear-gradient(135deg,#bf5fff,#6f42ff);color:#fff;box-shadow:0 6px 24px rgba(111,66,255,0.3)}
-.btn-pink:hover{box-shadow:0 10px 32px rgba(111,66,255,0.5)}
-.btn-cyan{background:linear-gradient(135deg,#00b7ff,#0062cc);color:#fff;box-shadow:0 6px 24px rgba(0,183,255,0.25)}
-.btn-cyan:hover{box-shadow:0 10px 32px rgba(0,183,255,0.45)}
-.btn-gold{background:linear-gradient(135deg,#ffc94d,#ff8c00);color:#111;box-shadow:0 6px 24px rgba(255,180,0,0.25)}
-.btn-gold:hover{box-shadow:0 10px 32px rgba(255,180,0,0.45)}
-
-.c-link{
-  display:block;text-align:center;
-  margin-top:12px;font-size:11px;color:#555;
-  text-decoration:none;transition:.2s;
-}
-.c-link:hover{color:#bf5fff}
-
-/* ── CTA ── */
-.cta{
-  padding:70px 60px 90px;text-align:center;
-}
-.cta h2{
-  font-family:'Orbitron';font-size:32px;font-weight:700;
-  margin-bottom:12px;
-  background:linear-gradient(135deg,#ff5fcb,#00b7ff);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
-}
-.cta p{font-size:14px;color:#7777aa;margin-bottom:28px}
-
-/* ── FOOTER ── */
-footer{
-  text-align:center;padding:26px;
-  font-size:12px;color:#444;
-  border-top:1px solid rgba(255,255,255,0.04);
-  position:relative;z-index:1;
-}
-
-/* ── RESPONSIVE ── */
-@media(max-width:1100px){
-  .cards{grid-template-columns:repeat(2,1fr);max-width:700px}
-}
-@media(max-width:900px){
-  header{padding:14px 20px}
-  nav{display:none}
-  .hero{flex-direction:column;padding:110px 24px 60px;text-align:center}
-  .hero-left{max-width:100%}
-  .hero p{margin:0 auto 28px}
-  .hero-btns{justify-content:center}
-  .offers-box{width:100%;max-width:360px;margin:0 auto}
-  .hero h1{font-size:38px}
-  .pricing,.cta{padding:60px 24px}
-  .section-head h2{font-size:26px}
-}
-@media(max-width:600px){
-  .cards{grid-template-columns:1fr;max-width:420px;margin:0 auto}
-  .hero h1{font-size:30px}
-  .c-price .amount{font-size:34px}
-}
-@media(max-width:380px){
-  .hero h1{font-size:26px}
-  .logo{font-size:18px}
-}
-</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 
-<!-- HEADER -->
-<header>
-  <a href="#" class="logo">Schoozie</a>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#pricing">Pricing</a>
-    <a href="https://wa.me/917017760292?text=Hi%2C+I%27m+interested+in+Schoozie" target="_blank">Contact</a>
-  </nav>
-  <button class="header-btn" onclick="window.open('https://wa.me/917017760292?text=Hi%2C+I%27m+interested+in+Schoozie','_blank')">Get Started</button>
-</header>
+<?php $active_page = 'home'; include '_header.php'; ?>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-left">
-    <div class="hero-tag"><span class="dot"></span> India's Smart School Platform</div>
-    <h1>Your School.<br><span>Smarter.</span> Faster.</h1>
+    <div class="hero-tag"><span class="dot"></span><span>India's Smart School Platform</span></div>
+    <h1>Your School.<br><span>Digital.</span> In Minutes.</h1>
     <p>From a simple school website to a full ERP system — everything your school needs to go digital, in one place.</p>
     <div class="hero-btns">
       <button class="btn-primary" onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})">See Pricing Plans</button>
-      <button class="btn-outline" onclick="window.open('https://wa.me/917017760292?text=Hi%2C+I%27d+like+to+know+more+about+Schoozie','_blank')">Learn More</button>
+      <button class="btn-outline" onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'})">Learn More</button>
+    </div>
+
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hs-num">4+</span>
+        <span class="hs-label">Digital Products</span>
+      </div>
+      <div class="hs-sep"></div>
+      <div class="hero-stat">
+        <span class="hs-num">₹10</span>
+        <span class="hs-label">Per Student / Month</span>
+      </div>
+      <div class="hs-sep"></div>
+      <div class="hero-stat">
+        <span class="hs-num">Free</span>
+        <span class="hs-label">Trial Available</span>
+      </div>
+      <div class="hs-sep"></div>
+      <div class="hero-stat">
+        <span class="hs-num">100%</span>
+        <span class="hs-label">Custom Built</span>
+      </div>
+    </div>
+
+    <div class="hero-trust">
+      <i class="fa-solid fa-circle-check" style="color:#22c55e"></i> No hidden fees
+      <i class="fa-solid fa-circle-check" style="color:#22c55e"></i> No long-term contracts
+      <i class="fa-solid fa-circle-check" style="color:#22c55e"></i> WhatsApp support
     </div>
   </div>
-  <?php if($offer_active): ?>
-  <div class="offers-box">
-    <div class="offers-box-head">
-      <span class="fire">🔥</span>
-      <span style="background:linear-gradient(90deg,#ff00cc,#6f42ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent"><?php echo $offer_month; ?> Special Offers</span>
+  <!-- HERO VISUAL -->
+  <div class="hero-visual">
+    <div class="hv-glow"></div>
+    <!-- neural network lines -->
+    <svg class="hv-lines" viewBox="0 0 540 540" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="lg1"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        <filter id="lg2"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        <filter id="lg3"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        <filter id="lg4"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        <filter id="dot-glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      </defs>
+      <!-- lines: owl center (270,270) → card centers -->
+      <line class="hvl hvl-1" x1="270" y1="270" x2="362" y2="77"  stroke="#f59e0b" filter="url(#lg1)"/>
+      <line class="hvl hvl-2" x1="270" y1="270" x2="457" y2="194" stroke="#00b7ff" filter="url(#lg2)"/>
+      <line class="hvl hvl-3" x1="270" y1="270" x2="457" y2="347" stroke="#22c55e" filter="url(#lg3)"/>
+      <line class="hvl hvl-4" x1="270" y1="270" x2="362" y2="455" stroke="#bf5fff" filter="url(#lg4)"/>
+      <line class="hvl hvl-5" x1="270" y1="270" x2="179" y2="455" stroke="#f43f5e" filter="url(#lg1)"/>
+      <line class="hvl hvl-6" x1="270" y1="270" x2="87"  y2="347" stroke="#e879f9" filter="url(#lg2)"/>
+      <line class="hvl hvl-7" x1="270" y1="270" x2="87"  y2="194" stroke="#f97316" filter="url(#lg3)"/>
+      <line class="hvl hvl-8" x1="270" y1="270" x2="179" y2="77"  stroke="#3b82f6" filter="url(#lg4)"/>
+      <!-- endpoint dots -->
+      <circle class="hvd hvd-1" cx="362" cy="77"  r="3.5" fill="#f59e0b" filter="url(#dot-glow)"/>
+      <circle class="hvd hvd-2" cx="457" cy="194" r="3.5" fill="#00b7ff" filter="url(#dot-glow)"/>
+      <circle class="hvd hvd-3" cx="457" cy="347" r="3.5" fill="#22c55e" filter="url(#dot-glow)"/>
+      <circle class="hvd hvd-4" cx="362" cy="455" r="3.5" fill="#bf5fff" filter="url(#dot-glow)"/>
+      <circle class="hvd hvd-5" cx="179" cy="455" r="3.5" fill="#f43f5e" filter="url(#dot-glow)"/>
+      <circle class="hvd hvd-6" cx="87"  cy="347" r="3.5" fill="#e879f9" filter="url(#dot-glow)"/>
+      <circle class="hvd hvd-7" cx="87"  cy="194" r="3.5" fill="#f97316" filter="url(#dot-glow)"/>
+      <circle class="hvd hvd-8" cx="179" cy="77"  r="3.5" fill="#3b82f6" filter="url(#dot-glow)"/>
+      <!-- center origin dot -->
+      <circle cx="270" cy="270" r="5" fill="rgba(168,85,247,0.6)" filter="url(#dot-glow)"/>
+    </svg>
+    <img src="assets/svg/schoozie-logo.svg" class="hv-logo" alt="Schoozie">
+    <div class="hv-card hv-card-1">
+      <i class="fa-solid fa-indian-rupee-sign" style="color:#f59e0b"></i>
+      <div><div class="hvc-title">Fee Management</div><div class="hvc-sub">Online & offline</div></div>
     </div>
-    <div class="offer-row">
-      <span class="o-plan"><span class="o-icon">🖥️</span> Static Website</span>
-      <span class="o-price" style="color:#ff5f6d">Rs. <?php echo $static_offer_price; ?></span>
+    <div class="hv-card hv-card-2">
+      <i class="fa-solid fa-clipboard-check" style="color:#00b7ff"></i>
+      <div><div class="hvc-title">Attendance</div><div class="hvc-sub">Daily, automated</div></div>
     </div>
-    <div class="offer-row">
-      <span class="o-plan"><span class="o-icon">⚡</span> Dynamic Website</span>
-      <span class="o-price" style="color:#bf5fff">Rs. <?php echo $dynamic_offer_price; ?></span>
+    <div class="hv-card hv-card-3">
+      <i class="fa-solid fa-globe" style="color:#22c55e"></i>
+      <div><div class="hvc-title">School Website</div><div class="hvc-sub">Live in minutes</div></div>
     </div>
-    <div class="offer-row">
-      <span class="o-plan"><span class="o-icon">🏫</span> School ERP</span>
-      <span class="o-price" style="color:#00f0ff">Rs. <?php echo $erp_offer_setup; ?> setup</span>
+    <div class="hv-card hv-card-4">
+      <i class="fa-solid fa-users-gear" style="color:#bf5fff"></i>
+      <div><div class="hvc-title">Staff & Payroll</div><div class="hvc-sub">Manage your team</div></div>
     </div>
-    <div class="offer-row">
-      <span class="o-plan"><span class="o-icon">🚀</span> Website + ERP</span>
-      <span class="o-price" style="color:#ffd200">50% OFF</span>
+    <div class="hv-card hv-card-5">
+      <i class="fa-solid fa-users" style="color:#f43f5e"></i>
+      <div><div class="hvc-title">Parent Portal</div><div class="hvc-sub">Always in the loop</div></div>
     </div>
-    <div class="offers-note">* Domain charges excluded &nbsp;|&nbsp; No hidden fees</div>
-    <button class="offers-btn" onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})">View All Plans ↓</button>
+    <div class="hv-card hv-card-6">
+      <i class="fa-solid fa-user-plus" style="color:#e879f9"></i>
+      <div><div class="hvc-title">Admission & TC</div><div class="hvc-sub">Instant TC</div></div>
+    </div>
+    <div class="hv-card hv-card-7">
+      <i class="fa-solid fa-pen-to-square" style="color:#f97316"></i>
+      <div><div class="hvc-title">Exam & Results</div><div class="hvc-sub">Auto graded</div></div>
+    </div>
+    <div class="hv-card hv-card-8">
+      <i class="fa-solid fa-chart-bar" style="color:#3b82f6"></i>
+      <div><div class="hvc-title">Admin Dashboard</div><div class="hvc-sub">At a glance</div></div>
+    </div>
   </div>
-  <?php endif; ?>
+</section>
+
+<!-- FEATURES STRIP -->
+<section class="features-strip" id="features">
+  <div class="fs-item"><i class="fa-solid fa-trophy" style="color:#00b7ff"></i><span>One Step Ahead of Other Schools</span></div>
+  <div class="fs-sep"></div>
+  <div class="fs-item"><i class="fa-solid fa-chart-line" style="color:#22c55e"></i><span>Watch Your School Grow</span></div>
+  <div class="fs-sep"></div>
+  <div class="fs-item"><i class="fa-solid fa-handshake" style="color:#bf5fff"></i><span>Parents Trust You More</span></div>
+  <div class="fs-sep"></div>
+  <div class="fs-item"><i class="fa-solid fa-star" style="color:#f43f5e"></i><span>Your School, Your Pride</span></div>
+  <div class="fs-sep"></div>
+  <div class="fs-item"><i class="fa-solid fa-tags" style="color:#f59e0b"></i><span>Affordable for Any School</span></div>
+</section>
+
+<!-- WHY SCHOOZIE -->
+<section class="why-section" id="why">
+  <div class="section-head">
+    <h2>Why Schools Choose Schoozie</h2>
+    <p>We're not a generic web agency. We're built specifically for Indian schools.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon" style="background:rgba(0,183,255,0.1);color:#00b7ff"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+      <h3>Priced for Indian Schools</h3>
+      <p>No dollar pricing. No enterprise contracts. Plans designed around what Indian schools actually spend — from small towns to big cities.</p>
+    </div>
+    <div class="why-card why-card-featured">
+      <div class="why-icon" style="background:rgba(168,85,247,0.1);color:#bf5fff"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+      <h3>Built for How You Work</h3>
+      <p>Urdu medium? CBSE? State board? We've thought about all of it. Multi-language support, school-specific features, nothing generic.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon" style="background:rgba(37,211,102,0.1);color:#25d366"><i class="fa-solid fa-headset"></i></div>
+      <h3>Real People, Fast Support</h3>
+      <p>Not a ticket system. You get a real person on WhatsApp who knows your school setup and responds the same day.</p>
+    </div>
+  </div>
 </section>
 
 <!-- PRICING -->
 <section class="pricing" id="pricing">
   <div class="section-head">
     <?php if($offer_active): ?>
-    <div class="offer-ribbon"><span class="dot"></span> <?php echo $offer_full; ?></div>
+    <div class="offer-ribbon">
+      <i class="fa-solid fa-fire offer-ribbon-fire"></i>
+      <span class="offer-ribbon-text"><?php echo $offer_full; ?></span>
+      <span class="offer-ribbon-tag"><i class="fa-solid fa-clock"></i> Ending Soon</span>
+    </div>
     <?php endif; ?>
     <h2>Simple, Clear Pricing</h2>
     <p>Pick the plan that fits your school. No hidden charges, no surprises.</p>
@@ -455,11 +194,15 @@ footer{
 
     <!-- STATIC WEBSITE -->
     <div class="card card-white">
-      <?php if($offer_active): ?>
-      <span class="c-badge badge-offer">⚡ <?php echo $offer_month; ?> Offer</span>
-      <?php endif; ?>
-      <span class="c-icon">🖥️</span>
-      <div class="c-name">Static Website</div>
+      <div class="c-header">
+        <div class="c-title">
+          <span class="c-icon"><i class="fa-solid fa-desktop"></i></span>
+          <div class="c-name">Static Website</div>
+        </div>
+        <?php if($offer_active): ?>
+        <span class="c-badge badge-offer"><span class="c-badge-inner"><i class="fa-solid fa-tag"></i><strong><?php echo $offer_month; ?></strong><em>Offer</em></span></span>
+        <?php endif; ?>
+      </div>
       <div class="c-tagline">We build &amp; manage your school website for you.</div>
       <div class="c-price">
         <?php if($offer_active): ?>
@@ -485,11 +228,15 @@ footer{
 
     <!-- DYNAMIC WEBSITE -->
     <div class="card card-pink">
-      <?php if($offer_active): ?>
-      <span class="c-badge badge-popular">⚡ <?php echo $offer_month; ?> Special</span>
-      <?php endif; ?>
-      <span class="c-icon">⚡</span>
-      <div class="c-name">Dynamic Website</div>
+      <div class="c-header">
+        <div class="c-title">
+          <span class="c-icon"><i class="fa-solid fa-bolt"></i></span>
+          <div class="c-name">Dynamic Website</div>
+        </div>
+        <?php if($offer_active): ?>
+        <span class="c-badge badge-popular"><span class="c-badge-inner"><i class="fa-solid fa-bolt"></i><strong><?php echo $offer_month; ?></strong><em>Special</em></span></span>
+        <?php endif; ?>
+      </div>
       <div class="c-tagline">Your own admin panel — update your site yourself.</div>
       <div class="c-price">
         <?php if($offer_active): ?>
@@ -515,13 +262,19 @@ footer{
 
     <!-- ERP -->
     <div class="card card-cyan">
-      <span class="c-badge badge-hot">⭐ Most Popular</span>
-      <span class="c-icon">🏫</span>
-      <div class="c-name">School ERP</div>
+      <div class="coming-soon-ribbon">Coming Soon</div>
+      <div class="c-header">
+        <div class="c-title">
+          <span class="c-icon"><i class="fa-solid fa-school"></i></span>
+          <div class="c-name">School ERP</div>
+        </div>
+        <span class="c-badge badge-hot"><span class="c-badge-inner"><i class="fa-solid fa-star"></i><strong>Most</strong><em>Popular</em></span></span>
+      </div>
       <div class="c-tagline">Complete school management — fees, attendance, exams &amp; more.</div>
       <div class="c-price">
         <div class="amount"><span class="rs">Rs.</span> 10</div>
         <div class="per">per student / per month</div>
+        <?php /* OFFER DISABLED — uncomment when ERP is ready
         <?php if($offer_active): ?>
         <div class="per" style="margin-top:6px;color:#ccc;font-size:12px">+ One-time setup: <strong style="color:#00c8ff">Rs. <?php echo $erp_offer_setup; ?></strong> <span style="color:#aaa">(<?php echo $offer_month; ?> offer)</span></div>
         <div class="per" style="color:#555;font-size:11px">Regular setup: Rs. <?php echo $erp_regular_setup; ?></div>
@@ -529,6 +282,8 @@ footer{
         <?php else: ?>
         <div class="per" style="margin-top:6px;color:#ccc;font-size:12px">+ One-time setup: <strong style="color:#00c8ff">Rs. <?php echo $erp_regular_setup; ?></strong></div>
         <?php endif; ?>
+        */ ?>
+        <div class="per" style="margin-top:6px;color:#ccc;font-size:12px">+ One-time setup: <strong style="color:#00c8ff">Rs. <?php echo $erp_regular_setup; ?></strong></div>
       </div>
       <div class="c-divider"></div>
       <ul class="c-feats">
@@ -544,17 +299,25 @@ footer{
 
     <!-- COMBO -->
     <div class="card card-gold">
-      <span class="c-badge badge-deal">🔥 Best Value</span>
-      <span class="c-icon">🚀</span>
-      <div class="c-name">Website + ERP</div>
+      <div class="coming-soon-ribbon">Coming Soon</div>
+      <div class="c-header">
+        <div class="c-title">
+          <span class="c-icon"><i class="fa-solid fa-rocket"></i></span>
+          <div class="c-name">Website + ERP</div>
+        </div>
+        <span class="c-badge badge-deal"><span class="c-badge-inner"><i class="fa-solid fa-fire"></i><strong>Best</strong><em>Value</em></span></span>
+      </div>
       <div class="c-tagline">Everything together — website &amp; full ERP at one combo price.</div>
       <div class="c-price">
         <div class="amount" style="font-size:26px;background:linear-gradient(135deg,#ffc94d,#ff8c00);-webkit-background-clip:text;-webkit-text-fill-color:transparent">50% OFF Website</div>
+        <?php /* OFFER DISABLED — uncomment when ERP is ready
         <?php if($offer_active): ?>
         <div class="per" style="color:#ccc;margin-top:8px;font-size:12px">+ ERP setup: <strong style="color:#ffc94d">Rs. <?php echo $combo_erp_setup; ?></strong> <span style="color:#aaa">(<?php echo $offer_month; ?> offer)</span></div>
         <?php else: ?>
         <div class="per" style="color:#ccc;margin-top:8px;font-size:12px">+ ERP setup: <strong style="color:#ffc94d">Rs. <?php echo $erp_regular_setup; ?></strong></div>
         <?php endif; ?>
+        */ ?>
+        <div class="per" style="color:#ccc;margin-top:8px;font-size:12px">+ ERP setup: <strong style="color:#ffc94d">Rs. <?php echo $erp_regular_setup; ?></strong></div>
         <div class="per" style="color:#ccc;font-size:12px">+ Rs. 10 per student/month</div>
         <span class="c-save">Maximum savings on both plans</span>
         <span class="c-domain">* Domain charges excluded</span>
@@ -576,130 +339,209 @@ footer{
 
 <!-- CTA -->
 <section class="cta">
+  <?php if($offer_active): ?>
+  <div class="cta-offer-tag"><i class="fa-solid fa-fire"></i> <?php echo $offer_full; ?> — Ending Soon</div>
+  <?php endif; ?>
   <h2>Ready to Take Your School Digital?</h2>
-  <p>Contact us on WhatsApp — we'll guide you through everything step by step.</p>
-  <button class="btn-primary" onclick="window.open('https://wa.me/917017760292?text=Hi%2C+I%27m+ready+to+take+my+school+digital+with+Schoozie','_blank')">Contact Us on WhatsApp</button>
+  <p>Message us on WhatsApp — no forms, no calls, no pressure. We'll answer every question and help you pick the right plan for your school.</p>
+  <button class="btn-primary" onclick="window.open('https://wa.me/<?php echo $contact_whatsapp; ?>?text=Hi%2C+I%27m+ready+to+take+my+school+digital+with+Schoozie','_blank')">
+    <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+  </button>
+  <div class="cta-trust">
+    <span><i class="fa-solid fa-circle-check"></i> We reply within hours</span>
+    <span><i class="fa-solid fa-circle-check"></i> No commitment needed</span>
+    <span><i class="fa-solid fa-circle-check"></i> Free demo available</span>
+  </div>
 </section>
 
-<!-- FOOTER -->
-<footer>
-  &copy; <?php echo $year; ?> Schoozie &nbsp;|&nbsp; Beyond Education Systems &nbsp;|&nbsp; All Rights Reserved
-</footer>
+<?php include '_footer.php'; ?>
+
+<!-- JSON-LD STRUCTURED DATA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "Schoozie",
+      "description": "Schoozie provides professional school websites, dynamic CMS platforms, and ERP software for schools across India.",
+      "url": "https://schoozie.in",
+      "logo": "https://schoozie.in/assets/svg/schoozie-logo.svg",
+      "telephone": "+<?php echo $contact_whatsapp; ?>",
+      "email": "<?php echo $contact_email; ?>",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "<?php echo $contact_city; ?>",
+        "addressRegion": "<?php echo $contact_region; ?>",
+        "addressCountry": "IN"
+      },
+      "sameAs": [],
+      "areaServed": "IN",
+      "priceRange": "₹₹"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Schoozie School ERP",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "INR",
+        "price": "2"
+      },
+      "description": "Cloud-based school ERP software for student management, fee tracking, timetable, attendance, and more.",
+      "url": "https://schoozie.in/erp.php"
+    }
+  ]
+}
+</script>
 
 <!-- SCHOOZIE DUCK -->
 <div id="schoozie-duck">
   <div class="duck-bubble" id="duck-bubble"></div>
-  <svg id="duck-svg" viewBox="0 0 80 95" width="68" height="80" xmlns="http://www.w3.org/2000/svg">
+  <div class="duck-base">
+  <svg id="duck-svg" viewBox="0 0 80 95" width="56" height="67" xmlns="http://www.w3.org/2000/svg">
     <defs>
-      <radialGradient id="bodyG" cx="50%" cy="40%" r="55%">
+      <!-- Body: richer radial purple -->
+      <radialGradient id="bodyG" cx="35%" cy="28%" r="70%">
         <stop offset="0%"   stop-color="#c084fc"/>
-        <stop offset="100%" stop-color="#6f42ff"/>
+        <stop offset="55%"  stop-color="#7c3aed"/>
+        <stop offset="100%" stop-color="#3b0764"/>
       </radialGradient>
-      <radialGradient id="headG" cx="50%" cy="35%" r="55%">
-        <stop offset="0%"   stop-color="#d8b4fe"/>
-        <stop offset="100%" stop-color="#7c3aed"/>
-      </radialGradient>
-      <radialGradient id="wingG" cx="40%" cy="30%" r="60%">
-        <stop offset="0%"   stop-color="#a855f7"/>
+      <!-- Banner gradient -->
+      <linearGradient id="bannerG" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%"   stop-color="#f59e0b"/>
+        <stop offset="100%" stop-color="#fcd34d"/>
+      </linearGradient>
+      <!-- Head -->
+      <radialGradient id="headG" cx="40%" cy="30%" r="65%">
+        <stop offset="0%"   stop-color="#e9d5ff"/>
+        <stop offset="50%"  stop-color="#a855f7"/>
         <stop offset="100%" stop-color="#5b21b6"/>
       </radialGradient>
-      <filter id="glow">
-        <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <!-- Wing -->
+      <linearGradient id="wingG" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%"   stop-color="#c084fc"/>
+        <stop offset="100%" stop-color="#4c1d95"/>
+      </linearGradient>
+      <!-- Eye iris: cyan matching the logo -->
+      <radialGradient id="irisG" cx="38%" cy="35%" r="65%">
+        <stop offset="0%"   stop-color="#67e8f9"/>
+        <stop offset="60%"  stop-color="#06b6d4"/>
+        <stop offset="100%" stop-color="#0e7490"/>
+      </radialGradient>
+      <!-- Beak gradient -->
+      <linearGradient id="beakG" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%"   stop-color="#fde68a"/>
+        <stop offset="100%" stop-color="#f59e0b"/>
+      </linearGradient>
+      <!-- Belly shine -->
+      <radialGradient id="bellyG" cx="50%" cy="25%" r="70%">
+        <stop offset="0%"   stop-color="rgba(255,255,255,0.22)"/>
+        <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+      </radialGradient>
+      <!-- Eye glow -->
+      <filter id="eyeGlow" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
+        <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+      <!-- Body glow -->
+      <filter id="bodyGlow" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur"/>
         <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
       </filter>
     </defs>
 
     <!-- WINGS (behind body) -->
-    <ellipse cx="14" cy="62" rx="12" ry="20" fill="url(#wingG)" transform="rotate(-18,14,62)" opacity="0.9">
+    <ellipse cx="14" cy="62" rx="13" ry="21" fill="url(#wingG)" transform="rotate(-18,14,62)" opacity="0.92">
       <animateTransform attributeName="transform" type="rotate" values="-18,14,62;-10,14,62;-18,14,62" dur="0.55s" repeatCount="indefinite"/>
     </ellipse>
-    <ellipse cx="66" cy="62" rx="12" ry="20" fill="url(#wingG)" transform="rotate(18,66,62)" opacity="0.9">
+    <!-- Wing highlight left -->
+    <ellipse cx="14" cy="57" rx="5.5" ry="11" fill="rgba(216,180,254,0.35)" transform="rotate(-18,14,62)">
+      <animateTransform attributeName="transform" type="rotate" values="-18,14,62;-10,14,62;-18,14,62" dur="0.55s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="66" cy="62" rx="13" ry="21" fill="url(#wingG)" transform="rotate(18,66,62)" opacity="0.92">
+      <animateTransform attributeName="transform" type="rotate" values="18,66,62;10,66,62;18,66,62" dur="0.55s" repeatCount="indefinite"/>
+    </ellipse>
+    <!-- Wing highlight right -->
+    <ellipse cx="66" cy="57" rx="5.5" ry="11" fill="rgba(216,180,254,0.35)" transform="rotate(18,66,62)">
       <animateTransform attributeName="transform" type="rotate" values="18,66,62;10,66,62;18,66,62" dur="0.55s" repeatCount="indefinite"/>
     </ellipse>
 
     <!-- BODY -->
-    <ellipse cx="40" cy="65" rx="24" ry="22" fill="url(#bodyG)" filter="url(#glow)"/>
-
+    <ellipse cx="40" cy="65" rx="25" ry="23" fill="url(#bodyG)" filter="url(#bodyGlow)"/>
+    <!-- Body rim -->
+    <ellipse cx="40" cy="65" rx="25" ry="23" fill="none" stroke="rgba(192,132,252,0.3)" stroke-width="0.8"/>
     <!-- BELLY shine -->
-    <ellipse cx="40" cy="68" rx="13" ry="11" fill="rgba(255,255,255,0.12)"/>
+    <ellipse cx="40" cy="68" rx="14" ry="12" fill="url(#bellyG)"/>
 
     <!-- HEAD -->
-    <circle cx="40" cy="34" r="21" fill="url(#headG)" filter="url(#glow)"/>
+    <circle cx="40" cy="34" r="22" fill="url(#headG)" filter="url(#bodyGlow)"/>
+    <!-- Head rim -->
+    <circle cx="40" cy="34" r="22" fill="none" stroke="rgba(216,180,254,0.25)" stroke-width="0.8"/>
+    <!-- Head shine -->
+    <ellipse cx="32" cy="26" rx="8" ry="5.5" fill="rgba(255,255,255,0.22)" transform="rotate(-20,32,26)"/>
 
-    <!-- HEAD shine -->
-    <ellipse cx="33" cy="27" rx="7" ry="5" fill="rgba(255,255,255,0.18)" transform="rotate(-20,33,27)"/>
-
-    <!-- BEAK (front oval) -->
-    <ellipse cx="40" cy="46" rx="9" ry="5" fill="#00e5ff"/>
-    <ellipse cx="40" cy="46" rx="9" ry="2.5" fill="#00b4d8"/>
+    <!-- BEAK -->
+    <path d="M 32 46 Q 40 53 48 46 Q 44 44 40 43 Q 36 44 32 46 Z" fill="url(#beakG)"/>
+    <line x1="40" y1="43" x2="40" y2="52" stroke="rgba(0,0,0,0.12)" stroke-width="0.7"/>
+    <!-- Beak highlight -->
+    <path d="M 33 46 Q 40 50 40 46 Q 37 44 33 46 Z" fill="rgba(255,255,255,0.25)"/>
 
     <!-- EYE WHITES -->
-    <circle cx="29" cy="30" r="8" fill="white"/>
-    <circle cx="51" cy="30" r="8" fill="white"/>
+    <circle cx="29" cy="30" r="10" fill="#1a0a2e"/>
+    <circle cx="51" cy="30" r="10" fill="#1a0a2e"/>
+    <circle cx="29" cy="30" r="9"  fill="#ffffff"/>
+    <circle cx="51" cy="30" r="9"  fill="#ffffff"/>
 
-    <!-- EYE SHINE ring -->
-    <circle cx="29" cy="30" r="8" fill="none" stroke="#e0d0ff" stroke-width="0.5"/>
-    <circle cx="51" cy="30" r="8" fill="none" stroke="#e0d0ff" stroke-width="0.5"/>
+    <!-- EYE cyan glow ring -->
+    <circle cx="29" cy="30" r="9"  fill="none" stroke="rgba(103,232,249,0.8)" stroke-width="1.5" filter="url(#eyeGlow)"/>
+    <circle cx="51" cy="30" r="9"  fill="none" stroke="rgba(103,232,249,0.8)" stroke-width="1.5" filter="url(#eyeGlow)"/>
+
+    <!-- EYE IRIS (cyan) -->
+    <circle cx="29" cy="30" r="6.5" fill="url(#irisG)" filter="url(#eyeGlow)"/>
+    <circle cx="51" cy="30" r="6.5" fill="url(#irisG)" filter="url(#eyeGlow)"/>
 
     <!-- PUPILS (moved by JS) -->
-    <circle id="pupL" cx="29" cy="31" r="4.5" fill="#1a0a2e"/>
-    <circle id="pupR" cx="51" cy="31" r="4.5" fill="#1a0a2e"/>
+    <circle id="pupL"   cx="29" cy="31" r="4" fill="#020210"/>
+    <circle id="pupR"   cx="51" cy="31" r="4" fill="#020210"/>
 
     <!-- PUPIL SHINE -->
-    <circle id="shineL" cx="31" cy="29" r="1.5" fill="white"/>
-    <circle id="shineR" cx="53" cy="29" r="1.5" fill="white"/>
+    <circle id="shineL" cx="31" cy="29" r="1.8" fill="white" opacity="1"/>
+    <circle id="shineR" cx="53" cy="29" r="1.8" fill="white" opacity="1"/>
+    <!-- Secondary shine -->
+    <circle cx="27" cy="33" r="1.2" fill="white" opacity="0.5"/>
+    <circle cx="49" cy="33" r="1.2" fill="white" opacity="0.5"/>
+
+    <!-- BANNER held by paws -->
+    <rect x="10" y="64" width="60" height="13" rx="3" fill="url(#bannerG)" opacity="0.97"/>
+    <rect x="10" y="64" width="60" height="13" rx="3" fill="none" stroke="rgba(255,220,80,0.6)" stroke-width="0.8"/>
+    <rect x="13" y="65.5" width="26" height="3" rx="1.5" fill="rgba(255,255,255,0.25)"/>
+    <text x="40" y="73.5" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="6.8" font-weight="900" letter-spacing="0.8" fill="#3b1a00">SCHOOZIE</text>
+    <!-- left paw over banner edge -->
+    <ellipse cx="11" cy="70" rx="6" ry="4" fill="url(#wingG)" transform="rotate(-20,11,70)"/>
+    <ellipse cx="11" cy="70" rx="3" ry="2" fill="rgba(216,180,254,0.35)" transform="rotate(-20,11,70)"/>
+    <!-- right paw over banner edge -->
+    <ellipse cx="69" cy="70" rx="6" ry="4" fill="url(#wingG)" transform="rotate(20,69,70)"/>
+    <ellipse cx="69" cy="70" rx="3" ry="2" fill="rgba(216,180,254,0.35)" transform="rotate(20,69,70)"/>
 
     <!-- FEET -->
-    <ellipse cx="32" cy="89" rx="11" ry="5" fill="#00e5ff" opacity="0.9">
+    <ellipse cx="32" cy="89" rx="12" ry="5.5" fill="#00e5ff" opacity="0.9">
       <animateTransform attributeName="transform" type="translate" values="0,0;0,2;0,0" dur="0.55s" repeatCount="indefinite"/>
     </ellipse>
-    <ellipse cx="48" cy="89" rx="11" ry="5" fill="#00e5ff" opacity="0.9">
+    <ellipse cx="48" cy="89" rx="12" ry="5.5" fill="#00e5ff" opacity="0.9">
       <animateTransform attributeName="transform" type="translate" values="0,2;0,0;0,2" dur="0.55s" repeatCount="indefinite"/>
     </ellipse>
-
-    <!-- BODY bob -->
-    <animateTransform attributeName="transform" type="translate" values="0,0;0,-3;0,0" dur="0.55s" repeatCount="indefinite" xlink:href="#duck-svg"/>
+    <!-- Feet highlight -->
+    <ellipse cx="32" cy="87" rx="7" ry="2.5" fill="rgba(255,255,255,0.3)">
+      <animateTransform attributeName="transform" type="translate" values="0,0;0,2;0,0" dur="0.55s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="48" cy="87" rx="7" ry="2.5" fill="rgba(255,255,255,0.3)">
+      <animateTransform attributeName="transform" type="translate" values="0,2;0,0;0,2" dur="0.55s" repeatCount="indefinite"/>
+    </ellipse>
   </svg>
-  <div class="duck-name">Schoozie</div>
+  </div>
 </div>
-
-<style>
-#schoozie-duck{
-  position:fixed;bottom:24px;right:28px;z-index:9999;
-  display:flex;flex-direction:column;align-items:center;
-  cursor:pointer;user-select:none;
-  filter:drop-shadow(0 0 14px rgba(111,66,255,0.7));
-  animation:duck-bob 0.9s ease-in-out infinite alternate;
-}
-@keyframes duck-bob{
-  from{transform:translateY(0)}
-  to{transform:translateY(-6px)}
-}
-.duck-name{
-  font-family:'Orbitron';font-size:9px;letter-spacing:1.5px;
-  background:linear-gradient(90deg,#c084fc,#00e5ff);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
-  margin-top:4px;
-  filter:drop-shadow(0 0 6px rgba(192,132,252,0.8));
-}
-.duck-bubble{
-  background:linear-gradient(135deg,rgba(111,66,255,0.95),rgba(0,229,255,0.9));
-  color:#fff;font-size:12px;font-weight:600;
-  padding:7px 14px;border-radius:14px 14px 2px 14px;
-  margin-bottom:10px;white-space:nowrap;
-  opacity:0;transform:scale(0.5) translateY(8px);
-  transition:opacity .3s, transform .3s;
-  box-shadow:0 4px 20px rgba(111,66,255,0.5);
-  pointer-events:none;
-  border:1px solid rgba(255,255,255,0.2);
-}
-.duck-bubble.show{opacity:1;transform:scale(1) translateY(0)}
-#schoozie-duck:hover{
-  filter:drop-shadow(0 0 24px rgba(192,132,252,1));
-  animation-play-state:paused;
-}
-#schoozie-duck:hover .duck-bubble{opacity:1;transform:scale(1) translateY(0)}
-</style>
 
 <script>
 (function(){
@@ -711,9 +553,11 @@ footer{
   const shineR  = document.getElementById('shineR');
 
   const messages = [
-    'Quack! 🦆','Hi there! 👋','Pick a plan!','Need help?',
-    'Honk honk! 📣','Go digital! 🎓','Let\'s talk! 💬','I\'m Schoozie!',
-    'Click me! 😄','Schools love me 🏫'
+    'Hi there! 👋','Need help? Ask us!','See our plans! 📋',
+    'April offer on! 🔥','WhatsApp us! 💬','Demo available! 👀',
+    'Going digital? 🚀','We reply fast! ⚡','I\'m Schoozie! 🦉',
+    'Schools trust us 🏫','No lock-in! 🔓','₹10/student only! 💰',
+    'Live in minutes! ⏱️','Free demo! 🎓','Let\'s talk! 📞'
   ];
 
   let bubbleTimer;
@@ -759,6 +603,7 @@ footer{
   duck.addEventListener('click', ()=> showBubble(messages[Math.floor(Math.random()*messages.length)]));
 })();
 </script>
+
 
 </body>
 </html>

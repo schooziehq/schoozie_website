@@ -5,6 +5,18 @@
    Set $offer_active = false to hide all offers.
 ───────────────────────────────────────────── */
 
+/* ─────────────────────────────────────────────
+   CONTACT DETAILS
+   Update here and it changes everywhere on the site.
+───────────────────────────────────────────── */
+$demo_url         = "https://schools.schoozie.com/aggarwal-public/";
+
+$contact_email    = "schooziehq@gmail.com";
+$contact_whatsapp = "917017760292";          // with country code, no +
+$contact_city     = "Roorkee";
+$contact_region   = "Uttarakhand";
+$contact_country  = "India";
+
 $offer_active = true;
 
 $offer_month  = "April";           // short label shown on badges & savings text

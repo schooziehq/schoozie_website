@@ -1,0 +1,86 @@
+<svg viewBox="0 0 80 95" width="80" height="95" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="dBodyG" cx="35%" cy="28%" r="70%">
+      <stop offset="0%"   stop-color="#c084fc"/>
+      <stop offset="55%"  stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#3b0764"/>
+    </radialGradient>
+    <radialGradient id="dHeadG" cx="40%" cy="30%" r="65%">
+      <stop offset="0%"   stop-color="#e9d5ff"/>
+      <stop offset="50%"  stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#5b21b6"/>
+    </radialGradient>
+    <linearGradient id="dWingG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#4c1d95"/>
+    </linearGradient>
+    <radialGradient id="dIrisG" cx="38%" cy="35%" r="65%">
+      <stop offset="0%"   stop-color="#67e8f9"/>
+      <stop offset="60%"  stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#0e7490"/>
+    </radialGradient>
+    <linearGradient id="dBeakG" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#fde68a"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <radialGradient id="dBellyG" cx="50%" cy="25%" r="70%">
+      <stop offset="0%"   stop-color="rgba(255,255,255,0.22)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </radialGradient>
+    <filter id="dEyeGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="dBodyGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- WINGS -->
+  <ellipse cx="14" cy="62" rx="13" ry="21" fill="url(#dWingG)" transform="rotate(-18,14,62)" opacity="0.92"/>
+  <ellipse cx="14" cy="57" rx="5.5" ry="11" fill="rgba(216,180,254,0.35)" transform="rotate(-18,14,62)"/>
+  <ellipse cx="66" cy="62" rx="13" ry="21" fill="url(#dWingG)" transform="rotate(18,66,62)" opacity="0.92"/>
+  <ellipse cx="66" cy="57" rx="5.5" ry="11" fill="rgba(216,180,254,0.35)" transform="rotate(18,66,62)"/>
+
+  <!-- BODY -->
+  <ellipse cx="40" cy="65" rx="25" ry="23" fill="url(#dBodyG)" filter="url(#dBodyGlow)"/>
+  <ellipse cx="40" cy="65" rx="25" ry="23" fill="none" stroke="rgba(192,132,252,0.3)" stroke-width="0.8"/>
+  <ellipse cx="40" cy="68" rx="14" ry="12" fill="url(#dBellyG)"/>
+
+  <!-- HEAD -->
+  <circle cx="40" cy="34" r="22" fill="url(#dHeadG)" filter="url(#dBodyGlow)"/>
+  <circle cx="40" cy="34" r="22" fill="none" stroke="rgba(216,180,254,0.25)" stroke-width="0.8"/>
+  <ellipse cx="32" cy="26" rx="8" ry="5.5" fill="rgba(255,255,255,0.22)" transform="rotate(-20,32,26)"/>
+
+  <!-- BEAK -->
+  <path d="M 32 46 Q 40 53 48 46 Q 44 44 40 43 Q 36 44 32 46 Z" fill="url(#dBeakG)"/>
+  <line x1="40" y1="43" x2="40" y2="52" stroke="rgba(0,0,0,0.12)" stroke-width="0.7"/>
+  <path d="M 33 46 Q 40 50 40 46 Q 37 44 33 46 Z" fill="rgba(255,255,255,0.25)"/>
+
+  <!-- EYE WHITES -->
+  <circle cx="29" cy="30" r="9" fill="#f0f9ff"/>
+  <circle cx="51" cy="30" r="9" fill="#f0f9ff"/>
+  <circle cx="29" cy="30" r="9" fill="none" stroke="rgba(103,232,249,0.5)" stroke-width="1.2" filter="url(#dEyeGlow)"/>
+  <circle cx="51" cy="30" r="9" fill="none" stroke="rgba(103,232,249,0.5)" stroke-width="1.2" filter="url(#dEyeGlow)"/>
+
+  <!-- IRIS -->
+  <circle cx="29" cy="30" r="6" fill="url(#dIrisG)" filter="url(#dEyeGlow)"/>
+  <circle cx="51" cy="30" r="6" fill="url(#dIrisG)" filter="url(#dEyeGlow)"/>
+
+  <!-- PUPILS (fixed center for static version) -->
+  <circle cx="30" cy="30" r="3.5" fill="#060616"/>
+  <circle cx="52" cy="30" r="3.5" fill="#060616"/>
+
+  <!-- PUPIL SHINE -->
+  <circle cx="32" cy="28" r="1.5" fill="white" opacity="0.95"/>
+  <circle cx="54" cy="28" r="1.5" fill="white" opacity="0.95"/>
+  <circle cx="28" cy="33" r="1"   fill="white" opacity="0.35"/>
+  <circle cx="50" cy="33" r="1"   fill="white" opacity="0.35"/>
+
+  <!-- FEET -->
+  <ellipse cx="32" cy="89" rx="12" ry="5.5" fill="#00e5ff" opacity="0.9"/>
+  <ellipse cx="48" cy="89" rx="12" ry="5.5" fill="#00e5ff" opacity="0.9"/>
+  <ellipse cx="32" cy="87" rx="7"  ry="2.5" fill="rgba(255,255,255,0.3)"/>
+  <ellipse cx="48" cy="87" rx="7"  ry="2.5" fill="rgba(255,255,255,0.3)"/>
+</svg>

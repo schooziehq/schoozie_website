@@ -1,7 +1,7 @@
 <?php
 $plan = [
   'name'           => 'Dynamic Website',
-  'badge'          => '⚡ April Special Offer',
+  'badge'          => '<i class="fa-solid fa-bolt"></i> April Special Offer',
   'badge_bg'       => 'rgba(255,0,204,0.1)',
   'badge_color'    => '#ff00cc',
   'badge_border'   => 'rgba(255,0,204,0.3)',
@@ -17,14 +17,14 @@ $plan = [
   'btn_text'       => 'Claim April Deal Now',
   'tab_color'      => 'pink',
   'features' => [
-    ['⚡','Your own admin login panel'],
-    ['🖥️','Professional school website'],
-    ['📱','Mobile responsive design'],
-    ['📝','Manage content yourself'],
-    ['📅','Events & announcements'],
-    ['👩‍🏫','Staff & faculty profiles'],
-    ['📋','Online admissions management'],
-    ['🌐','1 year hosting included'],
+    ['<i class="fa-solid fa-bolt" style="color:#fbbf24"></i>','Your own admin login panel'],
+    ['<i class="fa-solid fa-desktop" style="color:#00b7ff"></i>','Professional school website'],
+    ['<i class="fa-solid fa-mobile-screen" style="color:#a855f7"></i>','Mobile responsive design'],
+    ['<i class="fa-solid fa-file-pen" style="color:#10b981"></i>','Manage content yourself'],
+    ['<i class="fa-solid fa-calendar-days" style="color:#f59e0b"></i>','Events & announcements'],
+    ['<i class="fa-solid fa-user-tie" style="color:#ec4899"></i>','Staff & faculty profiles'],
+    ['<i class="fa-solid fa-clipboard-list" style="color:#f59e0b"></i>','Online admissions management'],
+    ['<i class="fa-solid fa-globe" style="color:#3b82f6"></i>','1 year hosting included'],
   ],
   'tc' => [
 

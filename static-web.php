@@ -17,14 +17,14 @@ $plan = [
   'btn_text'       => 'Contact Us to Get Started',
   'tab_color'      => 'green',
   'features' => [
-    ['🖥️','Professional school website'],
-    ['📱','Mobile responsive design'],
-    ['📋','Admissions inquiry form'],
-    ['🖼️','Photo gallery & news'],
-    ['✏️','Content managed by Schoozie'],
-    ['🔄','Free updates on request'],
-    ['🌐','1 year hosting included'],
-    ['⚙️','Domain setup assistance'],
+    ['<i class="fa-solid fa-desktop" style="color:#00b7ff"></i>','Professional school website'],
+    ['<i class="fa-solid fa-mobile-screen" style="color:#a855f7"></i>','Mobile responsive design'],
+    ['<i class="fa-solid fa-clipboard-list" style="color:#f59e0b"></i>','Admissions inquiry form'],
+    ['<i class="fa-solid fa-images" style="color:#ec4899"></i>','Photo gallery & news'],
+    ['<i class="fa-solid fa-pen" style="color:#10b981"></i>','Content managed by Schoozie'],
+    ['<i class="fa-solid fa-arrows-rotate" style="color:#06b6d4"></i>','Free updates on request'],
+    ['<i class="fa-solid fa-globe" style="color:#3b82f6"></i>','1 year hosting included'],
+    ['<i class="fa-solid fa-gear" style="color:#9ca3af"></i>','Domain setup assistance'],
   ],
   'tc' => [
 

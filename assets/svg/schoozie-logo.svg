@@ -1,0 +1,180 @@
+<svg viewBox="0 0 200 200" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+
+    <!-- Background -->
+    <radialGradient id="bgG" cx="50%" cy="40%" r="60%">
+      <stop offset="0%"   stop-color="#1a1040"/>
+      <stop offset="100%" stop-color="#07060f"/>
+    </radialGradient>
+
+    <!-- Owl body -->
+    <linearGradient id="bodyG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+
+    <!-- Ear tuft -->
+    <linearGradient id="tuftG" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#6d28d9"/>
+    </linearGradient>
+
+    <!-- Eye iris -->
+    <radialGradient id="irisG" cx="38%" cy="35%" r="65%">
+      <stop offset="0%"   stop-color="#67e8f9"/>
+      <stop offset="60%"  stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#0e7490"/>
+    </radialGradient>
+
+    <!-- Cap -->
+    <linearGradient id="capG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#00f0ff"/>
+      <stop offset="100%" stop-color="#0077ff"/>
+    </linearGradient>
+
+    <!-- Outer border gradient (going around) -->
+    <linearGradient id="ringG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#d946ef"/>
+      <stop offset="40%"  stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#00f0ff"/>
+    </linearGradient>
+
+    <!-- Belly highlight -->
+    <radialGradient id="bellyG" cx="50%" cy="30%" r="70%">
+      <stop offset="0%"   stop-color="rgba(255,255,255,0.12)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </radialGradient>
+
+    <!-- Eye soft glow -->
+    <filter id="eyeGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- General soft glow -->
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+  </defs>
+
+  <!-- ── BACKGROUND CIRCLE ── -->
+  <circle cx="100" cy="100" r="98" fill="url(#bgG)"/>
+
+  <!-- Outer glow ring -->
+  <circle cx="100" cy="100" r="97" fill="none"
+          stroke="url(#ringG)" stroke-width="2.5" opacity="0.9"/>
+
+  <!-- Inner subtle ring -->
+  <circle cx="100" cy="100" r="90" fill="none"
+          stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+
+  <!-- ── CIRCUIT DOTS (subtle tech pattern) ── -->
+  <!-- Left side -->
+  <circle cx="22" cy="88"  r="2"   fill="#a855f7" opacity="0.5"/>
+  <circle cx="15" cy="108" r="1.5" fill="#00f0ff" opacity="0.4"/>
+  <circle cx="24" cy="126" r="1.5" fill="#a855f7" opacity="0.3"/>
+  <line x1="22" y1="88"  x2="15" y2="108" stroke="#a855f7" stroke-width="0.8" opacity="0.3"/>
+  <line x1="15" y1="108" x2="24" y2="126" stroke="#00f0ff" stroke-width="0.8" opacity="0.3"/>
+  <!-- Right side -->
+  <circle cx="178" cy="88"  r="2"   fill="#00f0ff" opacity="0.5"/>
+  <circle cx="185" cy="108" r="1.5" fill="#a855f7" opacity="0.4"/>
+  <circle cx="176" cy="126" r="1.5" fill="#00f0ff" opacity="0.3"/>
+  <line x1="178" y1="88"  x2="185" y2="108" stroke="#00f0ff" stroke-width="0.8" opacity="0.3"/>
+  <line x1="185" y1="108" x2="176" y2="126" stroke="#a855f7" stroke-width="0.8" opacity="0.3"/>
+  <!-- Bottom arc dots -->
+  <circle cx="68"  cy="178" r="1.5" fill="#00f0ff" opacity="0.35"/>
+  <circle cx="100" cy="185" r="2"   fill="#a855f7" opacity="0.4"/>
+  <circle cx="132" cy="178" r="1.5" fill="#00f0ff" opacity="0.35"/>
+  <line x1="68" y1="178" x2="100" y2="185" stroke="#a855f7" stroke-width="0.8" opacity="0.25"/>
+  <line x1="132" y1="178" x2="100" y2="185" stroke="#00f0ff" stroke-width="0.8" opacity="0.25"/>
+
+  <!-- ── GRADUATION CAP ── -->
+  <!-- Board (diamond) -->
+  <polygon points="100,36 140,54 100,63 60,54"
+           fill="url(#capG)" filter="url(#softGlow)"/>
+  <!-- Centre button -->
+  <circle cx="100" cy="50" r="4" fill="#0e7490"/>
+  <circle cx="100" cy="50" r="2.5" fill="#67e8f9"/>
+  <!-- Tassel cord -->
+  <line x1="140" y1="54" x2="146" y2="72"
+        stroke="#fbbf24" stroke-width="2" stroke-linecap="round"/>
+  <!-- Tassel knot -->
+  <circle cx="146" cy="74" r="4.5" fill="#fbbf24"/>
+  <!-- Tassel strands -->
+  <line x1="143" y1="77" x2="140" y2="87" stroke="#fbbf24" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="146" y1="78" x2="146" y2="89" stroke="#fbbf24" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="149" y1="77" x2="152" y2="87" stroke="#fbbf24" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Cap underside band -->
+  <rect x="83" y="59" width="34" height="9" rx="2.5" fill="#0891b2" opacity="0.85"/>
+
+  <!-- ── OWL EAR TUFTS ── -->
+  <path d="M 66 86 L 54 56 L 80 78 Z" fill="url(#tuftG)"/>
+  <path d="M 68 80 L 56 56 L 74 74 Z" fill="rgba(196,132,252,0.3)"/>
+  <path d="M 134 86 L 146 56 L 120 78 Z" fill="url(#tuftG)"/>
+  <path d="M 132 80 L 144 56 L 126 74 Z" fill="rgba(196,132,252,0.3)"/>
+
+  <!-- ── OWL HEAD / BODY ── -->
+  <ellipse cx="100" cy="116" rx="54" ry="58" fill="url(#bodyG)"/>
+
+  <!-- Face disc -->
+  <ellipse cx="100" cy="112" rx="42" ry="44" fill="url(#bellyG)"/>
+
+  <!-- Wings shadow (sides) -->
+  <path d="M 48 120 Q 38 140 50 160 Q 56 140 64 126 Z"
+        fill="rgba(0,0,0,0.25)"/>
+  <path d="M 152 120 Q 162 140 150 160 Q 144 140 136 126 Z"
+        fill="rgba(0,0,0,0.25)"/>
+
+  <!-- ── EYES ── -->
+  <!-- Outer eye ring glow -->
+  <circle cx="76" cy="107" r="25" fill="rgba(0,240,255,0.07)" filter="url(#eyeGlow)"/>
+  <circle cx="124" cy="107" r="25" fill="rgba(0,240,255,0.07)" filter="url(#eyeGlow)"/>
+
+  <!-- Eye whites -->
+  <circle cx="76"  cy="107" r="21" fill="#f0f9ff"/>
+  <circle cx="124" cy="107" r="21" fill="#f0f9ff"/>
+
+  <!-- Eye rim -->
+  <circle cx="76"  cy="107" r="21" fill="none"
+          stroke="rgba(103,232,249,0.4)" stroke-width="1.5"/>
+  <circle cx="124" cy="107" r="21" fill="none"
+          stroke="rgba(103,232,249,0.4)" stroke-width="1.5"/>
+
+  <!-- Iris -->
+  <circle cx="76"  cy="107" r="14" fill="url(#irisG)" filter="url(#eyeGlow)"/>
+  <circle cx="124" cy="107" r="14" fill="url(#irisG)" filter="url(#eyeGlow)"/>
+
+  <!-- Pupil -->
+  <circle cx="78"  cy="107" r="8.5" fill="#06070f"/>
+  <circle cx="126" cy="107" r="8.5" fill="#06070f"/>
+
+  <!-- Pupil shine (main) -->
+  <circle cx="81"  cy="104" r="3.2" fill="white" opacity="0.95"/>
+  <circle cx="129" cy="104" r="3.2" fill="white" opacity="0.95"/>
+
+  <!-- Pupil shine (small) -->
+  <circle cx="75"  cy="111" r="1.4" fill="white" opacity="0.45"/>
+  <circle cx="123" cy="111" r="1.4" fill="white" opacity="0.45"/>
+
+  <!-- ── BEAK ── -->
+  <path d="M 93 124 L 107 124 L 100 137 Z" fill="#fbbf24"/>
+  <!-- Beak centre line -->
+  <line x1="100" y1="124" x2="100" y2="136"
+        stroke="rgba(0,0,0,0.2)" stroke-width="1"/>
+  <!-- Beak highlight -->
+  <path d="M 94 124 L 100 124 L 97 131 Z"
+        fill="rgba(255,255,255,0.25)"/>
+
+  <!-- ── CHEST BELLY SHINE ── -->
+  <ellipse cx="100" cy="148" rx="20" ry="14"
+           fill="rgba(255,255,255,0.05)"/>
+
+</svg>

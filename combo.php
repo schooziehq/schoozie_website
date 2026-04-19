@@ -1,7 +1,7 @@
 <?php
 $plan = [
   'name'           => 'Website + ERP Combo',
-  'badge'          => '🔥 Best Value Deal',
+  'badge'          => '<i class="fa-solid fa-fire"></i> Best Value Deal',
   'badge_bg'       => 'rgba(255,210,0,0.1)',
   'badge_color'    => '#ffd200',
   'badge_border'   => 'rgba(255,210,0,0.3)',
@@ -17,14 +17,14 @@ $plan = [
   'btn_text'       => 'Grab Combo Deal Now',
   'tab_color'      => 'gold',
   'features' => [
-    ['🌐','Full school website'],
-    ['🏫','Complete ERP system'],
-    ['⚡','Single unified dashboard'],
-    ['💰','Fee collection & tracking'],
-    ['👆','Attendance system'],
-    ['📱','Parent portal'],
-    ['🎁','Free onboarding session'],
-    ['🏆','Priority support'],
+    ['<i class="fa-solid fa-globe" style="color:#3b82f6"></i>','Full school website'],
+    ['<i class="fa-solid fa-school" style="color:#a855f7"></i>','Complete ERP system'],
+    ['<i class="fa-solid fa-bolt" style="color:#fbbf24"></i>','Single unified dashboard'],
+    ['<i class="fa-solid fa-money-bill-wave" style="color:#10b981"></i>','Fee collection & tracking'],
+    ['<i class="fa-solid fa-clipboard-check" style="color:#10b981"></i>','Attendance system'],
+    ['<i class="fa-solid fa-mobile-screen" style="color:#ec4899"></i>','Parent portal'],
+    ['<i class="fa-solid fa-gift" style="color:#f97316"></i>','Free onboarding session'],
+    ['<i class="fa-solid fa-trophy" style="color:#fbbf24"></i>','Priority support'],
   ],
   'tc' => [
 
