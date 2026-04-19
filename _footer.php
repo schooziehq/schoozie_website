@@ -53,10 +53,24 @@ $wa_footer_text = isset($plan)
       <address style="font-style:normal">
         <div class="footer-contact-item">
           <i class="fa-solid fa-location-dot"></i>
-          <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-            <span itemprop="addressLocality"><?php echo $contact_city; ?></span>,
-            <span itemprop="addressRegion"><?php echo $contact_region; ?></span>,
-            <span itemprop="addressCountry"><?php echo $contact_country; ?></span>
+          <span>
+            <strong style="font-size:11px;color:#9090bb;display:block;margin-bottom:2px">South India Office</strong>
+            <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+              <span itemprop="streetAddress"><?php echo $office_south_street; ?></span>,
+              <span itemprop="addressLocality"><?php echo $office_south_city; ?></span>,
+              <span itemprop="addressRegion"><?php echo $office_south_region; ?></span>
+            </span>
+          </span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>
+            <strong style="font-size:11px;color:#9090bb;display:block;margin-bottom:2px">North India Office</strong>
+            <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+              <span itemprop="streetAddress"><?php echo $office_north_street; ?></span>,
+              <span itemprop="addressLocality"><?php echo $office_north_city; ?></span> - <?php echo $office_north_pin; ?>,
+              <span itemprop="addressRegion"><?php echo $office_north_region; ?></span>
+            </span>
           </span>
         </div>
         <div class="footer-contact-item">

@@ -10,12 +10,20 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="<?php echo $plan['name']; ?> — Schoozie">
 <meta property="og:description" content="<?php echo $plan['description']; ?>">
-<meta property="og:url" content="https://schoozie.in/<?php echo basename($_SERVER['PHP_SELF']); ?>">
-<meta property="og:image" content="https://schoozie.in/assets/svg/schoozie-logo.svg">
+<meta property="og:url" content="https://schoozie.com/<?php echo basename($_SERVER['PHP_SELF']); ?>">
+<meta property="og:image" content="https://schoozie.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:alt" content="Schoozie — School Digital Solutions India">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="<?php echo $plan['name']; ?> — Schoozie">
+<meta name="twitter:description" content="<?php echo $plan['description']; ?>">
+<meta name="twitter:image" content="https://schoozie.com/assets/og-image.png">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Inter:wght@300;400;600&family=Noto+Nastaliq+Urdu:wght@400;700&family=Noto+Sans+Devanagari:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="css/global.css">
-<link rel="stylesheet" href="css/plan.css">
+<link rel="stylesheet" href="css/global.css?v=<?php echo filemtime('css/global.css'); ?>">
+<link rel="stylesheet" href="css/plan.css?v=<?php echo filemtime('css/plan.css'); ?>">
 </head>
 <body>
 
@@ -204,7 +212,7 @@
   "@type": "LocalBusiness",
   "name": "Schoozie",
   "description": "Schoozie provides professional school websites, dynamic CMS platforms, and ERP software for schools across India.",
-  "url": "https://schoozie.in",
+  "url": "https://schoozie.com",
   "telephone": "+<?php echo $contact_whatsapp; ?>",
   "email": "<?php echo $contact_email; ?>",
   "address": {

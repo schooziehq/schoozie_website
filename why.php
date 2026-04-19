@@ -8,21 +8,29 @@
 <meta name="description" content="Discover why hundreds of schools across India choose Schoozie — unbeatable price, free SEO, AI-powered ERP, board-specific futuristic designs, and complete school digitization.">
 <meta name="keywords" content="why schoozie, best school website india, free seo school website, affordable school erp india, cbse school website design, school digital solution india, ai school management system">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://schoozie.in/why.php">
+<link rel="canonical" href="https://schoozie.com/why.php">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Why Schoozie — India's Most Complete School Digital Solution">
 <meta property="og:description" content="Unbeatable price, free SEO, AI-powered ERP, board-specific futuristic designs. See why no one comes close to Schoozie.">
-<meta property="og:url" content="https://schoozie.in/why.php">
-<meta property="og:image" content="https://schoozie.in/assets/svg/schoozie-logo.svg">
+<meta property="og:url" content="https://schoozie.com/why.php">
+<meta property="og:image" content="https://schoozie.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:alt" content="Why Schoozie? — School Digital Solutions India">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Why Schoozie — India's Most Complete School Digital Solution">
+<meta name="twitter:description" content="Unbeatable price, free SEO, AI-powered ERP, board-specific futuristic designs. See why no one comes close to Schoozie.">
+<meta name="twitter:image" content="https://schoozie.com/assets/og-image.png">
 
 <link rel="icon" type="image/svg+xml" href="assets/svg/schoozie-logo.svg">
 <link rel="apple-touch-icon" href="assets/svg/schoozie-logo.svg">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="css/global.css">
-<link rel="stylesheet" href="css/why.css">
+<link rel="stylesheet" href="css/global.css?v=<?php echo filemtime('css/global.css'); ?>">
+<link rel="stylesheet" href="css/why.css?v=<?php echo filemtime('css/why.css'); ?>">
 </head>
 <body>
 
@@ -323,12 +331,12 @@
   "@type": "WebPage",
   "name": "Why Schoozie",
   "description": "Why schools across India choose Schoozie — unbeatable price, free SEO, AI-powered ERP, board-specific futuristic designs.",
-  "url": "https://schoozie.in/why.php",
+  "url": "https://schoozie.com/why.php",
   "publisher": {
     "@type": "Organization",
     "name": "Schoozie",
-    "url": "https://schoozie.in",
-    "logo": "https://schoozie.in/assets/svg/schoozie-logo.svg",
+    "url": "https://schoozie.com",
+    "logo": "https://schoozie.com/assets/svg/schoozie-logo.svg",
     "telephone": "+<?php echo $contact_whatsapp; ?>",
     "email": "<?php echo $contact_email; ?>"
   }

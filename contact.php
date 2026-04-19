@@ -8,21 +8,29 @@
 <meta name="description" content="Get in touch with Schoozie for a free demo of our school website, CMS, or ERP software. We respond fast on WhatsApp. Serving schools across India.">
 <meta name="keywords" content="contact schoozie, school website demo india, school ERP demo, school software enquiry india, get school website made india">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://schoozie.in/contact.php">
+<link rel="canonical" href="https://schoozie.com/contact.php">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Contact Schoozie — Get a Free Demo for Your School">
 <meta property="og:description" content="Reach out on WhatsApp or email to get a free demo of Schoozie's school website and ERP solutions.">
-<meta property="og:url" content="https://schoozie.in/contact.php">
-<meta property="og:image" content="https://schoozie.in/assets/svg/schoozie-logo.svg">
+<meta property="og:url" content="https://schoozie.com/contact.php">
+<meta property="og:image" content="https://schoozie.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:alt" content="Contact Schoozie — Get a Free Demo for Your School">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact Schoozie — Get a Free Demo for Your School">
+<meta name="twitter:description" content="Reach out on WhatsApp or email to get a free demo of Schoozie's school website and ERP solutions.">
+<meta name="twitter:image" content="https://schoozie.com/assets/og-image.png">
 
 <link rel="icon" type="image/svg+xml" href="assets/svg/schoozie-logo.svg">
 <link rel="apple-touch-icon" href="assets/svg/schoozie-logo.svg">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="css/global.css">
-<link rel="stylesheet" href="css/contact.css">
+<link rel="stylesheet" href="css/global.css?v=<?php echo filemtime('css/global.css'); ?>">
+<link rel="stylesheet" href="css/contact.css?v=<?php echo filemtime('css/contact.css'); ?>">
 </head>
 <body>
 
@@ -65,11 +73,23 @@
 
     <div class="contact-card location" role="listitem">
       <div class="contact-card-icon"><i class="fa-solid fa-location-dot"></i></div>
-      <h3>Based In</h3>
+      <h3>Our Offices</h3>
       <p>We are a remote-first team serving schools all across India — from Kashmir to Kanyakumari.</p>
-      <div class="contact-card-val" itemscope itemtype="https://schema.org/PostalAddress">
-        <span itemprop="addressLocality"><?php echo $contact_city; ?></span>,
-        <span itemprop="addressRegion"><?php echo $contact_region; ?></span><br>India
+      <div class="contact-card-val" style="display:flex;flex-direction:column;gap:14px;text-align:left">
+        <div itemscope itemtype="https://schema.org/PostalAddress">
+          <div style="font-size:11px;font-weight:600;color:#bf5fff;letter-spacing:.5px;text-transform:uppercase;margin-bottom:4px">South India Office</div>
+          <div style="line-height:1.6">
+            <span itemprop="streetAddress"><?php echo $office_south_street; ?></span><br>
+            <span itemprop="addressLocality"><?php echo $office_south_city; ?></span>, <span itemprop="addressRegion"><?php echo $office_south_region; ?></span>
+          </div>
+        </div>
+        <div itemscope itemtype="https://schema.org/PostalAddress">
+          <div style="font-size:11px;font-weight:600;color:#bf5fff;letter-spacing:.5px;text-transform:uppercase;margin-bottom:4px">North India Office</div>
+          <div style="line-height:1.6">
+            <span itemprop="streetAddress"><?php echo $office_north_street; ?></span><br>
+            <span itemprop="addressLocality"><?php echo $office_north_city; ?></span> - <?php echo $office_north_pin; ?>, <span itemprop="addressRegion"><?php echo $office_north_region; ?></span>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -160,11 +180,11 @@
   "@type": "ContactPage",
   "name": "Contact Schoozie",
   "description": "Get in touch with Schoozie for school website and ERP software enquiries.",
-  "url": "https://schoozie.in/contact.php",
+  "url": "https://schoozie.com/contact.php",
   "publisher": {
     "@type": "Organization",
     "name": "Schoozie",
-    "url": "https://schoozie.in",
+    "url": "https://schoozie.com",
     "email": "<?php echo $contact_email; ?>",
     "contactPoint": {
       "@type": "ContactPoint",

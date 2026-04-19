@@ -12,7 +12,7 @@ if (!isset($active_page))   $active_page   = '';
 if (!isset($show_back_btn)) $show_back_btn = false;
 ?>
 <!-- PROMO STRIP -->
-<div class="promo-strip">
+<div class="promo-strip promo-fixed">
   <div class="promo-track">
     <span><i class="fa-solid fa-crown"></i> Take your school digital at <strong>India's lowest price</strong> &mdash; Only 100 founding spots available.</span>
     <span class="promo-sep">◆</span>
@@ -37,7 +37,7 @@ if (!isset($show_back_btn)) $show_back_btn = false;
   <nav>
     <a href="index.php"      <?php if($active_page==='home')    echo 'class="nav-active"'; ?>>Home</a>
     <a href="index.php#pricing" <?php if($active_page==='plans') echo 'class="nav-active"'; ?>>Plans</a>
-    <a href="why.php"        <?php if($active_page==='why')     echo 'class="nav-active"'; ?>>Why Schoozie</a>
+    <a href="why.php"        <?php if($active_page==='why')     echo 'class="nav-active"'; ?>>Why Schoozie?</a>
     <a href="about.php"      <?php if($active_page==='about')   echo 'class="nav-active"'; ?>>About</a>
     <a href="contact.php"    <?php if($active_page==='contact') echo 'class="nav-active"'; ?>>Contact</a>
   </nav>
@@ -60,7 +60,7 @@ if (!isset($show_back_btn)) $show_back_btn = false;
 <div class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Mobile menu">
   <a href="index.php">Home</a>
   <a href="index.php#pricing">Plans</a>
-  <a href="why.php">Why Schoozie</a>
+  <a href="why.php">Why Schoozie?</a>
   <a href="about.php">About</a>
   <a href="contact.php">Contact</a>
   <a href="https://wa.me/<?php echo $contact_whatsapp; ?>" target="_blank" rel="noopener" class="mobile-nav-cta">Get Started &rarr;</a>

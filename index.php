@@ -12,21 +12,29 @@ require_once 'config.php';
 <meta name="description" content="Schoozie helps Indian schools go digital with professional school websites, dynamic CMS, and school ERP software. Starting at ₹10 per student per month. WhatsApp support included.">
 <meta name="keywords" content="school website india, school ERP software india, school management software, dynamic school website, school CMS india, school website design india, urdu medium school website, hindi medium school website, school ERP roorkee, school website uttarakhand, affordable school website india">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://schoozie.in/">
+<link rel="canonical" href="https://schoozie.com/">
 <link rel="icon" type="image/svg+xml" href="assets/svg/schoozie-logo.svg">
 <link rel="apple-touch-icon" href="assets/svg/schoozie-logo.svg">
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Schoozie — School Website & ERP Software for Indian Schools">
 <meta property="og:description" content="Schoozie helps Indian schools go digital with professional school websites, dynamic CMS, and school ERP software. Starting at ₹10 per student per month.">
-<meta property="og:url" content="https://schoozie.in/">
-<meta property="og:image" content="https://schoozie.in/assets/svg/schoozie-logo.svg">
+<meta property="og:url" content="https://schoozie.com/">
+<meta property="og:image" content="https://schoozie.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:alt" content="Schoozie — School Websites, CMS & ERP Software for Indian Schools">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Schoozie — School Website & ERP Software for Indian Schools">
+<meta name="twitter:description" content="Schoozie helps Indian schools go digital with professional school websites, dynamic CMS, and school ERP software. Starting at ₹10 per student per month.">
+<meta name="twitter:image" content="https://schoozie.com/assets/og-image.png">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="css/global.css">
-<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/global.css?v=<?php echo filemtime('css/global.css'); ?>">
+<link rel="stylesheet" href="css/index.css?v=<?php echo filemtime('css/index.css'); ?>">
 </head>
-<body>
+<body class="page-home">
 
 <?php $active_page = 'home'; include '_header.php'; ?>
 
@@ -150,6 +158,24 @@ require_once 'config.php';
   <div class="fs-sep"></div>
   <div class="fs-item"><i class="fa-solid fa-tags" style="color:#f59e0b"></i><span>Affordable for Any School</span></div>
 </section>
+
+<!-- PROMO STRIP (desktop only — shown after features strip) -->
+<div class="promo-strip promo-inline">
+  <div class="promo-track">
+    <span><i class="fa-solid fa-crown"></i> Take your school digital at <strong>India's lowest price</strong> &mdash; Only 100 founding spots available.</span>
+    <span class="promo-sep">◆</span>
+    <span><i class="fa-solid fa-fire-flame-curved"></i> Once 100 schools join, <strong>this price is gone forever.</strong> Secure your spot now.</span>
+    <span class="promo-sep">◆</span>
+    <span><i class="fa-solid fa-bolt"></i> Founding Offer &mdash; <strong>Your price stays locked for life.</strong> No hike. No surprise bills.</span>
+    <span class="promo-sep">◆</span>
+    <span><i class="fa-solid fa-crown"></i> Take your school digital at <strong>India's lowest price</strong> &mdash; Only 100 founding spots available.</span>
+    <span class="promo-sep">◆</span>
+    <span><i class="fa-solid fa-fire-flame-curved"></i> Once 100 schools join, <strong>this price is gone forever.</strong> Secure your spot now.</span>
+    <span class="promo-sep">◆</span>
+    <span><i class="fa-solid fa-bolt"></i> Founding Offer &mdash; <strong>Your price stays locked for life.</strong> No hike. No surprise bills.</span>
+    <span class="promo-sep">◆</span>
+  </div>
+</div>
 
 <!-- WHY SCHOOZIE -->
 <section class="why-section" id="why">
@@ -365,8 +391,8 @@ require_once 'config.php';
       "@type": "LocalBusiness",
       "name": "Schoozie",
       "description": "Schoozie provides professional school websites, dynamic CMS platforms, and ERP software for schools across India.",
-      "url": "https://schoozie.in",
-      "logo": "https://schoozie.in/assets/svg/schoozie-logo.svg",
+      "url": "https://schoozie.com",
+      "logo": "https://schoozie.com/assets/svg/schoozie-logo.svg",
       "telephone": "+<?php echo $contact_whatsapp; ?>",
       "email": "<?php echo $contact_email; ?>",
       "address": {
@@ -390,7 +416,7 @@ require_once 'config.php';
         "price": "2"
       },
       "description": "Cloud-based school ERP software for student management, fee tracking, timetable, attendance, and more.",
-      "url": "https://schoozie.in/erp.php"
+      "url": "https://schoozie.com/erp.php"
     }
   ]
 }

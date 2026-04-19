@@ -8,21 +8,29 @@
 <meta name="description" content="Schoozie is an Indian ed-tech company helping schools go digital with professional websites, dynamic CMS platforms, and school management ERP software. Learn our story, mission, and vision.">
 <meta name="keywords" content="about schoozie, school website company india, school ERP software india, ed-tech startup india, school digital solutions, school management software roorkee uttarakhand">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://schoozie.in/about.php">
+<link rel="canonical" href="https://schoozie.com/about.php">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="About Schoozie — Digitizing Schools Across India">
 <meta property="og:description" content="We build professional school websites, dynamic CMS platforms, and powerful ERP software for schools across India.">
-<meta property="og:url" content="https://schoozie.in/about.php">
-<meta property="og:image" content="https://schoozie.in/assets/svg/schoozie-logo.svg">
+<meta property="og:url" content="https://schoozie.com/about.php">
+<meta property="og:image" content="https://schoozie.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:alt" content="Schoozie — Digitizing Schools Across India">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About Schoozie — Digitizing Schools Across India">
+<meta name="twitter:description" content="We build professional school websites, dynamic CMS platforms, and powerful ERP software for schools across India.">
+<meta name="twitter:image" content="https://schoozie.com/assets/og-image.png">
 
 <link rel="icon" type="image/svg+xml" href="assets/svg/schoozie-logo.svg">
 <link rel="apple-touch-icon" href="assets/svg/schoozie-logo.svg">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="css/global.css">
-<link rel="stylesheet" href="css/about.css">
+<link rel="stylesheet" href="css/global.css?v=<?php echo filemtime('css/global.css'); ?>">
+<link rel="stylesheet" href="css/about.css?v=<?php echo filemtime('css/about.css'); ?>">
 </head>
 <body>
 
@@ -178,12 +186,12 @@
   "@type": "AboutPage",
   "name": "About Schoozie",
   "description": "Schoozie is an Indian ed-tech company providing school websites, CMS, and ERP software.",
-  "url": "https://schoozie.in/about.php",
+  "url": "https://schoozie.com/about.php",
   "publisher": {
     "@type": "Organization",
     "name": "Schoozie",
-    "url": "https://schoozie.in",
-    "logo": "https://schoozie.in/assets/svg/schoozie-logo.svg",
+    "url": "https://schoozie.com",
+    "logo": "https://schoozie.com/assets/svg/schoozie-logo.svg",
     "email": "<?php echo $contact_email; ?>",
     "address": {
       "@type": "PostalAddress",

@@ -17,6 +17,16 @@ $contact_city     = "Roorkee";
 $contact_region   = "Uttarakhand";
 $contact_country  = "India";
 
+// Office addresses
+$office_south_street = "Povval, Muliyar Post Office";
+$office_south_city   = "Kasaragod";
+$office_south_region = "Kerala";
+
+$office_north_street = "Lane No. 8, Nand Vihar";
+$office_north_city   = "Roorkee";
+$office_north_pin    = "247667";
+$office_north_region = "Uttarakhand";
+
 $offer_active = true;
 
 $offer_month  = "April";           // short label shown on badges & savings text

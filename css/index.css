@@ -632,14 +632,14 @@ section{position:relative;z-index:1}
   stroke-dashoffset:0;
   stroke-linecap:round;
 }
-.hvl-1{animation:flow1 3s linear infinite}
-.hvl-2{animation:flow1 3.4s linear infinite .4s}
-.hvl-3{animation:flow1 3.2s linear infinite .8s}
-.hvl-4{animation:flow1 3.6s linear infinite 1.2s}
-.hvl-5{animation:flow1 3.1s linear infinite 0.6s}
-.hvl-6{animation:flow1 3.5s linear infinite 1.0s}
-.hvl-7{animation:flow1 3.3s linear infinite 0.2s}
-.hvl-8{animation:flow1 3.7s linear infinite 1.4s}
+.hvl-1{animation:flow1 6s linear infinite}
+.hvl-2{animation:flow1 6.8s linear infinite .4s}
+.hvl-3{animation:flow1 6.4s linear infinite .8s}
+.hvl-4{animation:flow1 7.2s linear infinite 1.2s}
+.hvl-5{animation:flow1 6.2s linear infinite 0.6s}
+.hvl-6{animation:flow1 7s linear infinite 1.0s}
+.hvl-7{animation:flow1 6.6s linear infinite 0.2s}
+.hvl-8{animation:flow1 7.4s linear infinite 1.4s}
 @keyframes flow1{from{stroke-dashoffset:220}to{stroke-dashoffset:0}}
 .hvd{
   opacity:0.85;
@@ -699,10 +699,10 @@ section{position:relative;z-index:1}
   .hero-left{max-width:100%;width:100%}
   .hero-visual{
     display:block;
-    transform:scale(0.75);
+    transform:scale(0.60);
     transform-origin:top center;
     margin-top:16px;
-    margin-bottom:-135px;
+    margin-bottom:-210px;
   }
   .hv-logo{width:180px;height:180px}
   /* thinner dimmer neural lines on mobile */
