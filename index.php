@@ -29,6 +29,9 @@ require_once 'config.php';
 <meta name="twitter:title" content="Schoozie — School Website & ERP Software for Indian Schools">
 <meta name="twitter:description" content="Schoozie helps Indian schools go digital with professional school websites, dynamic CMS, and school ERP software. Starting at ₹<?php echo $erp_per_student; ?> per student per month.">
 <meta name="twitter:image" content="https://schoozie.com/assets/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="css/global.css?v=<?php echo filemtime('css/global.css'); ?>">

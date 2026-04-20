@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Disallow: /config.php
+Disallow: /_header.php
+Disallow: /_footer.php
+Disallow: /_plan_layout.php
+
+Sitemap: https://schoozie.com/sitemap.xml

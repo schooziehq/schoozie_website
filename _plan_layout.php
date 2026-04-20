@@ -7,6 +7,9 @@
 <title><?php echo $plan['name']; ?> — Schoozie</title>
 <link rel="icon" type="image/svg+xml" href="assets/svg/schoozie-logo.svg">
 <link rel="apple-touch-icon" href="assets/svg/schoozie-logo.svg">
+<meta name="description" content="<?php echo htmlspecialchars($plan['description']); ?>">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://schoozie.com/<?php echo basename($_SERVER['PHP_SELF']); ?>">
 <meta property="og:type" content="website">
 <meta property="og:title" content="<?php echo $plan['name']; ?> — Schoozie">
 <meta property="og:description" content="<?php echo $plan['description']; ?>">
@@ -20,6 +23,9 @@
 <meta name="twitter:title" content="<?php echo $plan['name']; ?> — Schoozie">
 <meta name="twitter:description" content="<?php echo $plan['description']; ?>">
 <meta name="twitter:image" content="https://schoozie.com/assets/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Inter:wght@300;400;600&family=Noto+Nastaliq+Urdu:wght@400;700&family=Noto+Sans+Devanagari:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="css/global.css?v=<?php echo filemtime('css/global.css'); ?>">
