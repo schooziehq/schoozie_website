@@ -103,18 +103,15 @@
       <p>We chose WhatsApp as our primary contact channel intentionally — it's where schools already are, and it lets us give you real, personal support.</p>
       <div class="why-wa-grid">
         <div class="why-wa-item">
-          <i class="fa-solid fa-bolt"></i>
-          <h4>Fast Response</h4>
+          <div class="why-wa-header"><i class="fa-solid fa-bolt"></i><h4>Fast Response</h4></div>
           <p>No waiting on hold or email queues. We respond personally and quickly.</p>
         </div>
         <div class="why-wa-item">
-          <i class="fa-solid fa-user"></i>
-          <h4>Personal Attention</h4>
+          <div class="why-wa-header"><i class="fa-solid fa-user"></i><h4>Personal Attention</h4></div>
           <p>You speak to the same person — not a rotating support agent who doesn't know your school.</p>
         </div>
         <div class="why-wa-item">
-          <i class="fa-solid fa-shield-halved"></i>
-          <h4>No Pressure</h4>
+          <div class="why-wa-header"><i class="fa-solid fa-shield-halved"></i><h4>No Pressure</h4></div>
           <p>Ask questions, request demos, take your time. We never push or spam.</p>
         </div>
       </div>
@@ -127,7 +124,7 @@
 
     <details class="faq-item">
       <summary class="faq-q">How long does it take to build a school website? <i class="fa-solid fa-chevron-down"></i></summary>
-      <div class="faq-a">A static school website is typically delivered within <strong>5–7 working days</strong> after content and assets are received. Dynamic websites take 10–14 days. We keep you updated throughout via WhatsApp.</div>
+      <div class="faq-a">Once we have all your content and assets, your website — static or dynamic — is ready within <strong>5–10 minutes</strong>. We keep you updated throughout via WhatsApp.</div>
     </details>
 
     <details class="faq-item">
@@ -151,8 +148,8 @@
     </details>
 
     <details class="faq-item">
-      <summary class="faq-q">Do you work with schools outside India? <i class="fa-solid fa-chevron-down"></i></summary>
-      <div class="faq-a">Our current focus is schools across India. If you're an Indian school abroad (e.g., UAE, UK), feel free to reach out — we handle international clients on a case-by-case basis.</div>
+      <summary class="faq-q">What happens after I message you on WhatsApp? <i class="fa-solid fa-chevron-down"></i></summary>
+      <div class="faq-a">You'll hear from us within a few hours — usually much faster. We'll ask a few quick questions about your school, understand what you need, and walk you through the right plan. No sales pitch, no pressure. Just a real conversation.</div>
     </details>
 
   </section>
@@ -201,7 +198,7 @@
         "name": "How long does it take to build a school website?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "A static school website is typically delivered within 5–7 working days after content and assets are received. Dynamic websites take 10–14 days."
+          "text": "Once we have all your content and assets, your website — static or dynamic — is ready within 5–10 minutes."
         }
       },
       {

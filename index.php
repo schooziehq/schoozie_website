@@ -9,7 +9,7 @@ require_once 'config.php';
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Schoozie — Take Your School Digital in Minutes</title>
-<meta name="description" content="Schoozie helps Indian schools go digital with professional school websites, dynamic CMS, and school ERP software. Starting at ₹10 per student per month. WhatsApp support included.">
+<meta name="description" content="Schoozie helps Indian schools go digital with professional school websites, dynamic CMS, and school ERP software. Starting at ₹<?php echo $erp_per_student; ?> per student per month. WhatsApp support included.">
 <meta name="keywords" content="school website india, school ERP software india, school management software, dynamic school website, school CMS india, school website design india, urdu medium school website, hindi medium school website, school ERP roorkee, school website uttarakhand, affordable school website india">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://schoozie.com/">
@@ -18,7 +18,7 @@ require_once 'config.php';
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Schoozie — School Website & ERP Software for Indian Schools">
-<meta property="og:description" content="Schoozie helps Indian schools go digital with professional school websites, dynamic CMS, and school ERP software. Starting at ₹10 per student per month.">
+<meta property="og:description" content="Schoozie helps Indian schools go digital with professional school websites, dynamic CMS, and school ERP software. Starting at ₹<?php echo $erp_per_student; ?> per student per month.">
 <meta property="og:url" content="https://schoozie.com/">
 <meta property="og:image" content="https://schoozie.com/assets/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -27,7 +27,7 @@ require_once 'config.php';
 <meta property="og:image:alt" content="Schoozie — School Websites, CMS & ERP Software for Indian Schools">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Schoozie — School Website & ERP Software for Indian Schools">
-<meta name="twitter:description" content="Schoozie helps Indian schools go digital with professional school websites, dynamic CMS, and school ERP software. Starting at ₹10 per student per month.">
+<meta name="twitter:description" content="Schoozie helps Indian schools go digital with professional school websites, dynamic CMS, and school ERP software. Starting at ₹<?php echo $erp_per_student; ?> per student per month.">
 <meta name="twitter:image" content="https://schoozie.com/assets/og-image.png">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -56,7 +56,7 @@ require_once 'config.php';
       </div>
       <div class="hs-sep"></div>
       <div class="hero-stat">
-        <span class="hs-num">₹10</span>
+        <span class="hs-num">₹<?php echo $erp_per_student; ?></span>
         <span class="hs-label">Per Student / Month</span>
       </div>
       <div class="hs-sep"></div>
@@ -185,19 +185,25 @@ require_once 'config.php';
   </div>
   <div class="why-grid">
     <div class="why-card">
-      <div class="why-icon" style="background:rgba(0,183,255,0.1);color:#00b7ff"><i class="fa-solid fa-indian-rupee-sign"></i></div>
-      <h3>Priced for Indian Schools</h3>
-      <p>No dollar pricing. No enterprise contracts. Plans designed around what Indian schools actually spend — from small towns to big cities.</p>
+      <div class="why-card-header">
+        <div class="why-icon" style="background:rgba(0,183,255,0.1);color:#00b7ff"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+        <h3>India's Lowest Price. Locked for Life.</h3>
+      </div>
+      <p>Our founding price never hikes. No surprise renewal bills, no contract traps — just honest, affordable pricing built around what Indian schools actually spend.</p>
     </div>
     <div class="why-card why-card-featured">
-      <div class="why-icon" style="background:rgba(168,85,247,0.1);color:#bf5fff"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-      <h3>Built for How You Work</h3>
-      <p>Urdu medium? CBSE? State board? We've thought about all of it. Multi-language support, school-specific features, nothing generic.</p>
+      <div class="why-card-header">
+        <div class="why-icon" style="background:rgba(168,85,247,0.1);color:#bf5fff"><i class="fa-solid fa-graduation-cap"></i></div>
+        <h3>Built for Your Board</h3>
+      </div>
+      <p>CBSE, ICSE, or State Board — your website is designed to match your board's identity, not a generic template. We know what parents of each board expect, and we deliver exactly that.</p>
     </div>
     <div class="why-card">
-      <div class="why-icon" style="background:rgba(37,211,102,0.1);color:#25d366"><i class="fa-solid fa-headset"></i></div>
-      <h3>Real People, Fast Support</h3>
-      <p>Not a ticket system. You get a real person on WhatsApp who knows your school setup and responds the same day.</p>
+      <div class="why-card-header">
+        <div class="why-icon" style="background:rgba(37,211,102,0.1);color:#25d366"><i class="fa-brands fa-whatsapp"></i></div>
+        <h3>Real People, Fast Support</h3>
+      </div>
+      <p>Not a ticket system. A real person on WhatsApp who knows your school setup — and actually responds the same day.</p>
     </div>
   </div>
 </section>
@@ -209,6 +215,7 @@ require_once 'config.php';
     <div class="offer-ribbon">
       <i class="fa-solid fa-fire offer-ribbon-fire"></i>
       <span class="offer-ribbon-text"><?php echo $offer_full; ?></span>
+      <span class="offer-ribbon-divider"></span>
       <span class="offer-ribbon-tag"><i class="fa-solid fa-clock"></i> Ending Soon</span>
     </div>
     <?php endif; ?>
@@ -246,7 +253,7 @@ require_once 'config.php';
         <li>Mobile responsive design</li>
         <li>Content managed by Schoozie</li>
         <li>1 year hosting included</li>
-        <li>Renewal: Rs. 4,800/year</li>
+        <li>Renewal: Rs. <?php echo $static_renewal_price; ?>/year</li>
       </ul>
       <button class="c-btn btn-red" onclick="window.location='static-web.php'">Get This Plan</button>
       <a href="static-web.php" class="c-link">Full details &amp; terms &rarr;</a>
@@ -280,7 +287,7 @@ require_once 'config.php';
         <li>Manage news, events &amp; gallery</li>
         <li>Online admissions management</li>
         <li>1 year hosting included</li>
-        <li>Renewal: Rs. 7,800/year</li>
+        <li>Renewal: Rs. <?php echo $dynamic_renewal_price; ?>/year</li>
       </ul>
       <button class="c-btn btn-pink" onclick="window.location='dynamic-web.php'">Get This Plan</button>
       <a href="dynamic-web.php" class="c-link">Full details &amp; terms &rarr;</a>
@@ -298,9 +305,8 @@ require_once 'config.php';
       </div>
       <div class="c-tagline">Complete school management — fees, attendance, exams &amp; more.</div>
       <div class="c-price">
-        <div class="amount"><span class="rs">Rs.</span> 10</div>
+        <div class="amount"><span class="rs">Rs.</span> <?php echo $erp_per_student; ?></div>
         <div class="per">per student / per month</div>
-        <?php /* OFFER DISABLED — uncomment when ERP is ready
         <?php if($offer_active): ?>
         <div class="per" style="margin-top:6px;color:#ccc;font-size:12px">+ One-time setup: <strong style="color:#00c8ff">Rs. <?php echo $erp_offer_setup; ?></strong> <span style="color:#aaa">(<?php echo $offer_month; ?> offer)</span></div>
         <div class="per" style="color:#555;font-size:11px">Regular setup: Rs. <?php echo $erp_regular_setup; ?></div>
@@ -308,15 +314,13 @@ require_once 'config.php';
         <?php else: ?>
         <div class="per" style="margin-top:6px;color:#ccc;font-size:12px">+ One-time setup: <strong style="color:#00c8ff">Rs. <?php echo $erp_regular_setup; ?></strong></div>
         <?php endif; ?>
-        */ ?>
-        <div class="per" style="margin-top:6px;color:#ccc;font-size:12px">+ One-time setup: <strong style="color:#00c8ff">Rs. <?php echo $erp_regular_setup; ?></strong></div>
       </div>
       <div class="c-divider"></div>
       <ul class="c-feats">
         <li>Fee collection &amp; tracking</li>
         <li>Attendance &amp; exam system</li>
         <li>Parent portal access</li>
-        <li>SMS notifications</li>
+        <li>In-panel notifications</li>
         <li>Full admin dashboard</li>
       </ul>
       <button class="c-btn btn-cyan" onclick="window.location='erp.php'">Get Started</button>
@@ -335,26 +339,23 @@ require_once 'config.php';
       </div>
       <div class="c-tagline">Everything together — website &amp; full ERP at one combo price.</div>
       <div class="c-price">
-        <div class="amount" style="font-size:26px;background:linear-gradient(135deg,#ffc94d,#ff8c00);-webkit-background-clip:text;-webkit-text-fill-color:transparent">50% OFF Website</div>
-        <?php /* OFFER DISABLED — uncomment when ERP is ready
+        <div class="amount" style="font-size:26px;background:linear-gradient(135deg,#ffc94d,#ff8c00);-webkit-background-clip:text;-webkit-text-fill-color:transparent"><?php echo $combo_website_discount; ?>% OFF Website</div>
         <?php if($offer_active): ?>
-        <div class="per" style="color:#ccc;margin-top:8px;font-size:12px">+ ERP setup: <strong style="color:#ffc94d">Rs. <?php echo $combo_erp_setup; ?></strong> <span style="color:#aaa">(<?php echo $offer_month; ?> offer)</span></div>
+        <div class="per" style="color:#ccc;margin-top:8px;font-size:12px">+ ERP setup: <strong style="color:#ffc94d">Rs. <?php echo $erp_offer_setup; ?></strong> <span style="color:#aaa">(<?php echo $offer_month; ?> offer)</span></div>
         <?php else: ?>
         <div class="per" style="color:#ccc;margin-top:8px;font-size:12px">+ ERP setup: <strong style="color:#ffc94d">Rs. <?php echo $erp_regular_setup; ?></strong></div>
         <?php endif; ?>
-        */ ?>
-        <div class="per" style="color:#ccc;margin-top:8px;font-size:12px">+ ERP setup: <strong style="color:#ffc94d">Rs. <?php echo $erp_regular_setup; ?></strong></div>
-        <div class="per" style="color:#ccc;font-size:12px">+ Rs. 10 per student/month</div>
+        <div class="per" style="color:#ccc;font-size:12px">+ Rs. <?php echo $erp_per_student; ?> per student/month</div>
         <span class="c-save">Maximum savings on both plans</span>
         <span class="c-domain">* Domain charges excluded</span>
       </div>
       <div class="c-divider"></div>
       <ul class="c-feats">
-        <li>Full website + admin panel</li>
-        <li>Complete ERP system</li>
-        <li>Single unified dashboard</li>
-        <li>Free onboarding session</li>
-        <li>Priority support</li>
+        <li><?php echo $combo_website_discount; ?>% off your website</li>
+        <li>Full ERP included</li>
+        <li>Unified school management</li>
+        <li>Guided setup, on us</li>
+        <li>Dedicated priority support</li>
       </ul>
       <button class="c-btn btn-gold" onclick="window.location='combo.php'">Get This Deal</button>
       <a href="combo.php" class="c-link">Full details &amp; terms &rarr;</a>
@@ -422,213 +423,7 @@ require_once 'config.php';
 }
 </script>
 
-<!-- SCHOOZIE DUCK -->
-<div id="schoozie-duck">
-  <div class="duck-bubble" id="duck-bubble"></div>
-  <div class="duck-base">
-  <svg id="duck-svg" viewBox="0 0 80 95" width="56" height="67" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <!-- Body: richer radial purple -->
-      <radialGradient id="bodyG" cx="35%" cy="28%" r="70%">
-        <stop offset="0%"   stop-color="#c084fc"/>
-        <stop offset="55%"  stop-color="#7c3aed"/>
-        <stop offset="100%" stop-color="#3b0764"/>
-      </radialGradient>
-      <!-- Banner gradient -->
-      <linearGradient id="bannerG" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%"   stop-color="#f59e0b"/>
-        <stop offset="100%" stop-color="#fcd34d"/>
-      </linearGradient>
-      <!-- Head -->
-      <radialGradient id="headG" cx="40%" cy="30%" r="65%">
-        <stop offset="0%"   stop-color="#e9d5ff"/>
-        <stop offset="50%"  stop-color="#a855f7"/>
-        <stop offset="100%" stop-color="#5b21b6"/>
-      </radialGradient>
-      <!-- Wing -->
-      <linearGradient id="wingG" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%"   stop-color="#c084fc"/>
-        <stop offset="100%" stop-color="#4c1d95"/>
-      </linearGradient>
-      <!-- Eye iris: cyan matching the logo -->
-      <radialGradient id="irisG" cx="38%" cy="35%" r="65%">
-        <stop offset="0%"   stop-color="#67e8f9"/>
-        <stop offset="60%"  stop-color="#06b6d4"/>
-        <stop offset="100%" stop-color="#0e7490"/>
-      </radialGradient>
-      <!-- Beak gradient -->
-      <linearGradient id="beakG" x1="0%" y1="0%" x2="0%" y2="100%">
-        <stop offset="0%"   stop-color="#fde68a"/>
-        <stop offset="100%" stop-color="#f59e0b"/>
-      </linearGradient>
-      <!-- Belly shine -->
-      <radialGradient id="bellyG" cx="50%" cy="25%" r="70%">
-        <stop offset="0%"   stop-color="rgba(255,255,255,0.22)"/>
-        <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
-      </radialGradient>
-      <!-- Eye glow -->
-      <filter id="eyeGlow" x="-50%" y="-50%" width="200%" height="200%">
-        <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
-        <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-      </filter>
-      <!-- Body glow -->
-      <filter id="bodyGlow" x="-20%" y="-20%" width="140%" height="140%">
-        <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur"/>
-        <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-      </filter>
-    </defs>
-
-    <!-- WINGS (behind body) -->
-    <ellipse cx="14" cy="62" rx="13" ry="21" fill="url(#wingG)" transform="rotate(-18,14,62)" opacity="0.92">
-      <animateTransform attributeName="transform" type="rotate" values="-18,14,62;-10,14,62;-18,14,62" dur="0.55s" repeatCount="indefinite"/>
-    </ellipse>
-    <!-- Wing highlight left -->
-    <ellipse cx="14" cy="57" rx="5.5" ry="11" fill="rgba(216,180,254,0.35)" transform="rotate(-18,14,62)">
-      <animateTransform attributeName="transform" type="rotate" values="-18,14,62;-10,14,62;-18,14,62" dur="0.55s" repeatCount="indefinite"/>
-    </ellipse>
-    <ellipse cx="66" cy="62" rx="13" ry="21" fill="url(#wingG)" transform="rotate(18,66,62)" opacity="0.92">
-      <animateTransform attributeName="transform" type="rotate" values="18,66,62;10,66,62;18,66,62" dur="0.55s" repeatCount="indefinite"/>
-    </ellipse>
-    <!-- Wing highlight right -->
-    <ellipse cx="66" cy="57" rx="5.5" ry="11" fill="rgba(216,180,254,0.35)" transform="rotate(18,66,62)">
-      <animateTransform attributeName="transform" type="rotate" values="18,66,62;10,66,62;18,66,62" dur="0.55s" repeatCount="indefinite"/>
-    </ellipse>
-
-    <!-- BODY -->
-    <ellipse cx="40" cy="65" rx="25" ry="23" fill="url(#bodyG)" filter="url(#bodyGlow)"/>
-    <!-- Body rim -->
-    <ellipse cx="40" cy="65" rx="25" ry="23" fill="none" stroke="rgba(192,132,252,0.3)" stroke-width="0.8"/>
-    <!-- BELLY shine -->
-    <ellipse cx="40" cy="68" rx="14" ry="12" fill="url(#bellyG)"/>
-
-    <!-- HEAD -->
-    <circle cx="40" cy="34" r="22" fill="url(#headG)" filter="url(#bodyGlow)"/>
-    <!-- Head rim -->
-    <circle cx="40" cy="34" r="22" fill="none" stroke="rgba(216,180,254,0.25)" stroke-width="0.8"/>
-    <!-- Head shine -->
-    <ellipse cx="32" cy="26" rx="8" ry="5.5" fill="rgba(255,255,255,0.22)" transform="rotate(-20,32,26)"/>
-
-    <!-- BEAK -->
-    <path d="M 32 46 Q 40 53 48 46 Q 44 44 40 43 Q 36 44 32 46 Z" fill="url(#beakG)"/>
-    <line x1="40" y1="43" x2="40" y2="52" stroke="rgba(0,0,0,0.12)" stroke-width="0.7"/>
-    <!-- Beak highlight -->
-    <path d="M 33 46 Q 40 50 40 46 Q 37 44 33 46 Z" fill="rgba(255,255,255,0.25)"/>
-
-    <!-- EYE WHITES -->
-    <circle cx="29" cy="30" r="10" fill="#1a0a2e"/>
-    <circle cx="51" cy="30" r="10" fill="#1a0a2e"/>
-    <circle cx="29" cy="30" r="9"  fill="#ffffff"/>
-    <circle cx="51" cy="30" r="9"  fill="#ffffff"/>
-
-    <!-- EYE cyan glow ring -->
-    <circle cx="29" cy="30" r="9"  fill="none" stroke="rgba(103,232,249,0.8)" stroke-width="1.5" filter="url(#eyeGlow)"/>
-    <circle cx="51" cy="30" r="9"  fill="none" stroke="rgba(103,232,249,0.8)" stroke-width="1.5" filter="url(#eyeGlow)"/>
-
-    <!-- EYE IRIS (cyan) -->
-    <circle cx="29" cy="30" r="6.5" fill="url(#irisG)" filter="url(#eyeGlow)"/>
-    <circle cx="51" cy="30" r="6.5" fill="url(#irisG)" filter="url(#eyeGlow)"/>
-
-    <!-- PUPILS (moved by JS) -->
-    <circle id="pupL"   cx="29" cy="31" r="4" fill="#020210"/>
-    <circle id="pupR"   cx="51" cy="31" r="4" fill="#020210"/>
-
-    <!-- PUPIL SHINE -->
-    <circle id="shineL" cx="31" cy="29" r="1.8" fill="white" opacity="1"/>
-    <circle id="shineR" cx="53" cy="29" r="1.8" fill="white" opacity="1"/>
-    <!-- Secondary shine -->
-    <circle cx="27" cy="33" r="1.2" fill="white" opacity="0.5"/>
-    <circle cx="49" cy="33" r="1.2" fill="white" opacity="0.5"/>
-
-    <!-- BANNER held by paws -->
-    <rect x="10" y="64" width="60" height="13" rx="3" fill="url(#bannerG)" opacity="0.97"/>
-    <rect x="10" y="64" width="60" height="13" rx="3" fill="none" stroke="rgba(255,220,80,0.6)" stroke-width="0.8"/>
-    <rect x="13" y="65.5" width="26" height="3" rx="1.5" fill="rgba(255,255,255,0.25)"/>
-    <text x="40" y="73.5" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-size="6.8" font-weight="900" letter-spacing="0.8" fill="#3b1a00">SCHOOZIE</text>
-    <!-- left paw over banner edge -->
-    <ellipse cx="11" cy="70" rx="6" ry="4" fill="url(#wingG)" transform="rotate(-20,11,70)"/>
-    <ellipse cx="11" cy="70" rx="3" ry="2" fill="rgba(216,180,254,0.35)" transform="rotate(-20,11,70)"/>
-    <!-- right paw over banner edge -->
-    <ellipse cx="69" cy="70" rx="6" ry="4" fill="url(#wingG)" transform="rotate(20,69,70)"/>
-    <ellipse cx="69" cy="70" rx="3" ry="2" fill="rgba(216,180,254,0.35)" transform="rotate(20,69,70)"/>
-
-    <!-- FEET -->
-    <ellipse cx="32" cy="89" rx="12" ry="5.5" fill="#00e5ff" opacity="0.9">
-      <animateTransform attributeName="transform" type="translate" values="0,0;0,2;0,0" dur="0.55s" repeatCount="indefinite"/>
-    </ellipse>
-    <ellipse cx="48" cy="89" rx="12" ry="5.5" fill="#00e5ff" opacity="0.9">
-      <animateTransform attributeName="transform" type="translate" values="0,2;0,0;0,2" dur="0.55s" repeatCount="indefinite"/>
-    </ellipse>
-    <!-- Feet highlight -->
-    <ellipse cx="32" cy="87" rx="7" ry="2.5" fill="rgba(255,255,255,0.3)">
-      <animateTransform attributeName="transform" type="translate" values="0,0;0,2;0,0" dur="0.55s" repeatCount="indefinite"/>
-    </ellipse>
-    <ellipse cx="48" cy="87" rx="7" ry="2.5" fill="rgba(255,255,255,0.3)">
-      <animateTransform attributeName="transform" type="translate" values="0,2;0,0;0,2" dur="0.55s" repeatCount="indefinite"/>
-    </ellipse>
-  </svg>
-  </div>
-</div>
-
-<script>
-(function(){
-  const duck    = document.getElementById('schoozie-duck');
-  const bubble  = document.getElementById('duck-bubble');
-  const pupL    = document.getElementById('pupL');
-  const pupR    = document.getElementById('pupR');
-  const shineL  = document.getElementById('shineL');
-  const shineR  = document.getElementById('shineR');
-
-  const messages = [
-    'Hi there! 👋','Need help? Ask us!','See our plans! 📋',
-    'April offer on! 🔥','WhatsApp us! 💬','Demo available! 👀',
-    'Going digital? 🚀','We reply fast! ⚡','I\'m Schoozie! 🦉',
-    'Schools trust us 🏫','No lock-in! 🔓','₹10/student only! 💰',
-    'Live in minutes! ⏱️','Free demo! 🎓','Let\'s talk! 📞'
-  ];
-
-  let bubbleTimer;
-
-  /* ── EYE TRACKING ── */
-  document.addEventListener('mousemove', function(e){
-    const r   = duck.getBoundingClientRect();
-    const cx  = r.left + r.width  / 2;
-    const cy  = r.top  + r.height / 2;
-    const ang = Math.atan2(e.clientY - cy, e.clientX - cx);
-    const d   = 2.8;
-    const ox  = Math.cos(ang) * d;
-    const oy  = Math.sin(ang) * d;
-    pupL.setAttribute('cx',   29+ox); pupL.setAttribute('cy',   31+oy);
-    pupR.setAttribute('cx',   51+ox); pupR.setAttribute('cy',   31+oy);
-    shineL.setAttribute('cx', 31+ox); shineL.setAttribute('cy', 29+oy);
-    shineR.setAttribute('cx', 53+ox); shineR.setAttribute('cy', 29+oy);
-  });
-
-  /* ── RANDOM LOOK AROUND when mouse idle ── */
-  let idleTimer;
-  function randomLook(){
-    const ox=(Math.random()-0.5)*4, oy=(Math.random()-0.5)*4;
-    pupL.setAttribute('cx',   29+ox); pupL.setAttribute('cy',   31+oy);
-    pupR.setAttribute('cx',   51+ox); pupR.setAttribute('cy',   31+oy);
-    shineL.setAttribute('cx', 31+ox); shineL.setAttribute('cy', 29+oy);
-    shineR.setAttribute('cx', 53+ox); shineR.setAttribute('cy', 29+oy);
-    idleTimer = setTimeout(randomLook, 900+Math.random()*1200);
-  }
-  document.addEventListener('mousemove', ()=>{ clearTimeout(idleTimer); idleTimer=setTimeout(randomLook,2000); });
-  idleTimer = setTimeout(randomLook, 2000);
-
-  /* ── AUTO GREET after 3 sec ── */
-  function showBubble(msg){
-    clearTimeout(bubbleTimer);
-    bubble.textContent = msg;
-    bubble.classList.add('show');
-    bubbleTimer = setTimeout(()=> bubble.classList.remove('show'), 2400);
-  }
-  setTimeout(()=> showBubble('Hi! Need help? 👋'), 3000);
-
-  /* ── CLICK ── */
-  duck.addEventListener('click', ()=> showBubble(messages[Math.floor(Math.random()*messages.length)]));
-})();
-</script>
+<!-- SCHOOZIE DUCK moved to _footer.php -->
 
 
 </body>

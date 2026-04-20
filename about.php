@@ -60,10 +60,6 @@
       <div class="stat-label">Custom Work</div>
     </div>
     <div class="stat-item">
-      <div class="stat-num">3</div>
-      <div class="stat-label">Languages Supported</div>
-    </div>
-    <div class="stat-item">
       <div class="stat-num">&#8734;</div>
       <div class="stat-label">Schools We Can Serve</div>
     </div>
@@ -122,26 +118,34 @@
       </div>
       <div class="products-grid">
         <a href="static-web.php" class="product-card">
-          <div class="product-card-icon" style="color:#00b7ff"><i class="fa-solid fa-desktop"></i></div>
-          <h3>Static School Website</h3>
+          <div class="product-card-header">
+            <div class="product-card-icon" style="color:#00b7ff"><i class="fa-solid fa-desktop"></i></div>
+            <h3>Static School Website</h3>
+          </div>
           <p>A fast, beautiful, mobile-friendly website for your school. Great for first impressions and Google discovery.</p>
           <span class="product-card-link">View Plan <i class="fa-solid fa-arrow-right"></i></span>
         </a>
         <a href="dynamic-web.php" class="product-card">
-          <div class="product-card-icon" style="color:#bf5fff"><i class="fa-solid fa-bolt"></i></div>
-          <h3>Dynamic Website + CMS</h3>
+          <div class="product-card-header">
+            <div class="product-card-icon" style="color:#bf5fff"><i class="fa-solid fa-bolt"></i></div>
+            <h3>Dynamic Website + CMS</h3>
+          </div>
           <p>Everything in Static, plus a content management panel so your staff can update notices, events, and results themselves.</p>
           <span class="product-card-link">View Plan <i class="fa-solid fa-arrow-right"></i></span>
         </a>
         <a href="erp.php" class="product-card">
-          <div class="product-card-icon" style="color:#f59e0b"><i class="fa-solid fa-layer-group"></i></div>
-          <h3>School ERP Software</h3>
+          <div class="product-card-header">
+            <div class="product-card-icon" style="color:#00c8ff"><i class="fa-solid fa-school"></i></div>
+            <h3>School ERP Software</h3>
+          </div>
           <p>Student records, fee management, attendance, timetables, reports — all in one cloud platform built for Indian schools.</p>
           <span class="product-card-link">View Plan <i class="fa-solid fa-arrow-right"></i></span>
         </a>
         <a href="combo.php" class="product-card">
-          <div class="product-card-icon" style="color:#f43f5e"><i class="fa-solid fa-fire"></i></div>
-          <h3>Website + ERP Combo</h3>
+          <div class="product-card-header">
+            <div class="product-card-icon" style="color:#f59e0b"><i class="fa-solid fa-rocket"></i></div>
+            <h3>Website + ERP Combo</h3>
+          </div>
           <p>The complete package — your school's digital identity and its operational backbone, bundled for maximum value.</p>
           <span class="product-card-link">View Plan <i class="fa-solid fa-arrow-right"></i></span>
         </a>

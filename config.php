@@ -12,7 +12,7 @@
 $demo_url         = "https://schools.schoozie.com/aggarwal-public/";
 
 $contact_email    = "schooziehq@gmail.com";
-$contact_whatsapp = "917017760292";          // with country code, no +
+$contact_whatsapp = "919045109910";          // with country code, no +
 $contact_city     = "Roorkee";
 $contact_region   = "Uttarakhand";
 $contact_country  = "India";
@@ -34,18 +34,25 @@ $offer_full   = "April 2025 Special Offers — Limited Time";
 
 /* Static Website */
 $static_offer_price   = "4,444";
-$static_regular_price = "5,999";
-$static_saving        = "1,555";
+$static_regular_price = "6,999";
+$static_saving        = "2,555";
 
 /* Dynamic Website */
 $dynamic_offer_price   = "9,999";
-$dynamic_regular_price = "12,999";
-$dynamic_saving        = "3,000";
+$dynamic_regular_price = "17,999";
+$dynamic_saving        = "8,000";
 
-/* ERP — setup fee only (per-student stays same) */
-$erp_offer_setup    = "9,999";
-$erp_regular_setup  = "21,500";
-$erp_setup_saving   = "11,501";
+/* ERP — per-student monthly + setup fee */
+$erp_per_student          = "10";   // Basic plan
+$erp_standard_per_student = "20";   // Standard plan
+$erp_complete_per_student = "25";   // Complete plan
+$erp_offer_setup    = "21500";
+$erp_regular_setup  = "35999";
+$erp_setup_saving   = "14,499";
 
-/* Combo — ERP setup fee (website stays 50% off) */
-$combo_erp_setup = "9,999";
+/* Renewal prices */
+$static_renewal_price  = "4,200";
+$dynamic_renewal_price = "7,800";
+
+/* Combo */
+$combo_website_discount = "50";   // % off on chosen website (static or dynamic)

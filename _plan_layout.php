@@ -74,7 +74,7 @@
   <?php if(!empty($plan['sub_plans'])): ?>
   <div class="sub-plans-section">
     <div class="sp-heading">Choose Your Subscription Tier</div>
-    <div class="sp-sub">All plans include a free trial. No contracts — cancel anytime.</div>
+    <div class="sp-sub">All plans include a free demo.</div>
     <div class="sp-grid">
       <?php foreach($plan['sub_plans'] as $sp): ?>
       <div class="sp-card <?php echo !empty($sp['popular']) ? 'popular' : ''; ?>" style="--sp-color:<?php echo $sp['color']; ?>">
@@ -108,9 +108,9 @@
   <!-- LANGUAGE TABS + T&C -->
   <div class="lang-section">
     <div class="lang-tabs">
-      <button class="lang-tab active <?php echo $plan['tab_color']; ?>" onclick="switchLang('en',this)">&#127468;&#127463; English</button>
+      <button class="lang-tab active <?php echo $plan['tab_color']; ?>" onclick="switchLang('en',this)">English</button>
       <button class="lang-tab" onclick="switchLang('ur',this)">اردو</button>
-      <button class="lang-tab" onclick="switchLang('hi',this)">&#127470;&#127475; हिंदी</button>
+      <button class="lang-tab" onclick="switchLang('hi',this)">हिंदी</button>
     </div>
 
     <!-- ENGLISH -->
@@ -118,7 +118,7 @@
       <div class="tc-wrap tc-english">
         <h2>Terms &amp; Conditions — <?php echo $plan['name']; ?></h2>
         <div class="important-box">
-          <p>&#9888; Please read these terms carefully before purchasing. By making payment, you agree to all terms listed below. For questions, contact us on WhatsApp before proceeding.</p>
+          <p>&#9888; Please read these terms carefully before purchasing. By making payment, you agree to all terms listed below. For questions, contact us before proceeding.</p>
         </div>
         <?php foreach($plan['tc']['en'] as $i => $tc): ?>
         <div class="tc-block">
@@ -127,7 +127,7 @@
             <?php echo $tc['title']; ?>
           </h3>
           <?php if(isset($tc['points'])): ?>
-          <ul><?php foreach($tc['points'] as $pt) echo "<li>$pt</li>"; ?></ul>
+          <ul><?php foreach($tc['points'] as $pt) if($pt !== '') echo "<li>$pt</li>"; ?></ul>
           <?php else: ?>
           <p><?php echo $tc['text']; ?></p>
           <?php endif; ?>
@@ -135,7 +135,7 @@
         <?php endforeach; ?>
         <div class="bottom-cta">
           <h3>Ready to Get Started?</h3>
-          <p>Contact us on WhatsApp and we'll guide you through the process.</p>
+          <p>Contact us and we'll guide you through the process.</p>
           <button class="cta-btn" style="background:<?php echo $plan['btn_bg']; ?>;box-shadow:0 5px 25px <?php echo $plan['accent']; ?>40"
             onclick="window.open('https://wa.me/<?php echo $contact_whatsapp; ?>?text=Hi%2C+I%27m+interested+in+the+<?php echo urlencode($plan['name']); ?>+plan.','_blank')"><?php echo $plan['btn_text']; ?></button>
         </div>
@@ -156,7 +156,7 @@
             <?php echo $tc['title']; ?>
           </h3>
           <?php if(isset($tc['points'])): ?>
-          <ul><?php foreach($tc['points'] as $pt) echo "<li>$pt</li>"; ?></ul>
+          <ul><?php foreach($tc['points'] as $pt) if($pt !== '') echo "<li>$pt</li>"; ?></ul>
           <?php else: ?>
           <p><?php echo $tc['text']; ?></p>
           <?php endif; ?>
@@ -185,7 +185,7 @@
             <?php echo $tc['title']; ?>
           </h3>
           <?php if(isset($tc['points'])): ?>
-          <ul><?php foreach($tc['points'] as $pt) echo "<li>$pt</li>"; ?></ul>
+          <ul><?php foreach($tc['points'] as $pt) if($pt !== '') echo "<li>$pt</li>"; ?></ul>
           <?php else: ?>
           <p><?php echo $tc['text']; ?></p>
           <?php endif; ?>

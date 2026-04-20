@@ -158,33 +158,45 @@
     </div>
     <div class="why-feat-grid">
       <div class="feat-card">
-        <div class="feat-icon" style="background:rgba(0,183,255,0.1);color:#00b7ff"><i class="fa-solid fa-rocket"></i></div>
-        <h3>Futuristic Aesthetic</h3>
+        <div class="feat-card-header">
+          <div class="feat-icon" style="background:rgba(0,183,255,0.1);color:#00b7ff"><i class="fa-solid fa-rocket"></i></div>
+          <h3>Futuristic Aesthetic</h3>
+        </div>
         <p>Your school won't look like it was built in 2010. Schoozie websites look like the future — modern, bold, and memorable.</p>
       </div>
       <div class="feat-card feat-card-featured">
-        <div class="feat-icon" style="background:rgba(168,85,247,0.15);color:#bf5fff"><i class="fa-solid fa-crown"></i></div>
-        <h3>Unmatched by Anyone</h3>
+        <div class="feat-card-header">
+          <div class="feat-icon" style="background:rgba(168,85,247,0.15);color:#bf5fff"><i class="fa-solid fa-crown"></i></div>
+          <h3>Unmatched by Anyone</h3>
+        </div>
         <p>No local developer, no generic builder, no other agency in India delivers school-specific design quality at this level — or this price.</p>
       </div>
       <div class="feat-card">
-        <div class="feat-icon" style="background:rgba(245,158,11,0.1);color:#f59e0b"><i class="fa-solid fa-mobile-screen-button"></i></div>
-        <h3>Mobile-First Always</h3>
+        <div class="feat-card-header">
+          <div class="feat-icon" style="background:rgba(245,158,11,0.1);color:#f59e0b"><i class="fa-solid fa-mobile-screen-button"></i></div>
+          <h3>Mobile-First Always</h3>
+        </div>
         <p>Over 80% of parents check school websites on their phone. Schoozie designs are pixel-perfect on every screen size.</p>
       </div>
       <div class="feat-card">
-        <div class="feat-icon" style="background:rgba(37,211,102,0.1);color:#25d366"><i class="fa-solid fa-bolt"></i></div>
-        <h3>Lightning Fast</h3>
+        <div class="feat-card-header">
+          <div class="feat-icon" style="background:rgba(37,211,102,0.1);color:#25d366"><i class="fa-solid fa-bolt"></i></div>
+          <h3>Lightning Fast</h3>
+        </div>
         <p>Slow websites kill credibility. Schoozie sites are optimized for speed — they load fast, rank higher, and keep parents engaged.</p>
       </div>
       <div class="feat-card">
-        <div class="feat-icon" style="background:rgba(244,63,94,0.1);color:#f43f5e"><i class="fa-solid fa-shield-halved"></i></div>
-        <h3>Secure & Reliable</h3>
+        <div class="feat-card-header">
+          <div class="feat-icon" style="background:rgba(244,63,94,0.1);color:#f43f5e"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3>Secure & Reliable</h3>
+        </div>
         <p>SSL secured, uptime monitored, and professionally maintained. Your school's website is always up and always safe.</p>
       </div>
       <div class="feat-card">
-        <div class="feat-icon" style="background:rgba(0,183,255,0.1);color:#00b7ff"><i class="fa-solid fa-school"></i></div>
-        <h3>All Boards & Mediums</h3>
+        <div class="feat-card-header">
+          <div class="feat-icon" style="background:rgba(0,183,255,0.1);color:#00b7ff"><i class="fa-solid fa-school"></i></div>
+          <h3>All Boards & Mediums</h3>
+        </div>
         <p>CBSE, ICSE, State Board — Hindi medium, Urdu medium, English medium. Schoozie is built for every type of Indian school, without exception.</p>
       </div>
     </div>

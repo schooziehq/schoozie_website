@@ -24,7 +24,7 @@ body::after{
 .hero{
   position:relative;z-index:1;
   display:flex;align-items:center;justify-content:space-between;
-  padding:112px 60px 24px;
+  padding:80px 60px 24px;
   gap:60px;
 }
 .hero-left{flex:1;min-width:0}
@@ -195,21 +195,21 @@ section{position:relative;z-index:1}
   background:linear-gradient(135deg,#ff5fcb,#00b7ff);
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;
 }
-.section-head p{font-size:14px;color:#7777aa;letter-spacing:.3px}
+.section-head p{font-size:15px;color:#aaaacc;letter-spacing:.3px}
 
 /* ── PRICING ── */
-.pricing{padding:80px 60px 100px}
+.pricing{padding:48px 60px 100px}
 
 .offer-ribbon{
-  display:inline-flex;align-items:center;gap:12px;
-  position:relative;border-radius:40px;
-  padding:11px 26px;margin-bottom:22px;
-  background:linear-gradient(135deg,rgba(255,0,180,0.1),rgba(111,66,255,0.12),rgba(0,183,255,0.08));
+  display:inline-flex;align-items:center;gap:14px;
+  position:relative;border-radius:16px;
+  padding:13px 28px;margin-bottom:24px;
+  background:linear-gradient(135deg,rgba(255,0,180,0.07),rgba(111,66,255,0.1),rgba(0,183,255,0.06));
   z-index:0;
 }
 .offer-ribbon::before{
   content:'';position:absolute;inset:0;
-  border-radius:40px;padding:1.5px;
+  border-radius:16px;padding:1px;
   background:linear-gradient(90deg,#ff00cc,#6f42ff,#00b7ff,#ff00cc);
   background-size:300% 100%;
   -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
@@ -223,7 +223,7 @@ section{position:relative;z-index:1}
   100%{background-position:300% 0}
 }
 .offer-ribbon-fire{
-  font-size:16px;color:#ff6b35;
+  font-size:18px;color:#ff6b35;
   animation:fire-flicker 1s ease-in-out infinite alternate;
 }
 @keyframes fire-flicker{
@@ -231,20 +231,30 @@ section{position:relative;z-index:1}
   to{transform:scale(1.15) rotate(5deg);filter:brightness(1.4)}
 }
 .offer-ribbon-text{
-  font-size:13px;font-weight:700;letter-spacing:.5px;
+  font-size:14px;font-weight:700;letter-spacing:.3px;
   background:linear-gradient(90deg,#ff5fcb,#bf5fff,#00b7ff);
   background-size:200%;
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;
   animation:hshift 4s ease infinite alternate;
 }
+.offer-ribbon-divider{
+  width:1px;height:18px;
+  background:rgba(255,255,255,0.12);
+  flex-shrink:0;
+}
 .offer-ribbon-tag{
-  font-size:10px;font-weight:700;letter-spacing:.8px;
+  font-size:11px;font-weight:700;letter-spacing:.6px;
   text-transform:uppercase;
-  background:rgba(255,200,0,0.12);
-  border:1px solid rgba(255,200,0,0.3);
-  color:#ffc94d;border-radius:20px;
-  padding:3px 10px;display:flex;align-items:center;gap:5px;
+  background:rgba(255,120,0,0.14);
+  border:1px solid rgba(255,120,0,0.35);
+  color:#ff9a50;border-radius:8px;
+  padding:4px 10px;display:flex;align-items:center;gap:5px;
   white-space:nowrap;
+  animation:pulse-tag 2s ease-in-out infinite;
+}
+@keyframes pulse-tag{
+  0%,100%{box-shadow:0 0 0 0 rgba(255,120,0,0)}
+  50%{box-shadow:0 0 10px 2px rgba(255,120,0,0.2)}
 }
 
 /* ── CARDS GRID ── */
@@ -474,65 +484,6 @@ section{position:relative;z-index:1}
 }
 .cta-trust i{color:#22c55e}
 
-/* ── DUCK MASCOT ── */
-#schoozie-duck{
-  position:fixed;bottom:28px;right:28px;z-index:9999;
-  display:flex;flex-direction:column;align-items:center;
-  cursor:pointer;user-select:none;
-  animation:duck-bob 2.4s ease-in-out infinite alternate;
-}
-@keyframes duck-bob{
-  from{transform:translateY(0)}
-  to{transform:translateY(-8px)}
-}
-.duck-base{
-  position:relative;
-  width:68px;height:68px;
-  border-radius:50%;
-  background:radial-gradient(circle at 40% 35%,rgba(30,10,60,0.97),rgba(15,5,35,0.97));
-  border:1.5px solid rgba(192,132,252,0.25);
-  display:flex;align-items:center;justify-content:center;
-  box-shadow:0 0 24px rgba(111,66,255,0.35),0 0 48px rgba(111,66,255,0.12);
-  transition:.3s;
-}
-#schoozie-duck:hover .duck-base{
-  box-shadow:0 0 32px rgba(192,132,252,0.6),0 0 60px rgba(0,229,255,0.2);
-  border-color:rgba(192,132,252,0.5);
-}
-.duck-name{display:none}
-.duck-banner{
-  position:absolute;
-  bottom:22px;left:50%;
-  transform:translateX(-50%);
-  font-family:'Orbitron',sans-serif;font-size:7px;font-weight:800;
-  letter-spacing:2px;text-transform:uppercase;color:#3b1a00;
-  padding:4px 13px;
-  background:linear-gradient(135deg,#f59e0b,#fcd34d);
-  border-radius:4px;
-  box-shadow:0 2px 8px rgba(245,158,11,0.6),0 0 0 1px rgba(255,220,80,0.4);
-  white-space:nowrap;
-  pointer-events:none;
-  z-index:2;
-}
-.duck-bubble{
-  background:linear-gradient(135deg,rgba(111,66,255,0.97),rgba(0,183,255,0.92));
-  color:#fff;font-size:11px;font-weight:600;
-  padding:7px 13px;border-radius:14px 14px 2px 14px;
-  margin-bottom:10px;white-space:nowrap;
-  opacity:0;transform:scale(0.5) translateY(8px);
-  transition:opacity .3s, transform .3s;
-  box-shadow:0 4px 20px rgba(111,66,255,0.5);
-  letter-spacing:.2px;
-  pointer-events:none;
-  border:1px solid rgba(255,255,255,0.2);
-}
-.duck-bubble.show{opacity:1;transform:scale(1) translateY(0)}
-#schoozie-duck:hover{
-  filter:drop-shadow(0 0 24px rgba(192,132,252,1));
-  animation-play-state:paused;
-}
-#schoozie-duck:hover .duck-bubble{opacity:1;transform:scale(1) translateY(0)}
-
 /* ── FEATURES STRIP ── */
 .features-strip{
   display:flex;align-items:center;justify-content:center;flex-wrap:wrap;
@@ -552,7 +503,7 @@ section{position:relative;z-index:1}
 .fs-sep{width:1px;height:28px;background:rgba(255,255,255,0.07);flex-shrink:0}
 
 /* ── WHY SCHOOZIE ── */
-.why-section{padding:80px 60px}
+.why-section{padding:60px 60px 40px}
 .why-grid{
   display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
   max-width:1000px;margin:0 auto;
@@ -562,6 +513,7 @@ section{position:relative;z-index:1}
   background:rgba(255,255,255,0.03);
   border:1px solid rgba(255,255,255,0.06);
   transition:.3s;
+  text-align:left;
 }
 .why-card:hover{
   background:rgba(255,255,255,0.06);
@@ -576,17 +528,21 @@ section{position:relative;z-index:1}
   border-color:rgba(168,85,247,0.4);
   background:rgba(168,85,247,0.09);
 }
+.why-card-header{
+  display:flex;align-items:center;justify-content:flex-start;
+  gap:14px;margin-bottom:16px;
+}
 .why-icon{
-  width:52px;height:52px;border-radius:14px;
+  width:52px;height:52px;border-radius:14px;flex-shrink:0;
   display:flex;align-items:center;justify-content:center;
-  font-size:20px;margin-bottom:18px;transition:.3s;
+  font-size:20px;transition:.3s;
 }
 .why-card:hover .why-icon{transform:scale(1.1)}
 .why-card h3{
   font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;
-  color:#e0e0f0;margin-bottom:12px;line-height:1.4;
+  color:#e0e0f0;margin:0;line-height:1.4;
 }
-.why-card p{font-size:13px;color:#6666aa;line-height:1.85;margin:0}
+.why-card p{font-size:13.5px;color:#9999bb;line-height:1.85;margin:0}
 
 /* ── HERO VISUAL ── */
 .hero-visual{
@@ -737,24 +693,24 @@ section{position:relative;z-index:1}
   .hero-trust{justify-content:center;gap:8px;font-size:11px;margin-top:16px}
   .hero h1{font-size:36px}
 
-  .pricing,.cta{padding:60px 20px}
+  .pricing,.cta{padding:28px 20px 70px}
+  .section-head{margin-bottom:36px}
   .section-head h2{font-size:24px}
+  .offer-ribbon{padding:10px 18px;gap:10px}
+  .offer-ribbon-text{font-size:12px}
+  .offer-ribbon-tag{font-size:10px}
 
   .features-strip{padding:14px 12px;flex-wrap:wrap;gap:4px}
   .fs-item{padding:8px 14px;font-size:12px}
   .fs-sep{display:none}
 
-  .why-section{padding:60px 20px}
+  .why-section{padding:40px 20px 28px}
   .why-grid{grid-template-columns:1fr;max-width:480px;margin:0 auto}
 }
 @media(max-width:600px){
   .cards{grid-template-columns:1fr;max-width:420px;margin:0 auto}
   .hero h1{font-size:30px}
   .c-price .amount{font-size:34px}
-  #schoozie-duck{bottom:16px;right:16px}
-  .duck-base{width:54px;height:54px}
-  #duck-svg{width:42px;height:50px}
-  .duck-name{font-size:7px}
 }
 @media(max-width:380px){
   .hero h1{font-size:26px}

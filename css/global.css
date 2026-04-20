@@ -98,13 +98,13 @@ header{
   filter:drop-shadow(0 0 14px rgba(0,240,255,0.7));
   transform:rotate(8deg) scale(1.08);
 }
-nav a{
+header nav a{
   margin:0 16px;font-size:14px;font-weight:500;
   color:#aaaac4;text-decoration:none;transition:.2s;
   letter-spacing:.4px;
 }
-nav a:hover{color:#fff;font-weight:600}
-nav a.nav-active{color:#fff;font-weight:600}
+header nav a:hover{color:#fff;font-weight:600}
+header nav a.nav-active{color:#fff;font-weight:600}
 .header-demo-btn{
   padding:10px 22px;border-radius:25px;
   border:none;background:transparent;
@@ -284,9 +284,16 @@ nav a.nav-active{color:#fff;font-weight:600}
   .footer-col:first-child{grid-column:1/-1}
 }
 @media(max-width:520px){
-  .footer-grid{grid-template-columns:1fr}
-  .footer-col:first-child{grid-column:auto}
-  .footer-bar{flex-direction:column;align-items:flex-start}
+  .site-footer{padding:28px 16px 0}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:20px;padding-bottom:28px}
+  .footer-col:first-child{grid-column:1/-1}
+  .footer-col:last-child{grid-column:1/-1}
+  .footer-keywords{display:none}
+  .footer-desc{font-size:12px;margin-bottom:10px}
+  .footer-col ul li a{font-size:11px;gap:5px}
+  .footer-col ul{gap:7px}
+  .footer-col h3{font-size:10px;margin-bottom:12px}
+  .footer-bar{flex-direction:column;align-items:flex-start;gap:6px}
 }
 
 /* ── HAMBURGER ── */
@@ -322,10 +329,10 @@ nav a.nav-active{color:#fff;font-weight:600}
   padding:15px 0;font-size:15px;
   color:#9999bb;text-decoration:none;
   border-bottom:1px solid rgba(255,255,255,0.05);
-  transition:.2s;
+  transition:.2s;text-align:center;
 }
 .mobile-nav a:last-of-type{border-bottom:none}
-.mobile-nav a:hover{color:#fff;padding-left:6px}
+.mobile-nav a:hover{color:#fff;}
 .mobile-nav-cta{
   margin-top:12px;
   padding:13px 20px;
@@ -341,12 +348,77 @@ nav a.nav-active{color:#fff;font-weight:600}
 /* ── RESPONSIVE HEADER ── */
 @media(max-width:900px){
   header{padding:14px 20px}
-  nav{display:none}
+  header nav{display:none}
   .hamburger{display:flex}
-  .header-btn{display:none}
+  .header-btn,.back-btn{display:none}
   .header-demo-btn{display:inline-flex;padding:7px 14px;font-size:11px}
   .mobile-nav{top:92px}
 }
 @media(max-width:380px){
   .logo{font-size:18px}
+}
+
+/* ── DUCK MASCOT ── */
+#schoozie-duck{
+  position:fixed;bottom:28px;right:28px;z-index:9999;
+  display:flex;flex-direction:column;align-items:center;
+  cursor:pointer;user-select:none;
+  animation:duck-bob 2.4s ease-in-out infinite alternate;
+}
+@keyframes duck-bob{
+  from{transform:translateY(0)}
+  to{transform:translateY(-8px)}
+}
+.duck-base{
+  position:relative;
+  width:68px;height:68px;
+  border-radius:50%;
+  background:radial-gradient(circle at 40% 35%,rgba(30,10,60,0.97),rgba(15,5,35,0.97));
+  border:1.5px solid rgba(192,132,252,0.25);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 0 24px rgba(111,66,255,0.35),0 0 48px rgba(111,66,255,0.12);
+  transition:.3s;
+}
+#schoozie-duck:hover .duck-base{
+  box-shadow:0 0 32px rgba(192,132,252,0.6),0 0 60px rgba(0,229,255,0.2);
+  border-color:rgba(192,132,252,0.5);
+}
+.duck-name{display:none}
+.duck-banner{
+  position:absolute;
+  bottom:22px;left:50%;
+  transform:translateX(-50%);
+  font-family:'Orbitron',sans-serif;font-size:7px;font-weight:800;
+  letter-spacing:2px;text-transform:uppercase;color:#3b1a00;
+  padding:4px 13px;
+  background:linear-gradient(135deg,#f59e0b,#fcd34d);
+  border-radius:4px;
+  box-shadow:0 2px 8px rgba(245,158,11,0.6),0 0 0 1px rgba(255,220,80,0.4);
+  white-space:nowrap;
+  pointer-events:none;
+  z-index:2;
+}
+.duck-bubble{
+  background:linear-gradient(135deg,rgba(111,66,255,0.97),rgba(0,183,255,0.92));
+  color:#fff;font-size:11px;font-weight:600;
+  padding:7px 13px;border-radius:14px 14px 2px 14px;
+  margin-bottom:10px;white-space:nowrap;
+  opacity:0;transform:scale(0.5) translateY(8px);
+  transition:opacity .3s, transform .3s;
+  box-shadow:0 4px 20px rgba(111,66,255,0.5);
+  letter-spacing:.2px;
+  pointer-events:none;
+  border:1px solid rgba(255,255,255,0.2);
+}
+.duck-bubble.show{opacity:1;transform:scale(1) translateY(0)}
+#schoozie-duck:hover{
+  filter:drop-shadow(0 0 24px rgba(192,132,252,1));
+  animation-play-state:paused;
+}
+#schoozie-duck:hover .duck-bubble{opacity:1;transform:scale(1) translateY(0)}
+@media(max-width:600px){
+  #schoozie-duck{bottom:16px;right:16px}
+  .duck-base{width:54px;height:54px}
+  #duck-svg{width:42px;height:50px}
+  .duck-name{font-size:7px}
 }
