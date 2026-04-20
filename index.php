@@ -13,8 +13,9 @@ require_once 'config.php';
 <meta name="keywords" content="school website india, school ERP software india, school management software, dynamic school website, school CMS india, school website design india, urdu medium school website, hindi medium school website, school ERP roorkee, school website uttarakhand, affordable school website india">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://schoozie.com/">
+<link rel="icon" type="image/png" href="assets/_fonts/logo.png">
 <link rel="icon" type="image/svg+xml" href="assets/svg/schoozie-logo.svg">
-<link rel="apple-touch-icon" href="assets/svg/schoozie-logo.svg">
+<link rel="apple-touch-icon" href="assets/_fonts/logo.png">
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Schoozie — School Website & ERP Software for Indian Schools">

@@ -25,8 +25,9 @@
 <meta name="twitter:description" content="Reach out on WhatsApp or email to get a free demo of Schoozie's school website and ERP solutions.">
 <meta name="twitter:image" content="https://schoozie.com/assets/og-image.png">
 
+<link rel="icon" type="image/png" href="assets/_fonts/logo.png">
 <link rel="icon" type="image/svg+xml" href="assets/svg/schoozie-logo.svg">
-<link rel="apple-touch-icon" href="assets/svg/schoozie-logo.svg">
+<link rel="apple-touch-icon" href="assets/_fonts/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">

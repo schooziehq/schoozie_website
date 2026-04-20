@@ -25,8 +25,9 @@
 <meta name="twitter:description" content="Unbeatable price, free SEO, AI-powered ERP, board-specific futuristic designs. See why no one comes close to Schoozie.">
 <meta name="twitter:image" content="https://schoozie.com/assets/og-image.png">
 
+<link rel="icon" type="image/png" href="assets/_fonts/logo.png">
 <link rel="icon" type="image/svg+xml" href="assets/svg/schoozie-logo.svg">
-<link rel="apple-touch-icon" href="assets/svg/schoozie-logo.svg">
+<link rel="apple-touch-icon" href="assets/_fonts/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">

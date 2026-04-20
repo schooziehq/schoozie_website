@@ -5,8 +5,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title><?php echo $plan['name']; ?> — Schoozie</title>
+<link rel="icon" type="image/png" href="assets/_fonts/logo.png">
 <link rel="icon" type="image/svg+xml" href="assets/svg/schoozie-logo.svg">
-<link rel="apple-touch-icon" href="assets/svg/schoozie-logo.svg">
+<link rel="apple-touch-icon" href="assets/_fonts/logo.png">
 <meta name="description" content="<?php echo htmlspecialchars($plan['description']); ?>">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://schoozie.com/<?php echo basename($_SERVER['PHP_SELF']); ?>">
