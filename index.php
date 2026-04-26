@@ -6,6 +6,7 @@ require_once 'config.php';
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<?php include '_analytics.php'; ?>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Schoozie — Take Your School Digital in Minutes</title>

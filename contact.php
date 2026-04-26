@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<?php include '_analytics.php'; ?>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact Schoozie | Get a Free Demo for Your School</title>
@@ -83,15 +84,15 @@
         <div itemscope itemtype="https://schema.org/PostalAddress">
           <div style="font-size:11px;font-weight:600;color:#bf5fff;letter-spacing:.5px;text-transform:uppercase;margin-bottom:4px">South India Office</div>
           <div style="line-height:1.6">
-            <span itemprop="streetAddress"><?php echo $office_south_street; ?></span><br>
+            <?php if($office_south_street): ?><span itemprop="streetAddress"><?php echo $office_south_street; ?></span><br><?php endif; ?>
             <span itemprop="addressLocality"><?php echo $office_south_city; ?></span>, <span itemprop="addressRegion"><?php echo $office_south_region; ?></span>
           </div>
         </div>
         <div itemscope itemtype="https://schema.org/PostalAddress">
           <div style="font-size:11px;font-weight:600;color:#bf5fff;letter-spacing:.5px;text-transform:uppercase;margin-bottom:4px">North India Office</div>
           <div style="line-height:1.6">
-            <span itemprop="streetAddress"><?php echo $office_north_street; ?></span><br>
-            <span itemprop="addressLocality"><?php echo $office_north_city; ?></span> - <?php echo $office_north_pin; ?>, <span itemprop="addressRegion"><?php echo $office_north_region; ?></span>
+            <?php if($office_north_street): ?><span itemprop="streetAddress"><?php echo $office_north_street; ?></span><br><?php endif; ?>
+            <span itemprop="addressLocality"><?php echo $office_north_city; ?></span><?php if($office_north_pin): ?> - <?php echo $office_north_pin; ?><?php endif; ?>, <span itemprop="addressRegion"><?php echo $office_north_region; ?></span>
           </div>
         </div>
       </div>
@@ -232,26 +233,6 @@
     ]
   }
 }
-</script>
-
-<script>
-(function(){
-  var btn = document.getElementById('hamburger');
-  var nav = document.getElementById('mobile-nav');
-  if(!btn || !nav) return;
-  btn.addEventListener('click', function(){
-    var open = nav.classList.toggle('open');
-    btn.classList.toggle('open', open);
-    btn.setAttribute('aria-expanded', open);
-  });
-  document.addEventListener('click', function(e){
-    if(!btn.contains(e.target) && !nav.contains(e.target)){
-      nav.classList.remove('open');
-      btn.classList.remove('open');
-      btn.setAttribute('aria-expanded','false');
-    }
-  });
-})();
 </script>
 
 </body>

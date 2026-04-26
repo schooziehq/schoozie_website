@@ -56,7 +56,7 @@ $wa_footer_text = isset($plan)
           <span>
             <strong style="font-size:11px;color:#9090bb;display:block;margin-bottom:2px">South India Office</strong>
             <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-              <span itemprop="streetAddress"><?php echo $office_south_street; ?></span>,
+              <?php if($office_south_street): ?><span itemprop="streetAddress"><?php echo $office_south_street; ?></span>, <?php endif; ?>
               <span itemprop="addressLocality"><?php echo $office_south_city; ?></span>,
               <span itemprop="addressRegion"><?php echo $office_south_region; ?></span>
             </span>
@@ -67,8 +67,8 @@ $wa_footer_text = isset($plan)
           <span>
             <strong style="font-size:11px;color:#9090bb;display:block;margin-bottom:2px">North India Office</strong>
             <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-              <span itemprop="streetAddress"><?php echo $office_north_street; ?></span>,
-              <span itemprop="addressLocality"><?php echo $office_north_city; ?></span> - <?php echo $office_north_pin; ?>,
+              <?php if($office_north_street): ?><span itemprop="streetAddress"><?php echo $office_north_street; ?></span>, <?php endif; ?>
+              <span itemprop="addressLocality"><?php echo $office_north_city; ?></span><?php if($office_north_pin): ?> - <?php echo $office_north_pin; ?><?php endif; ?>,
               <span itemprop="addressRegion"><?php echo $office_north_region; ?></span>
             </span>
           </span>
@@ -90,8 +90,8 @@ $wa_footer_text = isset($plan)
   <div class="footer-bar">
     <span>&copy; <?php echo date('Y'); ?> <strong>Schoozie</strong> &mdash; Beyond Education Systems. All Rights Reserved.</span>
     <div class="footer-bar-links">
-      <?php /* <a href="#">Privacy Policy</a> */ ?>
-      <?php /* <a href="#">Terms of Use</a> */ ?>
+      <a href="privacy.php">Privacy Policy</a>
+      <a href="terms.php">Terms of Use</a>
       <a href="contact.php">Support</a>
     </div>
   </div>

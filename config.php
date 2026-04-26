@@ -22,10 +22,15 @@ $office_south_street = "Povval, Muliyar Post Office";
 $office_south_city   = "Kasaragod";
 $office_south_region = "Kerala";
 
-$office_north_street = "Lane No. 8, Nand Vihar";
+$office_north_street = "";
 $office_north_city   = "Roorkee";
-$office_north_pin    = "247667";
+$office_north_pin    = "";
 $office_north_region = "Uttarakhand";
+
+/* ─────────────────────────────────────────────
+   GOOGLE ANALYTICS
+───────────────────────────────────────────── */
+$ga_id = "G-DZ3RFQ7QQL";
 
 $offer_active = true;
 
