@@ -34,8 +34,8 @@ $ga_id = "G-DZ3RFQ7QQL";
 
 $offer_active = false;
 
-$offer_month  = "April";           // short label shown on badges & savings text
-$offer_full   = "April 2025 Special Offers — Limited Time";
+$offer_month  = "Limited Offer";           // short label shown on badges & savings text
+$offer_full   = "Limited Spots for Premium Schools";
 
 /* Static Website */
 $static_offer_price   = "6,499";
