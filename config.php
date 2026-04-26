@@ -32,32 +32,32 @@ $office_north_region = "Uttarakhand";
 ───────────────────────────────────────────── */
 $ga_id = "G-DZ3RFQ7QQL";
 
-$offer_active = true;
+$offer_active = false;
 
 $offer_month  = "April";           // short label shown on badges & savings text
 $offer_full   = "April 2025 Special Offers — Limited Time";
 
 /* Static Website */
-$static_offer_price   = "4,444";
-$static_regular_price = "6,999";
-$static_saving        = "2,555";
+$static_offer_price   = "6,499";
+$static_regular_price = "8,999";
+$static_saving        = "2,500";
 
 /* Dynamic Website */
-$dynamic_offer_price   = "9,999";
-$dynamic_regular_price = "17,999";
-$dynamic_saving        = "8,000";
+$dynamic_offer_price   = "14,499";
+$dynamic_regular_price = "19,999";
+$dynamic_saving        = "5,500";
 
 /* ERP — per-student monthly + setup fee */
 $erp_per_student          = "10";   // Basic plan
 $erp_standard_per_student = "20";   // Standard plan
 $erp_complete_per_student = "25";   // Complete plan
-$erp_offer_setup    = "21500";
-$erp_regular_setup  = "35999";
-$erp_setup_saving   = "14,499";
+$erp_offer_setup    = "21,499";
+$erp_regular_setup  = "28,499";
+$erp_setup_saving   = "7,000";
 
 /* Renewal prices */
-$static_renewal_price  = "4,200";
-$dynamic_renewal_price = "7,800";
+$static_renewal_price  = "4,800";
+$dynamic_renewal_price = "9,800";
 
 /* Combo */
 $combo_website_discount = "50";   // % off on chosen website (static or dynamic)
