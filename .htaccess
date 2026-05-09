@@ -1,0 +1,93 @@
+# ==========================================================
+# Schoozie — Apache / LiteSpeed configuration
+# ==========================================================
+
+# ----------------------------------------------------------
+# 1. Compression (gzip / brotli)
+#    Cuts page weight ~70-80% for text assets.
+# ----------------------------------------------------------
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/atom+xml
+    AddOutputFilterByType DEFLATE image/svg+xml
+    AddOutputFilterByType DEFLATE font/ttf
+    AddOutputFilterByType DEFLATE font/otf
+    AddOutputFilterByType DEFLATE font/woff
+    AddOutputFilterByType DEFLATE font/woff2
+    AddOutputFilterByType DEFLATE application/font-woff
+    AddOutputFilterByType DEFLATE application/font-woff2
+</IfModule>
+
+# LiteSpeed brotli (preferred when available)
+<IfModule LiteSpeed>
+    SetEnv LSCACHE_BROTLI on
+</IfModule>
+
+# ----------------------------------------------------------
+# 2. Security headers
+# ----------------------------------------------------------
+<IfModule mod_headers.c>
+    # Force HTTPS for 1 year, including subdomains. Remove "preload" unless
+    # you intend to submit to https://hstspreload.org.
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+
+    # Block the page from being framed by other origins (clickjacking).
+    Header always set X-Frame-Options "SAMEORIGIN"
+
+    # Stop browsers from MIME-sniffing a response away from declared type.
+    Header always set X-Content-Type-Options "nosniff"
+
+    # Don't leak full URLs to third parties; send origin only on cross-origin.
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # Limit which browser features the site can use.
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+
+    # Hide server software hints.
+    Header unset X-Powered-By
+    Header always unset X-Powered-By
+</IfModule>
+
+# Belt-and-suspenders: also tell PHP not to expose itself.
+<IfModule mod_php.c>
+    php_flag expose_php Off
+</IfModule>
+
+# ----------------------------------------------------------
+# 3. Static asset caching
+#    Long cache for versioned/static files; HTML stays fresh.
+# ----------------------------------------------------------
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault                              "access plus 1 month"
+    ExpiresByType text/html                     "access plus 0 seconds"
+    ExpiresByType text/css                      "access plus 1 year"
+    ExpiresByType text/javascript               "access plus 1 year"
+    ExpiresByType application/javascript        "access plus 1 year"
+    ExpiresByType image/jpeg                    "access plus 1 year"
+    ExpiresByType image/png                     "access plus 1 year"
+    ExpiresByType image/webp                    "access plus 1 year"
+    ExpiresByType image/svg+xml                 "access plus 1 year"
+    ExpiresByType image/x-icon                  "access plus 1 year"
+    ExpiresByType font/woff                     "access plus 1 year"
+    ExpiresByType font/woff2                    "access plus 1 year"
+</IfModule>
+
+# ----------------------------------------------------------
+# 4. Force HTTPS (safety net; most hosts do this at the edge)
+# ----------------------------------------------------------
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTPS} !=on
+    RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
