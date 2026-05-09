@@ -11,7 +11,7 @@
 ───────────────────────────────────────────── */
 $demo_url         = "https://schools.schoozie.com/aggarwal-public/";
 
-$contact_email    = "schooziehq@gmail.com";
+$contact_email    = "hello@schoozie.com";
 $contact_whatsapp = "919045109910";          // with country code, no +
 $contact_city     = "Roorkee";
 $contact_region   = "Uttarakhand";
