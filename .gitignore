@@ -1,5 +1,49 @@
+# ── Project-specific (existing) ──
 node_modules/
+package.json
 package-lock.json
 generate_og.py
-package.json
 .htaccess
+
+# ── Claude Code working dir (per-user, not for sharing) ──
+.claude/
+
+# ── Environment / secrets ──
+.env
+.env.local
+.env.*.local
+config.local.php
+
+# ── OS junk ──
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# ── Editor / IDE ──
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.bak
+*.tmp
+
+# ── PHP / Composer (defensive — not used today) ──
+vendor/
+composer.lock
+*.log
+error_log
+php_errors.log
+
+# ── Python (you have generate_og.py) ──
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+
+# ── Test/scratch files ──
+_test_*.php
+_scratch_*.php
