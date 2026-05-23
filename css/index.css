@@ -337,7 +337,7 @@ section{position:relative;z-index:1}
   60%{transform:scale(1);filter:brightness(1)}
 }
 
-/* badge — scalloped seal: outer = border color, inner = dark fill */
+/* badge - scalloped seal: outer = border color, inner = dark fill */
 .c-badge{
   width:60px;height:60px;flex-shrink:0;
   display:flex;align-items:center;justify-content:center;
@@ -627,7 +627,7 @@ section{position:relative;z-index:1}
 .hv-card i{font-size:15px;flex-shrink:0}
 .hvc-title{font-size:12px;font-weight:600;color:#e0e0f0;line-height:1.3}
 .hvc-sub{font-size:10px;color:#9090bb;line-height:1.4}
-/* circular orbit — radius 200px, center (270,270) in 540×540 container
+/* circular orbit - radius 200px, center (270,270) in 540×540 container
    8 cards at 45° steps starting 22.5° from top, each floats radially */
 .hv-card-1{top:58px;left:282px;animation:hvcf1 5s ease-in-out infinite}
 .hv-card-2{top:175px;left:377px;animation:hvcf2 6s ease-in-out infinite .5s}

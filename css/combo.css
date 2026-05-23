@@ -1,0 +1,280 @@
+/* ============================================
+   COMBO PAGE - Website + ERP bundle
+   ============================================ */
+
+/* tag override (gold/orange for the combo) */
+.combo-tag{
+  background:linear-gradient(135deg, rgba(255,210,0,0.14), rgba(255,107,0,0.12)) !important;
+  border-color:rgba(255,210,0,0.40) !important;
+  color:#ffd479 !important;
+}
+.combo-tag i{ color:#ffb347; font-size:11px; }
+
+/* ── DEAL CARD ── */
+.combo-deal-section{
+  position:relative; z-index:1;
+  max-width:1100px; margin:10px auto 50px;
+  padding:0 60px;
+}
+.combo-deal{
+  position:relative;
+  border-radius:22px;
+  padding:40px 32px 26px;
+  background:
+    radial-gradient(ellipse at top right, rgba(255,210,0,0.10), transparent 65%),
+    radial-gradient(ellipse at bottom left, rgba(255,107,0,0.08), transparent 60%),
+    rgba(255,255,255,0.03);
+  border:1px solid rgba(255,210,0,0.32);
+  box-shadow:0 24px 60px rgba(255,140,0,0.10);
+}
+.combo-deal-ribbon{
+  position:absolute;
+  top:-13px; left:50%; transform:translateX(-50%);
+  display:inline-flex; align-items:center; gap:7px;
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:11px; font-weight:800; letter-spacing:1.6px;
+  text-transform:uppercase;
+  padding:6px 14px; border-radius:14px;
+  background:linear-gradient(135deg, #ffd200, #ff6b00);
+  color:#2a1a00;
+  box-shadow:0 6px 18px rgba(255,140,0,0.4);
+}
+.combo-deal-ribbon i{ font-size:11px; }
+
+.combo-deal-row{
+  display:grid;
+  grid-template-columns: 1fr auto 1fr auto 1.3fr;
+  gap:14px;
+  align-items:stretch;
+  margin-top:8px;
+}
+.combo-deal-pillar{
+  display:flex; flex-direction:column; align-items:center;
+  text-align:center;
+  padding:18px 14px;
+  border-radius:14px;
+  background:rgba(255,255,255,0.02);
+  border:1px solid rgba(255,255,255,0.06);
+}
+.combo-pillar-label{
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:10.5px; font-weight:700; letter-spacing:2px;
+  text-transform:uppercase; color:#9999bb;
+  margin-bottom:10px;
+}
+.combo-pillar-amt{
+  display:inline-flex; align-items:baseline; gap:6px;
+  margin-bottom:10px;
+}
+.combo-pct{
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:46px; font-weight:800; letter-spacing:-2px;
+  line-height:1;
+  background:linear-gradient(135deg, #ffd200, #ff6b00);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+}
+.combo-pct-suffix{
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:14px; font-weight:800; letter-spacing:1px;
+  color:#ffd200;
+}
+.combo-pillar-hint{
+  font-size:12px; line-height:1.6; color:#9999bb;
+}
+.combo-pillar-was{
+  display:block; font-size:11.5px; color:#a0a0c0;
+}
+.combo-pillar-was strong{ color:#ffd479; font-weight:700; }
+.combo-pillar-was s{ color:#5a5a72; }
+
+.combo-deal-plus{
+  display:flex; align-items:center; justify-content:center;
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:28px; font-weight:800;
+  color:#ffd200; opacity:.7;
+  min-width:20px;
+}
+.combo-deal-equals{ color:#22c55e; }
+
+.combo-deal-result{
+  background:
+    linear-gradient(135deg, rgba(34,197,94,0.08), rgba(0,212,255,0.05));
+  border-color:rgba(34,197,94,0.28);
+}
+.combo-result-list{
+  display:flex; flex-direction:column; gap:8px;
+  text-align:left;
+  width:100%;
+}
+.combo-result-list span{
+  display:flex; align-items:flex-start; gap:9px;
+  font-size:12.5px; color:#dcdce8; line-height:1.45;
+  font-weight:500;
+}
+.combo-result-list i{
+  flex-shrink:0; margin-top:3px;
+  width:16px; height:16px; border-radius:50%;
+  display:inline-flex; align-items:center; justify-content:center;
+  background:rgba(34,197,94,0.18);
+  color:#22c55e; font-size:8px;
+}
+
+.combo-deal-cta{
+  display:flex; flex-direction:column; align-items:center; gap:8px;
+  margin-top:22px;
+}
+.combo-cta-btn{
+  background:linear-gradient(135deg, #ffd200, #ff6b00) !important;
+  color:#2a1a00 !important;
+  font-weight:700 !important;
+  padding:14px 32px !important;
+  box-shadow:0 10px 26px rgba(255,140,0,0.32) !important;
+}
+.combo-cta-btn:hover{
+  box-shadow:0 16px 36px rgba(255,140,0,0.48) !important;
+}
+.combo-deal-fineprint{
+  font-size:11.5px; color:#8a8aa8; font-style:italic;
+}
+
+/* ── HOW IT WORKS ── */
+.combo-steps-section{
+  position:relative; z-index:1;
+  max-width:1100px; margin:0 auto 50px;
+  padding:0 60px;
+}
+.combo-steps{
+  display:grid; grid-template-columns:repeat(3, 1fr);
+  gap:18px;
+}
+.combo-step{
+  position:relative;
+  padding:24px 22px;
+  border-radius:14px;
+  background:rgba(255,255,255,0.025);
+  border:1px solid rgba(255,255,255,0.07);
+  transition:border-color .25s, transform .3s;
+}
+.combo-step:hover{
+  border-color:rgba(255,210,0,0.35);
+  transform:translateY(-3px);
+}
+.combo-step-num{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:34px; height:34px; border-radius:10px;
+  background:linear-gradient(135deg, #ffd200, #ff6b00);
+  color:#2a1a00;
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:15px; font-weight:800;
+  margin-bottom:14px;
+  box-shadow:0 6px 16px rgba(255,140,0,0.25);
+}
+.combo-step h4{
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:16px; font-weight:700; color:#fff;
+  margin-bottom:6px; letter-spacing:-0.2px;
+}
+.combo-step p{
+  font-size:13px; line-height:1.55; color:#9999bb;
+}
+
+/* ── WHAT'S INCLUDED ── */
+.combo-included{
+  position:relative; z-index:1;
+  max-width:1100px; margin:0 auto 50px;
+  padding:0 60px;
+}
+.combo-included-grid{
+  display:grid; grid-template-columns:1fr 1fr; gap:20px;
+}
+.combo-incl-card{
+  --ac:#bf5fff;
+  position:relative;
+  display:flex; flex-direction:column; gap:18px;
+  padding:28px 26px;
+  border-radius:18px;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--ac) 6%, transparent), transparent 45%),
+    rgba(255,255,255,0.025);
+  border:1px solid color-mix(in srgb, var(--ac) 22%, transparent);
+  transition:transform .3s, border-color .25s, box-shadow .35s;
+}
+.combo-incl-card::before{
+  content:""; position:absolute;
+  top:0; left:24px; right:24px; height:2px;
+  background:linear-gradient(90deg, transparent, var(--ac), transparent);
+  border-radius:2px; opacity:.7;
+}
+.combo-incl-card:hover{
+  transform:translateY(-4px);
+  border-color:color-mix(in srgb, var(--ac) 45%, transparent);
+  box-shadow:0 20px 44px color-mix(in srgb, var(--ac) 18%, transparent);
+}
+.combo-incl-head{
+  display:flex; align-items:center; gap:14px;
+}
+.combo-incl-icon{
+  width:46px; height:46px; border-radius:12px;
+  display:inline-flex; align-items:center; justify-content:center;
+  background:color-mix(in srgb, var(--ac) 14%, transparent);
+  color:var(--ac); font-size:19px;
+  border:1px solid color-mix(in srgb, var(--ac) 28%, transparent);
+}
+.combo-incl-head h3{
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:20px; font-weight:700; color:#fff;
+  letter-spacing:-0.2px;
+}
+.combo-incl-head p{
+  font-size:12.5px; color:#8a8aa8; font-weight:500;
+  margin-top:1px;
+}
+.combo-incl-card ul{
+  list-style:none; padding:0; margin:0;
+  display:flex; flex-direction:column; gap:10px;
+}
+.combo-incl-card li{
+  display:flex; align-items:flex-start; gap:11px;
+  font-size:13.5px; color:#dcdce8; line-height:1.5;
+}
+.combo-incl-card li i{
+  flex-shrink:0; margin-top:2px;
+  width:24px; height:24px; border-radius:7px;
+  display:inline-flex; align-items:center; justify-content:center;
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.07);
+  font-size:11px;
+}
+.combo-incl-link{
+  margin-top:auto; padding-top:6px;
+  display:inline-flex; align-items:center; gap:7px;
+  font-size:13px; font-weight:600; color:var(--ac);
+  text-decoration:none; transition:gap .25s;
+}
+.combo-incl-link:hover{ gap:11px; }
+.combo-incl-link i{ font-size:11px; }
+
+/* ── RESPONSIVE ── */
+@media(max-width:960px){
+  .combo-deal-section, .combo-steps-section, .combo-included{ padding:0 24px; }
+  .combo-deal{ padding:26px 22px 22px; }
+  .combo-deal-row{
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+  }
+  .combo-deal-plus{ display:none; }
+  .combo-deal-result{ grid-column:1/-1; }
+  .combo-steps{ grid-template-columns:1fr; gap:12px; }
+  .combo-included-grid{ grid-template-columns:1fr; gap:16px; }
+}
+@media(max-width:600px){
+  .combo-deal-section, .combo-steps-section, .combo-included{ padding:0 14px; }
+  .combo-deal{ padding:24px 18px 20px; }
+  .combo-deal-row{
+    grid-template-columns:1fr;
+  }
+  .combo-pct{ font-size:38px; }
+  .combo-cta-btn{ padding:13px 24px !important; font-size:13.5px !important; }
+  .combo-step{ padding:20px 18px; }
+  .combo-incl-card{ padding:22px 18px; }
+}

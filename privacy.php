@@ -5,7 +5,7 @@
 <?php include '_analytics.php'; ?>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy | Schoozie — School Website & ERP Software</title>
+<title>Privacy Policy | Schoozie - School Website & ERP Software</title>
 <meta name="description" content="Read Schoozie's privacy policy. Learn how we collect, use, and protect your personal information when you use our school website and ERP software services.">
 <meta name="keywords" content="schoozie privacy policy, school software privacy, data protection, school ERP privacy policy india">
 <meta name="robots" content="index, follow">
@@ -13,16 +13,16 @@
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Privacy Policy — Schoozie">
+<meta property="og:title" content="Privacy Policy - Schoozie">
 <meta property="og:description" content="Learn how Schoozie collects, uses, and protects your personal information.">
 <meta property="og:url" content="https://schoozie.com/privacy.php">
 <meta property="og:image" content="https://schoozie.com/assets/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:type" content="image/png">
-<meta property="og:image:alt" content="Schoozie — Privacy Policy">
+<meta property="og:image:alt" content="Schoozie - Privacy Policy">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Privacy Policy — Schoozie">
+<meta name="twitter:title" content="Privacy Policy - Schoozie">
 <meta name="twitter:description" content="Learn how Schoozie collects, uses, and protects your personal information.">
 <meta name="twitter:image" content="https://schoozie.com/assets/og-image.png">
 
@@ -35,6 +35,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="css/global.css?v=<?php echo filemtime('css/global.css'); ?>">
+<link rel="stylesheet" href="css/index-v2.css?v=<?php echo filemtime('css/index-v2.css'); ?>">
 <link rel="stylesheet" href="css/legal.css?v=<?php echo filemtime('css/legal.css'); ?>">
 </head>
 <body>
@@ -47,7 +48,7 @@
   <section class="legal-hero">
     <span class="legal-hero-eyebrow"><i class="fa-solid fa-shield-halved"></i> &nbsp;Privacy Policy</span>
     <h1>Your Privacy Matters to Us</h1>
-    <p>We believe in transparency. Here's exactly how we handle your data — no fine print, no surprises.</p>
+    <p>We believe in transparency. Here's exactly how we handle your data - no fine print, no surprises.</p>
   </section>
 
   <!-- CONTENT -->
@@ -100,7 +101,7 @@
       <h2><i class="fa-solid fa-share-nodes"></i> Information Sharing</h2>
       <p>We may share your information only in the following limited circumstances:</p>
       <ul>
-        <li><strong>Service Providers:</strong> Trusted third parties who help us operate our business (hosting, payment processing, analytics) — bound by confidentiality agreements</li>
+        <li><strong>Service Providers:</strong> Trusted third parties who help us operate our business (hosting, payment processing, analytics) - bound by confidentiality agreements</li>
         <li><strong>Legal Requirements:</strong> When required by law, regulation, or legal process</li>
         <li><strong>Business Transfers:</strong> In connection with a merger, acquisition, or sale of assets (you will be notified)</li>
         <li><strong>With Your Consent:</strong> When you explicitly ask us to share your information</li>
@@ -176,8 +177,7 @@
     <h2>Have Questions?</h2>
     <p>We're always happy to clarify how we handle your data. Reach out anytime.</p>
     <div class="legal-cta-actions">
-      <a href="contact.php" class="btn-primary-grad"><i class="fa-solid fa-envelope"></i> Contact Us</a>
-      <a href="https://wa.me/<?php echo $contact_whatsapp; ?>" target="_blank" rel="noopener" class="btn-outline-grad"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
+      <a href="contact.php" class="v2-btn-primary"><i class="fa-solid fa-envelope"></i> Contact Us</a>
     </div>
   </section>
 
@@ -191,7 +191,7 @@
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "Privacy Policy",
-  "description": "Schoozie's privacy policy — how we collect, use, and protect your personal information.",
+  "description": "Schoozie's privacy policy - how we collect, use, and protect your personal information.",
   "url": "https://schoozie.com/privacy.php",
   "publisher": {
     "@type": "Organization",

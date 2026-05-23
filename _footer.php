@@ -1,9 +1,9 @@
 <?php
 /**
- * _footer.php — Shared site footer
+ * _footer.php - Shared site footer
  *
  * Requires config.php to be loaded (for $contact_* and $demo_url variables)
- * Optional: $plan (array) — if set, WhatsApp message includes the plan name
+ * Optional: $plan (array) - if set, WhatsApp message includes the plan name
  */
 $wa_footer_text = isset($plan)
   ? 'Hi%2C+I%27m+interested+in+' . urlencode($plan['name']) . '+from+Schoozie.'
@@ -18,7 +18,7 @@ $wa_footer_text = isset($plan)
         <img src="assets/svg/schoozie-logo.svg" alt="Schoozie Logo">
         Schoozie
       </a>
-      <p class="footer-desc">Schoozie helps schools across India go digital — with professional school websites, dynamic CMS platforms, and powerful ERP software tailored for modern institutions.</p>
+      <p class="footer-desc">Schoozie helps schools across India go digital - with professional school websites, dynamic CMS platforms, and powerful ERP software tailored for modern institutions.</p>
       <p class="footer-keywords" aria-hidden="true">school website design india · school management software · school ERP system · school CMS · digital school solutions</p>
     </div>
 
@@ -27,8 +27,8 @@ $wa_footer_text = isset($plan)
       <h3>Our Plans</h3>
       <nav aria-label="Plans navigation">
         <ul>
-          <li><a href="static-web.php"><i class="fa-solid fa-desktop"></i> Static School Website</a></li>
-          <li><a href="dynamic-web.php"><i class="fa-solid fa-bolt"></i> Dynamic Website + CMS</a></li>
+          <li><a href="websites.php#static"><i class="fa-solid fa-desktop"></i> Static School Website</a></li>
+          <li><a href="websites.php#dynamic"><i class="fa-solid fa-bolt"></i> Dynamic Website + CMS</a></li>
           <li><a href="erp.php"><i class="fa-solid fa-layer-group"></i> School ERP Software</a></li>
           <li><a href="combo.php"><i class="fa-solid fa-fire"></i> Website + ERP Combo</a></li>
         </ul>
@@ -39,7 +39,7 @@ $wa_footer_text = isset($plan)
     <div class="footer-col">
       <h3>Quick Links</h3>
       <ul>
-        <li><a href="index.php#pricing"><i class="fa-solid fa-angle-right"></i> View All Plans</a></li>
+        <li><a href="index.php#plans"><i class="fa-solid fa-angle-right"></i> View All Plans</a></li>
         <li><a href="why.php"><i class="fa-solid fa-angle-right"></i> Why Schoozie</a></li>
         <li><a href="about.php"><i class="fa-solid fa-angle-right"></i> About Schoozie</a></li>
         <li><a href="contact.php"><i class="fa-solid fa-angle-right"></i> Contact Us</a></li>
@@ -80,15 +80,17 @@ $wa_footer_text = isset($plan)
       </address>
       <a class="footer-wa-btn"
          href="https://wa.me/<?php echo $contact_whatsapp; ?>?text=<?php echo $wa_footer_text; ?>"
-         target="_blank" rel="noopener">
-        <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+         target="_blank" rel="noopener"
+         aria-label="Chat with us on WhatsApp"
+         title="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
       </a>
     </div>
 
   </div><!-- end footer-grid -->
 
   <div class="footer-bar">
-    <span>&copy; <?php echo date('Y'); ?> <strong>Schoozie</strong> &mdash; Beyond Education Systems. All Rights Reserved.</span>
+    <span>&copy; <?php echo date('Y'); ?> <strong>Schoozie</strong> - Beyond Education Systems. All Rights Reserved.</span>
     <div class="footer-bar-links">
       <a href="privacy.php">Privacy Policy</a>
       <a href="terms.php">Terms of Use</a>

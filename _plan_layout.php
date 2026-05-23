@@ -5,7 +5,7 @@
 <?php include '_analytics.php'; ?>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title><?php echo $plan['name']; ?> — Schoozie</title>
+<title><?php echo $plan['name']; ?> - Schoozie</title>
 <link rel="icon" type="image/png" href="assets/_fonts/logo.png">
 <link rel="icon" type="image/svg+xml" href="assets/svg/schoozie-logo.svg">
 <link rel="apple-touch-icon" href="assets/_fonts/logo.png">
@@ -13,16 +13,16 @@
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://schoozie.com/<?php echo basename($_SERVER['PHP_SELF']); ?>">
 <meta property="og:type" content="website">
-<meta property="og:title" content="<?php echo $plan['name']; ?> — Schoozie">
+<meta property="og:title" content="<?php echo $plan['name']; ?> - Schoozie">
 <meta property="og:description" content="<?php echo $plan['description']; ?>">
 <meta property="og:url" content="https://schoozie.com/<?php echo basename($_SERVER['PHP_SELF']); ?>">
 <meta property="og:image" content="https://schoozie.com/assets/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:type" content="image/png">
-<meta property="og:image:alt" content="Schoozie — School Digital Solutions India">
+<meta property="og:image:alt" content="Schoozie - School Digital Solutions India">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="<?php echo $plan['name']; ?> — Schoozie">
+<meta name="twitter:title" content="<?php echo $plan['name']; ?> - Schoozie">
 <meta name="twitter:description" content="<?php echo $plan['description']; ?>">
 <meta name="twitter:image" content="https://schoozie.com/assets/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -81,10 +81,16 @@
   <!-- SUB-PLANS (only if defined) -->
   <?php if(!empty($plan['sub_plans'])): ?>
   <div class="sub-plans-section">
-    <div class="sp-heading">Choose Your Subscription Tier</div>
+    <div class="sp-heading">Available Plans</div>
+    <?php if(!empty($plan['sp_proration_note'])): ?>
+    <div class="sp-sub"><?php echo $plan['sp_proration_note']; ?></div>
+    <?php else: ?>
     <div class="sp-sub">All plans include a free demo.</div>
+    <?php endif; ?>
     <div class="sp-grid">
-      <?php foreach($plan['sub_plans'] as $sp): ?>
+      <?php foreach($plan['sub_plans'] as $sp):
+        $has_billing = !empty($sp['prices']);
+      ?>
       <div class="sp-card <?php echo !empty($sp['popular']) ? 'popular' : ''; ?>" style="--sp-color:<?php echo $sp['color']; ?>">
         <?php if(!empty($sp['popular'])): ?>
         <span class="sp-popular-badge" style="background:<?php echo $sp['color']; ?>22;color:<?php echo $sp['color']; ?>;border:1px solid <?php echo $sp['color']; ?>44"><i class="fa-solid fa-star"></i> Most Popular</span>
@@ -92,8 +98,37 @@
         <div class="sp-emoji"><?php echo $sp['emoji']; ?></div>
         <div class="sp-name" style="color:<?php echo $sp['color']; ?>"><?php echo $sp['name']; ?></div>
         <div class="sp-tagline"><?php echo $sp['tagline']; ?></div>
-        <div class="sp-price" style="background:linear-gradient(90deg,<?php echo $sp['color']; ?>,#ffffff88);-webkit-background-clip:text;-webkit-text-fill-color:transparent">Rs. <?php echo $sp['price']; ?></div>
-        <div class="sp-period">per student / per month</div>
+
+        <?php if($has_billing): ?>
+          <?php
+            $q  = $sp['prices']['quarterly'];
+            $h  = $sp['prices']['halfyearly'];
+            $y  = $sp['prices']['yearly'];
+            $sh = $erp_savings_halfyearly ?? '5';
+            $sy = $erp_savings_yearly    ?? '15';
+          ?>
+          <div class="sp-price-block"
+               data-q="<?php echo $q; ?>" data-h="<?php echo $h; ?>" data-y="<?php echo $y; ?>"
+               data-sh="<?php echo $sh; ?>" data-sy="<?php echo $sy; ?>">
+            <div class="sp-price" style="background:linear-gradient(90deg,<?php echo $sp['color']; ?>,#ffffff88);-webkit-background-clip:text;-webkit-text-fill-color:transparent">
+              <span class="sp-rs">Rs.</span> <span class="sp-amount"><?php echo $q; ?></span>
+            </div>
+            <div class="sp-period"><span class="sp-per">/quarter</span></div>
+            <div class="sp-savings">&nbsp;</div>
+            <div class="sp-billing-toggle" role="tablist">
+              <button type="button" class="sp-bt active" data-billing="q">Quarterly</button>
+              <button type="button" class="sp-bt"        data-billing="h">Half-Yearly</button>
+              <button type="button" class="sp-bt"        data-billing="y">Yearly</button>
+            </div>
+            <?php if(!empty($sp['modules'])): ?>
+            <div class="sp-modules"><?php echo $sp['modules']; ?> MODULES INCLUDED</div>
+            <?php endif; ?>
+          </div>
+        <?php else: ?>
+          <div class="sp-price" style="background:linear-gradient(90deg,<?php echo $sp['color']; ?>,#ffffff88);-webkit-background-clip:text;-webkit-text-fill-color:transparent">Rs. <?php echo $sp['price']; ?></div>
+          <div class="sp-period">per student / per month</div>
+        <?php endif; ?>
+
         <div class="sp-divider"></div>
         <ul class="sp-feats">
           <?php foreach($sp['features'] as $f): ?>
@@ -103,13 +138,80 @@
           </li>
           <?php endforeach; ?>
         </ul>
+        <?php
+          $wa_text = $has_billing
+            ? 'Hi%2C+I%27m+interested+in+the+ERP+'.urlencode($sp['name']).'+Plan+(Rs.+'.$sp['prices']['quarterly'].'%2Fquarter).'
+            : 'Hi%2C+I%27m+interested+in+the+ERP+'.urlencode($sp['name']).'+Plan+(Rs.+'.($sp['price'] ?? '').'%2Fstudent%2Fmonth).';
+        ?>
         <button class="sp-btn" style="background:<?php echo $sp['btn_bg']; ?>"
-          onclick="window.open('https://wa.me/<?php echo $contact_whatsapp; ?>?text=Hi%2C+I%27m+interested+in+the+ERP+<?php echo urlencode($sp['name']); ?>+Plan+(Rs.+<?php echo $sp['price']; ?>%2Fstudent%2Fmonth).','_blank')">
+          onclick="window.open('https://wa.me/<?php echo $contact_whatsapp; ?>?text=<?php echo $wa_text; ?>','_blank')">
           Get <?php echo $sp['name']; ?> Plan
         </button>
       </div>
       <?php endforeach; ?>
     </div>
+
+    <?php if(!empty($plan['enterprise'])):
+      $ent = $plan['enterprise'];
+    ?>
+    <div class="sp-enterprise">
+      <div class="sp-ent-head">
+        <div class="sp-ent-left">
+          <span class="sp-ent-tag"><i class="fa-solid fa-gem"></i> ENTERPRISE <span class="sp-ent-badge"><?php echo $ent['subtitle']; ?></span></span>
+          <h3><?php echo $ent['tagline']; ?></h3>
+        </div>
+        <div class="sp-ent-right">
+          <div class="sp-ent-investment-label">INVESTMENT</div>
+          <div class="sp-ent-investment-value">Custom</div>
+          <button class="sp-ent-btn"
+            onclick="window.open('https://wa.me/<?php echo $contact_whatsapp; ?>?text=Hi%2C+I%27m+interested+in+the+ERP+Enterprise+Plan+for+my+school.','_blank')">
+            <?php echo $ent['btn_text']; ?> <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+      <p class="sp-ent-desc"><?php echo $ent['description']; ?></p>
+
+      <div class="sp-ent-cols">
+        <?php foreach($ent['columns'] as $col): ?>
+        <div class="sp-ent-col">
+          <div class="sp-ent-col-title"><?php echo $col['icon']; ?> <span><?php echo $col['title']; ?></span></div>
+          <ul>
+            <?php foreach($col['items'] as $item): ?>
+            <li>
+              <span class="sp-ent-check"><i class="fa-solid fa-circle-check"></i></span>
+              <div>
+                <strong><?php echo $item[0]; ?></strong>
+                <span><?php echo $item[1]; ?></span>
+              </div>
+            </li>
+            <?php endforeach; ?>
+          </ul>
+        </div>
+        <?php endforeach; ?>
+      </div>
+
+      <div class="sp-ent-footer">
+        <div class="sp-ent-howto">
+          <span class="sp-ent-howto-label">HOW IT WORKS</span>
+          <?php foreach($ent['how_it_works'] as $i => $step): ?>
+          <div class="sp-ent-step">
+            <span class="sp-ent-step-num"><?php echo $step[0]; ?></span>
+            <span><strong><?php echo $step[1]; ?></strong> <em><?php echo $step[2]; ?></em></span>
+          </div>
+          <?php if($i < count($ent['how_it_works'])-1): ?>
+          <span class="sp-ent-step-arrow">&rsaquo;</span>
+          <?php endif; ?>
+          <?php endforeach; ?>
+        </div>
+        <div class="sp-ent-reply">Reply within 1 business day · No obligation</div>
+      </div>
+
+      <?php if(!empty($ent['fineprint'])): ?>
+      <div class="sp-ent-fineprint">* <?php echo $ent['fineprint']; ?></div>
+      <?php endif; ?>
+    </div>
+    <?php endif; ?>
+
   </div>
   <?php endif; ?>
 
@@ -124,7 +226,7 @@
     <!-- ENGLISH -->
     <div class="lang-panel active" id="panel-en">
       <div class="tc-wrap tc-english">
-        <h2>Terms &amp; Conditions — <?php echo $plan['name']; ?></h2>
+        <h2>Terms &amp; Conditions - <?php echo $plan['name']; ?></h2>
         <div class="important-box">
           <p>&#9888; Please read these terms carefully before purchasing. By making payment, you agree to all terms listed below. For questions, contact us before proceeding.</p>
         </div>
@@ -153,7 +255,7 @@
     <!-- URDU -->
     <div class="lang-panel" id="panel-ur">
       <div class="tc-wrap tc-urdu">
-        <h2 style="font-family:'Noto Nastaliq Urdu',serif">شرائط و ضوابط — <?php echo $plan['name']; ?></h2>
+        <h2 style="font-family:'Noto Nastaliq Urdu',serif">شرائط و ضوابط - <?php echo $plan['name']; ?></h2>
         <div class="important-box">
           <p>&#9888; خریداری سے پہلے یہ شرائط غور سے پڑھیں۔ ادائیگی کرنے سے آپ تمام شرائط سے متفق ہوتے ہیں۔ کسی بھی سوال کے لیے ادائیگی سے پہلے واٹس ایپ پر رابطہ کریں۔</p>
         </div>
@@ -182,7 +284,7 @@
     <!-- HINDI -->
     <div class="lang-panel" id="panel-hi">
       <div class="tc-wrap tc-hindi">
-        <h2 style="font-family:'Noto Sans Devanagari',sans-serif">नियम एवं शर्तें — <?php echo $plan['name']; ?></h2>
+        <h2 style="font-family:'Noto Sans Devanagari',sans-serif">नियम एवं शर्तें - <?php echo $plan['name']; ?></h2>
         <div class="important-box">
           <p>&#9888; खरीदारी से पहले इन शर्तों को ध्यान से पढ़ें। भुगतान करके आप सभी शर्तों से सहमत होते हैं। किसी भी प्रश्न के लिए भुगतान से पहले WhatsApp पर संपर्क करें।</p>
         </div>
@@ -240,6 +342,31 @@ function switchLang(lang, btn){
   document.getElementById('panel-'+lang).classList.add('active');
   btn.classList.add('active');
 }
+
+/* ── Billing-period toggle for ERP sub-plan cards ── */
+(function(){
+  document.querySelectorAll('.sp-price-block').forEach(function(block){
+    var amt   = block.querySelector('.sp-amount');
+    var per   = block.querySelector('.sp-per');
+    var save  = block.querySelector('.sp-savings');
+    var btns  = block.querySelectorAll('.sp-bt');
+    var data  = {
+      q: { price: block.dataset.q, period: '/quarter',     save: '' },
+      h: { price: block.dataset.h, period: '/half-yearly', save: 'Save '+block.dataset.sh+'% vs quarterly' },
+      y: { price: block.dataset.y, period: '/yearly',      save: 'Save '+block.dataset.sy+'% vs quarterly' },
+    };
+    btns.forEach(function(b){
+      b.addEventListener('click', function(){
+        btns.forEach(function(x){ x.classList.remove('active'); });
+        b.classList.add('active');
+        var key = b.dataset.billing;
+        amt.textContent  = data[key].price;
+        per.textContent  = data[key].period;
+        save.innerHTML   = data[key].save || '&nbsp;';
+      });
+    });
+  });
+})();
 </script>
 </body>
 </html>

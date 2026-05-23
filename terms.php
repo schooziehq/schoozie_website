@@ -5,7 +5,7 @@
 <?php include '_analytics.php'; ?>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Terms of Use | Schoozie — School Website & ERP Software</title>
+<title>Terms of Use | Schoozie - School Website & ERP Software</title>
 <meta name="description" content="Read Schoozie's terms of use. Understand the terms and conditions for using our school website, CMS, and ERP software services.">
 <meta name="keywords" content="schoozie terms of use, school software terms, terms and conditions, school ERP terms india">
 <meta name="robots" content="index, follow">
@@ -13,16 +13,16 @@
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Terms of Use — Schoozie">
+<meta property="og:title" content="Terms of Use - Schoozie">
 <meta property="og:description" content="Terms and conditions for using Schoozie's school website and ERP software services.">
 <meta property="og:url" content="https://schoozie.com/terms.php">
 <meta property="og:image" content="https://schoozie.com/assets/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:type" content="image/png">
-<meta property="og:image:alt" content="Schoozie — Terms of Use">
+<meta property="og:image:alt" content="Schoozie - Terms of Use">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Terms of Use — Schoozie">
+<meta name="twitter:title" content="Terms of Use - Schoozie">
 <meta name="twitter:description" content="Terms and conditions for using Schoozie's school website and ERP software services.">
 <meta name="twitter:image" content="https://schoozie.com/assets/og-image.png">
 
@@ -35,6 +35,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="css/global.css?v=<?php echo filemtime('css/global.css'); ?>">
+<link rel="stylesheet" href="css/index-v2.css?v=<?php echo filemtime('css/index-v2.css'); ?>">
 <link rel="stylesheet" href="css/legal.css?v=<?php echo filemtime('css/legal.css'); ?>">
 </head>
 <body>
@@ -102,7 +103,7 @@
       <h2><i class="fa-solid fa-copyright"></i> Intellectual Property</h2>
 
       <h3>Our Content</h3>
-      <p>All content on the Schoozie website — including text, graphics, logos, icons, images, code, and design — is the property of Schoozie and is protected by Indian and international intellectual property laws. You may not copy, modify, distribute, or reproduce any part of our website without written permission.</p>
+      <p>All content on the Schoozie website - including text, graphics, logos, icons, images, code, and design - is the property of Schoozie and is protected by Indian and international intellectual property laws. You may not copy, modify, distribute, or reproduce any part of our website without written permission.</p>
 
       <h3>Your Content</h3>
       <p>Content you provide to us (school information, logos, images, text) remains your property. By sharing it with us, you grant Schoozie a licence to use it solely for the purpose of delivering the agreed services (e.g., building your school website).</p>
@@ -178,8 +179,7 @@
     <h2>Questions About Our Terms?</h2>
     <p>We're here to help. Reach out and we'll clarify anything you need.</p>
     <div class="legal-cta-actions">
-      <a href="contact.php" class="btn-primary-grad"><i class="fa-solid fa-envelope"></i> Contact Us</a>
-      <a href="https://wa.me/<?php echo $contact_whatsapp; ?>" target="_blank" rel="noopener" class="btn-outline-grad"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
+      <a href="contact.php" class="v2-btn-primary"><i class="fa-solid fa-envelope"></i> Contact Us</a>
     </div>
   </section>
 

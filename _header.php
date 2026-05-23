@@ -1,10 +1,10 @@
 <?php
 /**
- * _header.php — Shared site header + mobile nav + hamburger JS
+ * _header.php - Shared site header + mobile nav + hamburger JS
  *
  * Variables to set BEFORE including this file:
- *   $active_page  (string) — 'home' | 'about' | 'contact' | ''
- *   $show_back_btn (bool)  — true on plan pages to show "← Plans" instead of "Get Started"
+ *   $active_page  (string) - 'home' | 'about' | 'contact' | ''
+ *   $show_back_btn (bool)  - true on plan pages to show "← Plans" instead of "Get Started"
  *
  * Requires config.php to be loaded (for $demo_url, $contact_whatsapp)
  */
@@ -14,17 +14,17 @@ if (!isset($show_back_btn)) $show_back_btn = false;
 <!-- PROMO STRIP -->
 <div class="promo-strip promo-fixed">
   <div class="promo-track">
-    <span><i class="fa-solid fa-crown"></i> Take your school digital at <strong>India's lowest price</strong> &mdash; Only 100 founding spots available.</span>
+    <span><i class="fa-solid fa-crown"></i> Take your school digital at <strong>India's lowest price</strong> - Only 100 founding spots available.</span>
     <span class="promo-sep">◆</span>
     <span><i class="fa-solid fa-fire-flame-curved"></i> Once 100 schools join, <strong>this price is gone forever.</strong> Secure your spot now.</span>
     <span class="promo-sep">◆</span>
-    <span><i class="fa-solid fa-bolt"></i> Founding Offer &mdash; <strong>Your price stays locked for life.</strong> No hike. No surprise bills.</span>
+    <span><i class="fa-solid fa-bolt"></i> Founding Offer - <strong>Your price stays locked for life.</strong> No hike. No surprise bills.</span>
     <span class="promo-sep">◆</span>
-    <span><i class="fa-solid fa-crown"></i> Take your school digital at <strong>India's lowest price</strong> &mdash; Only 100 founding spots available.</span>
+    <span><i class="fa-solid fa-crown"></i> Take your school digital at <strong>India's lowest price</strong> - Only 100 founding spots available.</span>
     <span class="promo-sep">◆</span>
     <span><i class="fa-solid fa-fire-flame-curved"></i> Once 100 schools join, <strong>this price is gone forever.</strong> Secure your spot now.</span>
     <span class="promo-sep">◆</span>
-    <span><i class="fa-solid fa-bolt"></i> Founding Offer &mdash; <strong>Your price stays locked for life.</strong> No hike. No surprise bills.</span>
+    <span><i class="fa-solid fa-bolt"></i> Founding Offer - <strong>Your price stays locked for life.</strong> No hike. No surprise bills.</span>
     <span class="promo-sep">◆</span>
   </div>
 </div>
@@ -34,9 +34,31 @@ if (!isset($show_back_btn)) $show_back_btn = false;
     <img src="assets/svg/schoozie-logo.svg" class="logo-icon" alt="Schoozie">
     <span>Schoozie</span>
   </a>
+  <?php $plans_active = in_array($active_page, ['plans','websites','erp','combo'], true); ?>
   <nav>
     <a href="index.php"      <?php if($active_page==='home')    echo 'class="nav-active"'; ?>>Home</a>
-    <a href="index.php#pricing" <?php if($active_page==='plans') echo 'class="nav-active"'; ?>>Plans</a>
+    <div class="nav-dropdown <?php echo $plans_active ? 'is-active' : ''; ?>">
+      <a href="websites.php" class="nav-dropdown-trigger <?php echo $plans_active ? 'nav-active' : ''; ?>">
+        Plans <i class="fa-solid fa-chevron-down nav-chev"></i>
+      </a>
+      <div class="nav-dropdown-menu">
+        <a href="websites.php" <?php if($active_page==='websites') echo 'class="is-current"'; ?>>
+          <i class="fa-solid fa-globe"></i>
+          <span><strong>Websites</strong><em>Static &amp; Dynamic</em></span>
+        </a>
+        <a href="erp.php" <?php if($active_page==='erp') echo 'class="is-current"'; ?>>
+          <i class="fa-solid fa-layer-group"></i>
+          <span><strong>School ERP</strong><em>4 tiers &middot; Q/H/Y billing</em></span>
+        </a>
+        <a href="combo.php" <?php if($active_page==='combo') echo 'class="is-current"'; ?>>
+          <i class="fa-solid fa-fire"></i>
+          <span><strong>Website + ERP Combo</strong><em>Best value bundle</em></span>
+        </a>
+      </div>
+    </div>
+    <?php /* hidden until launch:
+    <a href="offers.php"     <?php if($active_page==='offers')  echo 'class="nav-active"'; ?>>What We Offer</a>
+    */ ?>
     <a href="why.php"        <?php if($active_page==='why')     echo 'class="nav-active"'; ?>>Why Schoozie?</a>
     <a href="about.php"      <?php if($active_page==='about')   echo 'class="nav-active"'; ?>>About</a>
     <a href="contact.php"    <?php if($active_page==='contact') echo 'class="nav-active"'; ?>>Contact</a>
@@ -59,7 +81,15 @@ if (!isset($show_back_btn)) $show_back_btn = false;
 <!-- MOBILE NAV -->
 <div class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Mobile menu">
   <a href="index.php">Home</a>
-  <a href="index.php#pricing">Plans</a>
+  <div class="mobile-nav-group">
+    <span class="mobile-nav-group-label">Plans</span>
+    <a href="websites.php"><i class="fa-solid fa-globe"></i> Websites <em>(Static &amp; Dynamic)</em></a>
+    <a href="erp.php"><i class="fa-solid fa-layer-group"></i> School ERP</a>
+    <a href="combo.php"><i class="fa-solid fa-fire"></i> Website + ERP Combo</a>
+  </div>
+  <?php /* hidden until launch:
+  <a href="offers.php">What We Offer</a>
+  */ ?>
   <a href="why.php">Why Schoozie?</a>
   <a href="about.php">About</a>
   <a href="contact.php">Contact</a>

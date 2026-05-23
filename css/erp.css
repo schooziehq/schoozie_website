@@ -1,0 +1,263 @@
+/* ============================================
+   ERP PAGE - 4 tier cards + billing toggle
+   Builds on v2 + websites.css
+   ============================================ */
+
+/* ── BILLING TOGGLE ── */
+.erp-billing-section{
+  position:relative; z-index:1;
+  max-width:1280px; margin:10px auto 24px;
+  padding:0 60px;
+  display:flex; flex-direction:column; align-items:center; gap:12px;
+}
+.erp-billing-toggle{
+  display:inline-flex; align-items:center; gap:4px;
+  padding:6px;
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.10);
+  border-radius:14px;
+  box-shadow:inset 0 1px 2px rgba(0,0,0,0.25);
+}
+.erp-bt{
+  position:relative;
+  background:transparent; border:none; cursor:pointer;
+  font-family:inherit; font-size:13.5px; font-weight:600;
+  color:#a8a8c0; letter-spacing:.2px;
+  padding:10px 18px; border-radius:10px;
+  transition:color .2s, background .25s;
+  display:inline-flex; align-items:center; gap:8px;
+}
+.erp-bt:hover{ color:#fff; background:rgba(255,255,255,0.04); }
+.erp-bt.active{
+  color:#fff;
+  background:linear-gradient(135deg, rgba(191,95,255,0.22), rgba(0,212,255,0.16));
+  box-shadow:0 4px 14px rgba(111,66,255,0.22), inset 0 1px 0 rgba(255,255,255,0.08);
+}
+.erp-bt-save{
+  font-size:10px; font-weight:700; letter-spacing:.4px;
+  padding:2px 7px; border-radius:10px;
+  background:rgba(34,197,94,0.14); color:#22c55e;
+  border:1px solid rgba(34,197,94,0.28);
+}
+.erp-bt.active .erp-bt-save{
+  background:rgba(34,197,94,0.22); color:#86efac;
+  border-color:rgba(34,197,94,0.4);
+}
+.erp-proration{
+  font-size:12.5px; color:#8a8aa8; text-align:center;
+  font-style:italic; max-width:520px;
+}
+
+/* ── TIER CARDS ── */
+.erp-tiers{
+  position:relative; z-index:1;
+  max-width:1280px; margin:0 auto 30px;
+  padding:0 40px;
+}
+.erp-tiers-grid{
+  display:grid; grid-template-columns:repeat(4, 1fr); gap:14px;
+}
+.erp-tier-card{
+  --ac:#bf5fff;
+  position:relative;
+  display:flex; flex-direction:column; gap:18px;
+  padding:28px 22px 24px;
+  border-radius:18px;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--ac) 7%, transparent), transparent 45%),
+    rgba(255,255,255,0.025);
+  border:1px solid color-mix(in srgb, var(--ac) 22%, transparent);
+  transition:transform .3s cubic-bezier(.2,.7,.2,1),
+             border-color .25s, box-shadow .35s;
+}
+.erp-tier-card::before{
+  content:""; position:absolute;
+  top:0; left:22px; right:22px; height:2px;
+  background:linear-gradient(90deg, transparent, var(--ac), transparent);
+  border-radius:2px; opacity:.75;
+}
+.erp-tier-card:hover{
+  transform:translateY(-5px);
+  border-color:color-mix(in srgb, var(--ac) 50%, transparent);
+  box-shadow:0 22px 50px color-mix(in srgb, var(--ac) 20%, transparent);
+}
+.erp-tier-card.is-popular{
+  border-color:color-mix(in srgb, var(--ac) 50%, transparent);
+  box-shadow:0 10px 30px color-mix(in srgb, var(--ac) 20%, transparent);
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--ac) 12%, transparent), transparent 50%),
+    rgba(255,255,255,0.035);
+}
+.erp-tier-card.is-custom{
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--ac) 14%, transparent), transparent 50%),
+    radial-gradient(ellipse at top right, rgba(168,85,247,0.10), transparent 60%),
+    rgba(255,255,255,0.025);
+  border-color:color-mix(in srgb, var(--ac) 35%, transparent);
+}
+
+/* ── FLAGS ── */
+.erp-tier-flag{
+  position:absolute;
+  top:-11px; left:50%; transform:translateX(-50%);
+  display:inline-flex; align-items:center; gap:6px;
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:10px; font-weight:800; letter-spacing:1.3px;
+  text-transform:uppercase;
+  padding:5px 12px; border-radius:14px;
+  background:linear-gradient(135deg,var(--ac),#6f42ff);
+  color:#fff; white-space:nowrap;
+  box-shadow:0 4px 14px color-mix(in srgb, var(--ac) 40%, transparent);
+}
+.erp-tier-flag i{ font-size:9px; }
+.erp-tier-flag.erp-flag-custom{
+  background:linear-gradient(135deg,#bf5fff,#ff5fcb);
+}
+
+/* ── HEAD ── */
+.erp-tier-head{ text-align:center; }
+.erp-tier-icon{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:48px; height:48px; border-radius:13px;
+  background:color-mix(in srgb, var(--ac) 14%, transparent);
+  color:var(--ac); font-size:20px;
+  border:1px solid color-mix(in srgb, var(--ac) 28%, transparent);
+  margin-bottom:12px;
+}
+.erp-tier-head h3{
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:22px; font-weight:700; color:#fff;
+  letter-spacing:-0.3px; margin-bottom:6px;
+}
+.erp-tier-tag{
+  font-size:13px; color:#9999bb; line-height:1.5;
+  font-weight:500;
+}
+
+/* ── PRICE ── */
+.erp-tier-price{
+  text-align:center;
+  padding:16px 0; margin:0 -4px;
+  border-top:1px solid rgba(255,255,255,0.06);
+  border-bottom:1px solid rgba(255,255,255,0.06);
+}
+.erp-price-row{
+  display:inline-flex; align-items:baseline; gap:5px;
+  margin-bottom:4px;
+}
+.erp-price-rs{
+  font-size:14px; font-weight:600; color:#c8c8e0; opacity:.85;
+}
+.erp-price-amt{
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:34px; font-weight:800; letter-spacing:-1px;
+  background:linear-gradient(135deg, var(--ac), #ffffffcc);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+  line-height:1;
+}
+.is-custom .erp-price-amt{ font-size:30px; }
+.erp-price-period{
+  font-size:12px; color:#9999bb;
+}
+.erp-price-modules{
+  font-size:10.5px; font-weight:700; letter-spacing:1.2px;
+  text-transform:uppercase;
+  color:#7a7a92;
+  margin-top:8px;
+}
+
+/* ── FEATURES ── */
+.erp-tier-feats ul{
+  list-style:none; padding:0; margin:0;
+  display:flex; flex-direction:column; gap:8px;
+}
+.erp-tier-feats li{
+  display:flex; align-items:flex-start; gap:9px;
+  font-size:13px; color:#dcdce8; line-height:1.45;
+}
+.erp-tier-feats li i{
+  flex-shrink:0; margin-top:3px;
+  width:16px; height:16px; border-radius:50%;
+  display:inline-flex; align-items:center; justify-content:center;
+  background:color-mix(in srgb, var(--ac) 16%, transparent);
+  color:var(--ac); font-size:8px;
+}
+.erp-tier-feats li.is-off{ color:#5a5a72; }
+.erp-tier-feats li.is-off i{
+  background:rgba(255,255,255,0.03);
+  color:#4a4a62;
+}
+
+/* ── CTA ── */
+.erp-tier-cta{ margin-top:auto; padding-top:6px; }
+.erp-tier-cta .w-btn-primary{
+  width:100%; justify-content:center;
+  padding:12px 16px; font-size:13.5px;
+}
+
+/* ── SETUP-FEE CALLOUT ── */
+.erp-callout-wrap{
+  max-width:980px; margin:8px auto 36px;
+  padding:0 60px;
+  position:relative; z-index:1;
+}
+.erp-callout{
+  display:flex; align-items:flex-start; gap:14px;
+  padding:14px 18px; border-radius:12px;
+  background:rgba(245,158,11,0.07);
+  border:1px solid rgba(245,158,11,0.25);
+}
+.erp-callout-icon{
+  flex-shrink:0;
+  width:34px; height:34px; border-radius:10px;
+  display:inline-flex; align-items:center; justify-content:center;
+  background:rgba(245,158,11,0.16);
+  color:#fbbf24; font-size:14px;
+  border:1px solid rgba(245,158,11,0.32);
+}
+.erp-callout strong{
+  display:block;
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:13.5px; font-weight:700; color:#fbbf24;
+  margin-bottom:2px;
+}
+.erp-callout em{
+  font-style:normal;
+  font-size:12.5px; color:#e2b974; line-height:1.55;
+}
+
+/* ── COMPARE TABLE - 4-column tweaks ── */
+.erp-compare-wrap{ overflow-x:auto; }
+.erp-compare-table th i{ font-size:14px; margin-bottom:4px; display:inline-block; }
+.erp-compare-table .erp-compare-extra td.cmp-feature{
+  font-weight:600; color:#bf5fff;
+}
+.erp-compare-table tr.erp-compare-extra:first-of-type td{
+  border-top:1px dashed rgba(191,95,255,0.25);
+  padding-top:18px;
+}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1100px){
+  .erp-tiers-grid{ grid-template-columns:repeat(2, 1fr); gap:18px; }
+  .erp-tiers{ padding:0 24px; }
+}
+@media(max-width:960px){
+  .erp-billing-section{ padding:0 24px; }
+  .erp-callout-wrap{ padding:0 24px; }
+}
+@media(max-width:600px){
+  .erp-tiers-grid{ grid-template-columns:1fr; gap:14px; }
+  .erp-tiers{ padding:0 14px; }
+  .erp-tier-card{ padding:24px 18px; }
+  .erp-billing-section{ padding:0 14px; }
+  .erp-billing-toggle{ width:100%; }
+  .erp-bt{ flex:1; padding:9px 8px; font-size:12.5px; justify-content:center; }
+  .erp-bt-save{ display:none; }
+  .erp-callout-wrap{ padding:0 14px; }
+  .erp-callout{ padding:12px 14px; }
+  .erp-price-amt{ font-size:30px; }
+  .erp-compare-table{ font-size:11.5px; }
+  .erp-compare-table th{ font-size:10.5px; padding:10px 4px; }
+  .erp-compare-table td{ padding:8px 4px; }
+}

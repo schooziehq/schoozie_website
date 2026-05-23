@@ -13,16 +13,16 @@
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Contact Schoozie — Get a Free Demo for Your School">
+<meta property="og:title" content="Contact Schoozie - Get a Free Demo for Your School">
 <meta property="og:description" content="Reach out on WhatsApp or email to get a free demo of Schoozie's school website and ERP solutions.">
 <meta property="og:url" content="https://schoozie.com/contact.php">
 <meta property="og:image" content="https://schoozie.com/assets/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:type" content="image/png">
-<meta property="og:image:alt" content="Contact Schoozie — Get a Free Demo for Your School">
+<meta property="og:image:alt" content="Contact Schoozie - Get a Free Demo for Your School">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Contact Schoozie — Get a Free Demo for Your School">
+<meta name="twitter:title" content="Contact Schoozie - Get a Free Demo for Your School">
 <meta name="twitter:description" content="Reach out on WhatsApp or email to get a free demo of Schoozie's school website and ERP solutions.">
 <meta name="twitter:image" content="https://schoozie.com/assets/og-image.png">
 
@@ -35,6 +35,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="css/global.css?v=<?php echo filemtime('css/global.css'); ?>">
+<link rel="stylesheet" href="css/index-v2.css?v=<?php echo filemtime('css/index-v2.css'); ?>">
 <link rel="stylesheet" href="css/contact.css?v=<?php echo filemtime('css/contact.css'); ?>">
 </head>
 <body>
@@ -47,7 +48,7 @@
   <section class="contact-hero">
     <span class="contact-hero-eyebrow"><i class="fa-solid fa-paper-plane"></i> &nbsp;Get In Touch</span>
     <h1>Let's Talk About<br>Your School's Digital Future</h1>
-    <p>No sales scripts. No call centres. Just a real conversation about what your school needs — at your pace, on WhatsApp.</p>
+    <p>No sales scripts. No call centres. Just a real conversation about what your school needs - at your pace, on WhatsApp.</p>
   </section>
 
   <!-- CONTACT METHODS -->
@@ -58,7 +59,7 @@
       <h3>WhatsApp</h3>
       <p>The fastest way to reach us. We typically reply within a few hours during business days.</p>
       <div class="contact-card-val" itemprop="contactType">WhatsApp Chat</div>
-      <a class="contact-wa-btn"
+      <a class="v2-btn-whatsapp"
          href="https://wa.me/<?php echo $contact_whatsapp; ?>?text=Hi%2C+I%27m+interested+in+Schoozie+for+my+school.+Can+we+talk?"
          target="_blank" rel="noopener"
          itemprop="url">
@@ -71,7 +72,7 @@
       <h3>Email Us</h3>
       <p>For detailed enquiries, proposals, or partnership discussions. We reply within 24 hours.</p>
       <div class="contact-card-val" itemprop="email"><?php echo $contact_email; ?></div>
-      <a class="contact-email-btn" href="mailto:<?php echo $contact_email; ?>?subject=School%20Digital%20Solutions%20Enquiry">
+      <a class="v2-btn-outline" href="mailto:<?php echo $contact_email; ?>?subject=School%20Digital%20Solutions%20Enquiry">
         <i class="fa-solid fa-envelope"></i> Send Email
       </a>
     </div>
@@ -79,7 +80,7 @@
     <div class="contact-card location" role="listitem">
       <div class="contact-card-icon"><i class="fa-solid fa-location-dot"></i></div>
       <h3>Our Offices</h3>
-      <p>We are a remote-first team serving schools all across India — from Kashmir to Kanyakumari.</p>
+      <p>We are a remote-first team serving schools all across India - from Kashmir to Kanyakumari.</p>
       <div class="contact-card-val" style="display:flex;flex-direction:column;gap:14px;text-align:left">
         <div itemscope itemtype="https://schema.org/PostalAddress">
           <div style="font-size:11px;font-weight:600;color:#bf5fff;letter-spacing:.5px;text-transform:uppercase;margin-bottom:4px">South India Office</div>
@@ -105,7 +106,7 @@
     <div class="why-wa-inner">
       <span class="section-tag"><i class="fa-brands fa-whatsapp"></i> &nbsp;Why WhatsApp?</span>
       <h2 id="why-wa-heading">Because Real Support Beats a Ticket System</h2>
-      <p>We chose WhatsApp as our primary contact channel intentionally — it's where schools already are, and it lets us give you real, personal support.</p>
+      <p>We chose WhatsApp as our primary contact channel intentionally - it's where schools already are, and it lets us give you real, personal support.</p>
       <div class="why-wa-grid">
         <div class="why-wa-item">
           <div class="why-wa-header"><i class="fa-solid fa-bolt"></i><h4>Fast Response</h4></div>
@@ -113,7 +114,7 @@
         </div>
         <div class="why-wa-item">
           <div class="why-wa-header"><i class="fa-solid fa-user"></i><h4>Personal Attention</h4></div>
-          <p>You speak to the same person — not a rotating support agent who doesn't know your school.</p>
+          <p>You speak to the same person - not a rotating support agent who doesn't know your school.</p>
         </div>
         <div class="why-wa-item">
           <div class="why-wa-header"><i class="fa-solid fa-shield-halved"></i><h4>No Pressure</h4></div>
@@ -129,12 +130,12 @@
 
     <details class="faq-item">
       <summary class="faq-q">How long does it take to build a school website? <i class="fa-solid fa-chevron-down"></i></summary>
-      <div class="faq-a">Once we have all your content and assets, your website — static or dynamic — is ready within <strong>5–10 minutes</strong>. We keep you updated throughout via WhatsApp.</div>
+      <div class="faq-a">Once we have all your content and assets, your website - static or dynamic - is ready within <strong>5-10 minutes</strong>. We keep you updated throughout via WhatsApp.</div>
     </details>
 
     <details class="faq-item">
       <summary class="faq-q">Do you provide a free trial or demo? <i class="fa-solid fa-chevron-down"></i></summary>
-      <div class="faq-a">Yes — our ERP plans include a <strong>free trial period</strong>. For websites, we can share live demo links and mockups before you commit. Just message us on WhatsApp to get started.</div>
+      <div class="faq-a">Yes - our ERP plans include a <strong>free trial period</strong>. For websites, we can share live demo links and mockups before you commit. Just message us on WhatsApp to get started.</div>
     </details>
 
     <details class="faq-item">
@@ -154,21 +155,22 @@
 
     <details class="faq-item">
       <summary class="faq-q">What happens after I message you on WhatsApp? <i class="fa-solid fa-chevron-down"></i></summary>
-      <div class="faq-a">You'll hear from us within a few hours — usually much faster. We'll ask a few quick questions about your school, understand what you need, and walk you through the right plan. No sales pitch, no pressure. Just a real conversation.</div>
+      <div class="faq-a">You'll hear from us within a few hours - usually much faster. We'll ask a few quick questions about your school, understand what you need, and walk you through the right plan. No sales pitch, no pressure. Just a real conversation.</div>
     </details>
 
   </section>
 
   <!-- CTA -->
-  <section class="contact-cta">
-    <h2>Still Have Questions?</h2>
-    <p>Drop us a message on WhatsApp — we're happy to answer anything, no commitment needed.</p>
-    <a class="contact-wa-btn"
-       href="https://wa.me/<?php echo $contact_whatsapp; ?>?text=Hi%2C+I+have+a+question+about+Schoozie."
-       target="_blank" rel="noopener"
-       style="display:inline-flex;font-size:14px;padding:13px 28px">
-      <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
-    </a>
+  <section class="v2-final-cta">
+    <h2>Still have <span class="grad">questions?</span></h2>
+    <p>Drop us a message on WhatsApp - we're happy to answer anything, no commitment needed.</p>
+    <div class="v2-final-cta-btns">
+      <a class="v2-btn-whatsapp"
+         href="https://wa.me/<?php echo $contact_whatsapp; ?>?text=Hi%2C+I+have+a+question+about+Schoozie."
+         target="_blank" rel="noopener">
+        <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+      </a>
+    </div>
   </section>
 
 </div><!-- end inner-page -->
@@ -203,7 +205,7 @@
         "name": "How long does it take to build a school website?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Once we have all your content and assets, your website — static or dynamic — is ready within 5–10 minutes."
+          "text": "Once we have all your content and assets, your website - static or dynamic - is ready within 5-10 minutes."
         }
       },
       {
@@ -211,7 +213,7 @@
         "name": "Do you provide a free trial or demo?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes — our ERP plans include a free trial period. For websites, we can share live demo links and mockups before you commit."
+          "text": "Yes - our ERP plans include a free trial period. For websites, we can share live demo links and mockups before you commit."
         }
       },
       {
