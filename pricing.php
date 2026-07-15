@@ -5,7 +5,11 @@ require_once 'config.php';
 
 $term_disc = [5=>25, 3=>15, 1=>0];
 
-/* ── ERP plans (data + card highlights; full lists power the comparison) ── */
+/* ── ERP plans (data + card highlights; full lists power the comparison) ──
+   The numbers below (base / students / ai / discounts) are FALLBACK defaults.
+   They are overridden LIVE from the ERP a little further down, so editing a
+   price in the Schoozie super-admin panel updates this page automatically.
+   All the COPY (tag, highlights, groups) stays hardcoded here. */
 $plans = [
   'basic' => [
     'name'=>'Basic','icon'=>'fa-cube','variant'=>'basic','feat'=>false,'badge'=>null,'badge_class'=>'','eyebrow'=>'Essentials',
@@ -65,6 +69,73 @@ $plans = [
     ],
   ],
 ];
+
+/* ─────────────────────────────────────────────────────────────────────────
+   LIVE PRICING from the Schoozie ERP — the single source of truth.
+   Overrides base / students / AI / per-plan discounts on the cards above so a
+   price change in the super-admin panel shows here immediately. Always live
+   (no local cache); a short timeout + graceful fallback keeps the page fast
+   and up even if the ERP is briefly unreachable.
+   Endpoint: GET /api/v1/subscriptions/public-pricing/  (public, no auth)
+   ───────────────────────────────────────────────────────────────────────── */
+$ERP_PRICING_URL = 'https://erp.schoozie.com/api/v1/subscriptions/public-pricing/';
+
+function schoozie_fetch_pricing($url){
+  if(!function_exists('curl_init')) return null;
+  $ch = curl_init($url);
+  curl_setopt_array($ch, [
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_TIMEOUT        => 4,
+    CURLOPT_CONNECTTIMEOUT => 3,
+    CURLOPT_SSL_VERIFYPEER => true,
+    CURLOPT_SSL_VERIFYHOST => 2,
+    CURLOPT_HTTPHEADER     => ['Accept: application/json'],
+    CURLOPT_USERAGENT      => 'schoozie-marketing/1.0',
+  ]);
+  $body = curl_exec($ch);
+  $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+  curl_close($ch);
+  if($body === false || $code !== 200) return null;
+  $data = json_decode($body, true);
+  if(!is_array($data) || empty($data['plans']) || !is_array($data['plans'])) return null;
+  $by_code = [];
+  foreach($data['plans'] as $pl){
+    if(empty($pl['code'])) continue;
+    $by_code[strtolower($pl['code'])] = $pl;
+  }
+  return $by_code ?: null;
+}
+
+/* Seed every card with the fallback discount map, then override from the ERP. */
+foreach($plans as $k=>$_p){ $plans[$k]['disc'] = $term_disc; }
+
+$erp = schoozie_fetch_pricing($ERP_PRICING_URL);
+if($erp){
+  foreach($plans as $key=>$p){
+    if(!isset($erp[$key])) continue;
+    $live = $erp[$key];
+
+    if(isset($live['list_monthly']) && $live['list_monthly'] > 0)
+      $plans[$key]['base'] = (int)round($live['list_monthly']);
+    if(isset($live['max_students']) && $live['max_students'] > 0)
+      $plans[$key]['students'] = (int)$live['max_students'];
+    if(isset($live['ai_actions_per_month']))
+      $plans[$key]['ai'] = number_format((int)$live['ai_actions_per_month']);
+
+    // Per-plan discounts from the live pricing rows (months 12/36/60 → 1/3/5-yr).
+    if(!empty($live['pricing']) && is_array($live['pricing'])){
+      $disc = [];
+      foreach($live['pricing'] as $row){
+        if(empty($row['months'])) continue;
+        $term = (int)round($row['months'] / 12);
+        if(in_array($term, [1,3,5], true))
+          $disc[$term] = (int)round(isset($row['discount_pct']) ? $row['discount_pct'] : 0);
+      }
+      // Live values win; any term the ERP didn't return keeps the fallback.
+      $plans[$key]['disc'] = $disc + $plans[$key]['disc'];
+    }
+  }
+}
 
 function inr($n){ return number_format($n, 0, '.', ','); }
 function flat_feats($groups){ $s=[]; foreach($groups as $items){ foreach($items as $it){ $s[$it]=true; } } return $s; }
@@ -188,10 +259,13 @@ function ok($b){ return $b ? '<i class="fa-solid fa-check yes"></i>' : '<i class
 
       <div class="prx-grid">
         <?php foreach($plans as $key=>$p):
-          $eff = round($p['base'] * 0.75); $persy = round($eff * 12 / $p['students']);
+          $disc5 = isset($p['disc'][5]) ? (int)$p['disc'][5] : 25;
+          $eff   = (int)round($p['base'] * (1 - $disc5/100));
+          $persy = $p['students'] > 0 ? (int)round($eff * 12 / $p['students']) : 0;
+          $discJson = htmlspecialchars(json_encode($p['disc']), ENT_QUOTES);
           $variantClass = $p['feat'] ? 'is-feat' : 'is-'.$p['variant'];
         ?>
-        <article class="prx-card <?php echo $variantClass; ?>" data-base="<?php echo $p['base']; ?>" data-students="<?php echo $p['students']; ?>">
+        <article class="prx-card <?php echo $variantClass; ?>" data-base="<?php echo $p['base']; ?>" data-students="<?php echo $p['students']; ?>" data-disc='<?php echo $discJson; ?>'>
           <?php if($p['badge']): ?><div class="prx-ribbon"><span><?php echo $p['badge']; ?></span></div><?php endif; ?>
           <span class="prx-kicker"><?php echo $p['eyebrow']; ?></span>
           <div class="prx-name"><i class="fa-solid <?php echo $p['icon']; ?>"></i><b><?php echo $p['name']; ?></b></div>
@@ -205,8 +279,8 @@ function ok($b){ return $b ? '<i class="fa-solid fa-check yes"></i>' : '<i class
             <button type="button" data-term="1">1 Year</button>
           </div>
 
-          <div class="prx-price"><span class="amt">&#8377;<?php echo inr($eff); ?></span><span class="per">/mo</span><span class="was">&#8377;<?php echo inr($p['base']); ?>/mo</span></div>
-          <span class="prx-save">Save 25%</span>
+          <div class="prx-price"><span class="amt">&#8377;<?php echo inr($eff); ?></span><span class="per">/mo</span><span class="was"<?php if($disc5<=0) echo ' style="display:none"'; ?>>&#8377;<?php echo inr($p['base']); ?>/mo</span></div>
+          <span class="prx-save"<?php if($disc5<=0) echo ' style="display:none"'; ?>>Save <?php echo $disc5; ?>%</span>
           <p class="prx-note"><b class="n-bill">Billed upfront for 5 years</b> &middot; + 18% GST<br>Effective monthly rate &middot; &asymp; <span class="n-persy">&#8377;<?php echo inr($persy); ?></span>/student/year</p>
 
           <div class="prx-cap"><i class="fa-solid fa-users"></i> Up to <?php echo inr($p['students']); ?> students</div>
@@ -285,12 +359,15 @@ function ok($b){ return $b ? '<i class="fa-solid fa-check yes"></i>' : '<i class
 
 <script>
 (function(){
-  var DISC = {5:25, 3:15, 1:0};
   function inr(n){ return n.toLocaleString('en-IN'); }
+  function discFor(card, term){
+    try { var dm = JSON.parse(card.dataset.disc || '{}'); return +dm[term] || 0; }
+    catch(e){ return 0; }
+  }
   function setTerm(term){
     document.querySelectorAll('.prx-card[data-base]').forEach(function(card){
-      var base = +card.dataset.base, students = +card.dataset.students, disc = DISC[term];
-      var eff = Math.round(base * (1 - disc/100)), persy = Math.round(eff * 12 / students);
+      var base = +card.dataset.base, students = +card.dataset.students, disc = discFor(card, term);
+      var eff = Math.round(base * (1 - disc/100)), persy = students ? Math.round(eff * 12 / students) : 0;
       card.querySelector('.amt').innerHTML = '&#8377;' + inr(eff);
       var was = card.querySelector('.was'); was.innerHTML = '&#8377;' + inr(base) + '/mo'; was.style.display = disc>0?'':'none';
       var save = card.querySelector('.prx-save'); save.textContent = 'Save ' + disc + '%'; save.style.display = disc>0?'':'none';
