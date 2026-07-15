@@ -2,6 +2,18 @@
 $site_name = "Schoozie";
 $year = date("Y");
 require_once 'config.php';
+
+/* Resolve an image that may be saved as .png, .jpg or .jpeg.
+   Pass the path WITHOUT extension; returns the first file that exists on
+   disk. Falls back to the first extension so the markup still renders. */
+if (!function_exists('img_src')) {
+  function img_src(string $base, array $exts = ['png', 'jpg', 'jpeg']): string {
+    foreach ($exts as $ext) {
+      if (is_file(__DIR__ . '/' . $base . '.' . $ext)) return $base . '.' . $ext;
+    }
+    return $base . '.' . $exts[0];
+  }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -127,7 +139,7 @@ require_once 'config.php';
 
       <div class="story-step">
         <div class="story-img">
-          <img src="assets/png/story/story-1.png" alt="A worried mother at a school meeting, unsure how to talk to the teacher" loading="lazy">
+          <img src="<?php echo img_src('assets/png/story/story-1'); ?>" alt="A worried mother at a school meeting, unsure how to talk to the teacher" loading="lazy">
           <span class="story-num">1</span>
         </div>
         <p><b>She froze at the meeting.</b> &ldquo;How will I even talk to the teacher? I don&rsquo;t know English&hellip;&rdquo;</p>
@@ -135,7 +147,7 @@ require_once 'config.php';
 
       <div class="story-step">
         <div class="story-img">
-          <img src="assets/png/story/story-2.png" alt="The mother discovers the Schoozie app that lets her speak in her own language" loading="lazy">
+          <img src="<?php echo img_src('assets/png/story/story-2'); ?>" alt="The mother discovers the Schoozie app that lets her speak in her own language" loading="lazy">
           <span class="story-num">2</span>
         </div>
         <p><b>Then she found Schoozie.</b> &ldquo;Speak in your own language,&rdquo; it said &mdash; in Hindi.</p>
@@ -143,7 +155,7 @@ require_once 'config.php';
 
       <div class="story-step">
         <div class="story-img">
-          <img src="assets/png/story/story-3.png" alt="The mother speaks to Schoozie AI which is listening" loading="lazy">
+          <img src="<?php echo img_src('assets/png/story/story-3'); ?>" alt="The mother speaks to Schoozie AI which is listening" loading="lazy">
           <span class="story-num">3</span>
         </div>
         <p><b>She just asked out loud,</b> in her own words. Schoozie AI listened.</p>
@@ -151,7 +163,7 @@ require_once 'config.php';
 
       <div class="story-step">
         <div class="story-img">
-          <img src="assets/png/story/story-4.png" alt="The mother smiles as Schoozie replies in Hindi that her daughter scored 94 out of 100" loading="lazy">
+          <img src="<?php echo img_src('assets/png/story/story-4'); ?>" alt="The mother smiles as Schoozie replies in Hindi that her daughter scored 94 out of 100" loading="lazy">
           <span class="story-num">4</span>
         </div>
         <p><b>Instantly, in Hindi:</b> &ldquo;Kavya scored 94/100 in Maths today. Well done!&rdquo; She smiled.</p>
