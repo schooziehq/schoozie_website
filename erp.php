@@ -21,7 +21,7 @@ require_once 'config.php';
 <link rel="manifest" href="assets/icons/web/site.webmanifest">
 <meta property="og:type" content="website">
 <meta property="og:title" content="School ERP Software - 4 Plans for Indian Schools | Schoozie">
-<meta property="og:description" content="Schoozie School ERP - fees, attendance, exams, library, transport, payroll. Plans starting at Rs. <?php echo $erp_basic_quarterly; ?>/quarter.">
+<meta property="og:description" content="Schoozie School ERP - fees, attendance, exams, library, transport, payroll. Four flexible plans for schools of every size.">
 <meta property="og:url" content="https://schoozie.com/erp.php">
 <meta property="og:image" content="https://schoozie.com/assets/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -168,40 +168,11 @@ require_once 'config.php';
   "applicationCategory": "EducationalApplication",
   "operatingSystem": "Web",
   "description": "Cloud-based school ERP for student management, fee collection, attendance, exams, library, transport, payroll, and more. Four flexible plans for Indian schools.",
-  "url": "https://schoozie.com/erp.php",
-  "offers": [
-    {"@type":"Offer","name":"Basic","price":"<?php echo str_replace(',','',$erp_basic_quarterly); ?>","priceCurrency":"INR","priceSpecification":{"@type":"UnitPriceSpecification","price":"<?php echo str_replace(',','',$erp_basic_quarterly); ?>","priceCurrency":"INR","unitText":"quarter"}},
-    {"@type":"Offer","name":"Standard","price":"<?php echo str_replace(',','',$erp_standard_quarterly); ?>","priceCurrency":"INR","priceSpecification":{"@type":"UnitPriceSpecification","price":"<?php echo str_replace(',','',$erp_standard_quarterly); ?>","priceCurrency":"INR","unitText":"quarter"}},
-    {"@type":"Offer","name":"Premium","price":"<?php echo str_replace(',','',$erp_premium_quarterly); ?>","priceCurrency":"INR","priceSpecification":{"@type":"UnitPriceSpecification","price":"<?php echo str_replace(',','',$erp_premium_quarterly); ?>","priceCurrency":"INR","unitText":"quarter"}}
-  ]
+  "url": "https://schoozie.com/erp.php"
 }
 </script>
 
 <script>
-/* Billing toggle - updates all tier prices */
-(function(){
-  var bts = document.querySelectorAll('.erp-bt');
-  var savingsH = <?php echo (int)$erp_savings_halfyearly; ?>;
-  var savingsY = <?php echo (int)$erp_savings_yearly; ?>;
-  var periodLabels = { q:'/quarter', h:'/half-yearly', y:'/yearly' };
-  bts.forEach(function(btn){
-    btn.addEventListener('click', function(){
-      var key = btn.dataset.billing;
-      bts.forEach(function(b){ b.classList.remove('active'); });
-      btn.classList.add('active');
-      document.querySelectorAll('.erp-tier-price').forEach(function(p){
-        var amt  = p.querySelector('.erp-price-amt');
-        var per  = p.querySelector('.erp-price-per');
-        if(!amt || !per) return;
-        var v = p.dataset[key];
-        if(!v) return;
-        amt.textContent = v;
-        per.textContent = periodLabels[key];
-      });
-    });
-  });
-})();
-
 /* Language tabs */
 document.querySelectorAll('.w-lang-tabs').forEach(function(group){
   var scope = group.closest('.w-terms-block');

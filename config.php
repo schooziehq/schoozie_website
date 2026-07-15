@@ -66,15 +66,10 @@ $dynamic_regular_price = "19,999";
 $dynamic_saving        = "5,500";
 $dynamic_renewal_price = "9,800";
 
-/* ── School ERP — quarterly base price per tier ──
-   Half-yearly & yearly totals are derived from these + the savings %
-   below, inside erp.php (do NOT hard-code them here). */
-$erp_basic_quarterly    = "8,997";
-$erp_standard_quarterly = "17,997";
-$erp_premium_quarterly  = "29,997";
-
-$erp_savings_halfyearly = "5";       // % off vs paying quarterly
-$erp_savings_yearly     = "15";      // % off vs paying quarterly
+/* ── School ERP pricing is now DYNAMIC ──
+   Live from the ERP super-admin panel via
+   https://erp.schoozie.com/api/v1/subscriptions/public-pricing/ (used by
+   pricing.php). No ERP prices are hard-coded here anymore. */
 
 /* ── Combo (Website + ERP bundle) ── */
 $combo_website_discount = "50";      // % off the chosen website

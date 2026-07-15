@@ -380,6 +380,48 @@ function ok($b){ return $b ? '<i class="fa-solid fa-check yes"></i>' : '<i class
 })();
 </script>
 
+<?php
+/* ── Structured data (Product/Offer) — built from the SAME live pricing the
+   cards show above, so the rich-result prices never drift. ── */
+$strip = function($s){ return preg_replace('/[^\d]/', '', (string)$s); };
+$sw = $offer_active ? $static_offer_price  : $static_regular_price;
+$dw = $offer_active ? $dynamic_offer_price : $dynamic_regular_price;
+
+$erp_effs = [];
+foreach($plans as $p){
+  if(empty($p['base']) || $p['base'] <= 0) continue;
+  $d5 = isset($p['disc'][5]) ? (int)$p['disc'][5] : 25;
+  $erp_effs[] = (int)round($p['base'] * (1 - $d5/100));   // effective monthly rate
+}
+
+$ld = ['@context'=>'https://schema.org', '@graph'=>[
+  [
+    '@type'=>'Product', 'name'=>'Schoozie Static School Website',
+    'description'=>'Professionally designed, Schoozie-managed static school website with free SSL and first-year hosting included.',
+    'brand'=>['@type'=>'Brand','name'=>'Schoozie'],
+    'offers'=>['@type'=>'Offer','priceCurrency'=>'INR','price'=>$strip($sw),'availability'=>'https://schema.org/InStock','url'=>'https://schoozie.com/pricing.php'],
+  ],
+  [
+    '@type'=>'Product', 'name'=>'Schoozie Dynamic School Website',
+    'description'=>'Self-managed dynamic school website with an admin panel to post notices, news and photos any time.',
+    'brand'=>['@type'=>'Brand','name'=>'Schoozie'],
+    'offers'=>['@type'=>'Offer','priceCurrency'=>'INR','price'=>$strip($dw),'availability'=>'https://schema.org/InStock','url'=>'https://schoozie.com/pricing.php'],
+  ],
+]];
+if($erp_effs){
+  $ld['@graph'][] = [
+    '@type'=>'Product', 'name'=>'Schoozie School ERP',
+    'description'=>'AI-powered school ERP — fees, attendance, exams, transport, payroll and the parent app. Basic, Standard, Premium and Custom tiers.',
+    'brand'=>['@type'=>'Brand','name'=>'Schoozie'],
+    'offers'=>['@type'=>'AggregateOffer','priceCurrency'=>'INR',
+      'lowPrice'=>(string)min($erp_effs), 'highPrice'=>(string)max($erp_effs),
+      'offerCount'=>(string)count($erp_effs),
+      'availability'=>'https://schema.org/InStock', 'url'=>'https://schoozie.com/pricing.php'],
+  ];
+}
+echo "<script type=\"application/ld+json\">\n".json_encode($ld, JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT)."\n</script>\n";
+?>
+
 <?php include '_footer.php'; ?>
 </body>
 </html>

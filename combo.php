@@ -339,7 +339,7 @@ $tc = [
         <div class="combo-pillar-hint">
           Pick Basic, Standard,<br>
           Premium or Enterprise<br>
-          <span class="combo-pillar-was">From <strong>Rs. <?php echo $erp_basic_quarterly; ?></strong>/quarter</span>
+          <span class="combo-pillar-was">Simple per-student pricing</span>
         </div>
       </div>
 
@@ -519,7 +519,7 @@ $tc = [
     "highPrice": "<?php echo str_replace(',','',$dynamic_combo_now); ?>",
     "offerCount": "2",
     "url": "https://schoozie.com/combo.php",
-    "description": "Website starts from Rs. <?php echo $static_combo_now; ?> (Static) or Rs. <?php echo $dynamic_combo_now; ?> (Dynamic), plus any ERP tier from Rs. <?php echo $erp_basic_quarterly; ?>/quarter."
+    "description": "Website starts from Rs. <?php echo $static_combo_now; ?> (Static) or Rs. <?php echo $dynamic_combo_now; ?> (Dynamic), plus any Schoozie ERP tier."
   }
 }
 </script>

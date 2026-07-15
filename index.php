@@ -22,7 +22,7 @@ if (!function_exists('img_src')) {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Schoozie - Take Your School Digital in Minutes</title>
-<meta name="description" content="Schoozie helps Indian schools go digital with professional school websites, dynamic CMS, and school ERP software. Plans starting at ₹<?php echo $erp_basic_quarterly; ?> per quarter. WhatsApp support included.">
+<meta name="description" content="Schoozie helps Indian schools go digital with professional school websites, dynamic CMS, and school ERP software. WhatsApp support included.">
 <meta name="keywords" content="school website india, school ERP software india, school management software, dynamic school website, school CMS india, school website design india, urdu medium school website, hindi medium school website, school ERP roorkee, school website uttarakhand, affordable school website india">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://schoozie.com/">
@@ -33,7 +33,7 @@ if (!function_exists('img_src')) {
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Schoozie - School Website & ERP Software for Indian Schools">
-<meta property="og:description" content="Schoozie helps Indian schools go digital with professional school websites, dynamic CMS, and school ERP software. Plans starting at ₹<?php echo $erp_basic_quarterly; ?> per quarter.">
+<meta property="og:description" content="Schoozie helps Indian schools go digital with professional school websites, dynamic CMS, and school ERP software.">
 <meta property="og:url" content="https://schoozie.com/">
 <meta property="og:image" content="https://schoozie.com/assets/og-image.jpg">
 <meta property="og:image:width" content="1200">
@@ -42,7 +42,7 @@ if (!function_exists('img_src')) {
 <meta property="og:image:alt" content="Schoozie - School Websites, CMS & ERP Software for Indian Schools">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Schoozie - School Website & ERP Software for Indian Schools">
-<meta name="twitter:description" content="Schoozie helps Indian schools go digital with professional school websites, dynamic CMS, and school ERP software. Plans starting at ₹<?php echo $erp_basic_quarterly; ?> per quarter.">
+<meta name="twitter:description" content="Schoozie helps Indian schools go digital with professional school websites, dynamic CMS, and school ERP software.">
 <meta name="twitter:image" content="https://schoozie.com/assets/og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -518,7 +518,7 @@ if (!function_exists('img_src')) {
         <div class="plan-icon"><i class="fa-solid fa-layer-group"></i></div>
         <h3>School ERP</h3>
         <p>Full school management - fees, attendance, exams and more.</p>
-        <div class="plan-price">From <strong>Rs. <?php echo $erp_basic_quarterly; ?></strong>/quarter</div>
+        <div class="plan-price">Simple per-student pricing</div>
         <span class="plan-link">Preview <i class="fa-solid fa-arrow-right"></i></span>
       </a>
 
@@ -741,11 +741,6 @@ if (!function_exists('img_src')) {
       "name": "Schoozie School ERP",
       "applicationCategory": "EducationalApplication",
       "operatingSystem": "Web",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "INR",
-        "price": "<?php echo str_replace(',','',$erp_basic_quarterly); ?>"
-      },
       "description": "Cloud-based school ERP software for student management, fee tracking, timetable, attendance, and more.",
       "url": "https://schoozie.com/erp.php"
     }
