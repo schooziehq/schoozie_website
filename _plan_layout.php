@@ -17,15 +17,15 @@
 <meta property="og:title" content="<?php echo $plan['name']; ?> - Schoozie">
 <meta property="og:description" content="<?php echo $plan['description']; ?>">
 <meta property="og:url" content="https://schoozie.com/<?php echo basename($_SERVER['PHP_SELF']); ?>">
-<meta property="og:image" content="https://schoozie.com/assets/og-image.jpg">
+<meta property="og:image" content="https://schoozie.com/assets/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:type" content="image/png">
 <meta property="og:image:alt" content="Schoozie - School Digital Solutions India">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="<?php echo $plan['name']; ?> - Schoozie">
 <meta name="twitter:description" content="<?php echo $plan['description']; ?>">
-<meta name="twitter:image" content="https://schoozie.com/assets/og-image.jpg">
+<meta name="twitter:image" content="https://schoozie.com/assets/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
