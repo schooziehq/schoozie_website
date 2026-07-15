@@ -59,13 +59,13 @@ body{
   to{transform:translateX(-50%)}
 }
 /* home desktop: hide fixed promo, inline promo is sticky below header */
-@media(min-width:901px){
+@media(min-width:1025px){
   .page-home .promo-strip.promo-fixed{display:none}
   .page-home .promo-strip.promo-inline{
     position:sticky;top:68px;z-index:999;display:flex;
   }
 }
-@media(max-width:900px){
+@media(max-width:1024px){
   .promo-strip{height:32px;top:60px}
   .promo-track span{font-size:11px;padding:0 20px}
   .promo-strip.promo-inline{display:none}
@@ -87,6 +87,23 @@ header{
   background:linear-gradient(135deg,#bf5fff,#00b7ff);
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;
   text-decoration:none;
+}
+.logo-word{
+  font-family:'Source Serif 4', Georgia, serif;
+  font-weight:800; font-size:clamp(23px,3vw,29px); letter-spacing:-.5px; line-height:1;
+  color:#4B5D3F; -webkit-text-fill-color:#4B5D3F; background:none;
+  display:inline-flex; align-items:center;
+}
+.logo-inf{ color:#C99332; -webkit-text-fill-color:#C99332; font-weight:800; padding:0 1px; }
+.logo:hover .logo-word{ opacity:.9; }
+.logo-full{
+  height:clamp(32px,4.4vw,44px); width:auto; display:block;
+  filter:drop-shadow(0 1px 2px rgba(28,36,26,0.18));
+  transition:filter .3s ease, transform .3s ease;
+}
+.logo:hover .logo-full{
+  filter:drop-shadow(0 2px 6px rgba(75,93,63,0.35));
+  transform:translateY(-1px);
 }
 .logo-icon{
   width:32px;height:32px;
@@ -305,7 +322,7 @@ header nav a.nav-active{color:#fff;font-weight:600}
 }
 .footer-grid{
   display:grid;
-  grid-template-columns:2fr 1fr 1fr 1.4fr;
+  grid-template-columns:2fr 1.2fr 1.4fr;
   gap:40px;
   padding-bottom:48px;
   border-bottom:1px solid rgba(255,255,255,0.06);
@@ -442,9 +459,8 @@ header nav a.nav-active{color:#fff;font-weight:600}
 }
 @media(max-width:520px){
   .site-footer{padding:28px 16px 0}
-  .footer-grid{grid-template-columns:1fr 1fr;gap:20px;padding-bottom:28px}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:20px 18px;padding-bottom:28px}
   .footer-col:first-child{grid-column:1/-1}
-  .footer-col:last-child{grid-column:1/-1}
   .footer-keywords{display:none}
   .footer-desc{font-size:12px;margin-bottom:10px}
   .footer-col ul li a{font-size:11px;gap:5px}
@@ -555,9 +571,22 @@ header nav a.nav-active{color:#fff;font-weight:600}
   transform:translateY(-2px);
   box-shadow:0 10px 26px rgba(111,66,255,0.50);
 }
+.mobile-nav-legal{
+  display:flex;flex-wrap:wrap;justify-content:center;
+  gap:6px 18px;
+  margin-top:14px;padding-top:16px;
+  border-top:1px solid rgba(255,255,255,0.08);
+}
+.mobile-nav-legal a{
+  padding:3px 0;font-size:12px;
+  color:#7a7a95;
+  border-bottom:none;
+}
+.mobile-nav-legal a::after{display:none}
+.mobile-nav-legal a:hover{color:#fff}
 
 /* ── RESPONSIVE HEADER ── */
-@media(max-width:900px){
+@media(max-width:1024px){
   header{padding:14px 20px}
   header nav{display:none}
   .hamburger{display:flex}
@@ -584,17 +613,27 @@ header nav a.nav-active{color:#fff;font-weight:600}
   position:relative;
   width:68px;height:68px;
   border-radius:50%;
-  background:radial-gradient(circle at 40% 35%,rgba(30,10,60,0.97),rgba(15,5,35,0.97));
-  border:1.5px solid rgba(192,132,252,0.25);
+  background:radial-gradient(circle at 40% 35%,rgba(30,45,25,0.97),rgba(14,22,11,0.97));
+  border:1.5px solid rgba(208,178,94,0.30);
   display:flex;align-items:center;justify-content:center;
-  box-shadow:0 0 24px rgba(111,66,255,0.35),0 0 48px rgba(111,66,255,0.12);
+  box-shadow:0 0 24px rgba(75,93,63,0.40),0 0 48px rgba(75,93,63,0.14);
   transition:.3s;
 }
 #schoozie-duck:hover .duck-base{
-  box-shadow:0 0 32px rgba(192,132,252,0.6),0 0 60px rgba(0,229,255,0.2);
-  border-color:rgba(192,132,252,0.5);
+  box-shadow:0 0 32px rgba(208,178,94,0.55),0 0 60px rgba(75,93,63,0.30);
+  border-color:rgba(208,178,94,0.55);
 }
 .duck-name{display:none}
+/* logo mascot (replaces the old duck svg) */
+.duck-logo{
+  width:66px;height:66px;border-radius:50%;
+  filter:drop-shadow(0 0 16px rgba(75,93,63,0.5));
+  transition:filter .3s ease, transform .3s ease;
+}
+#schoozie-duck:hover .duck-logo{
+  filter:drop-shadow(0 0 24px rgba(208,178,94,0.85));
+  transform:rotate(6deg) scale(1.06);
+}
 .duck-banner{
   position:absolute;
   bottom:22px;left:50%;
@@ -610,26 +649,131 @@ header nav a.nav-active{color:#fff;font-weight:600}
   z-index:2;
 }
 .duck-bubble{
-  background:linear-gradient(135deg,rgba(111,66,255,0.97),rgba(0,183,255,0.92));
+  background:linear-gradient(135deg,#4B5D3F,#5c7049);
   color:#fff;font-size:11px;font-weight:600;
   padding:7px 13px;border-radius:14px 14px 2px 14px;
   margin-bottom:10px;white-space:nowrap;
   opacity:0;transform:scale(0.5) translateY(8px);
   transition:opacity .3s, transform .3s;
-  box-shadow:0 4px 20px rgba(111,66,255,0.5);
+  box-shadow:0 4px 20px rgba(75,93,63,0.5);
   letter-spacing:.2px;
   pointer-events:none;
   border:1px solid rgba(255,255,255,0.2);
 }
 .duck-bubble.show{opacity:1;transform:scale(1) translateY(0)}
 #schoozie-duck:hover{
-  filter:drop-shadow(0 0 24px rgba(192,132,252,1));
   animation-play-state:paused;
 }
 #schoozie-duck:hover .duck-bubble{opacity:1;transform:scale(1) translateY(0)}
 @media(max-width:600px){
   #schoozie-duck{bottom:16px;right:16px}
-  .duck-base{width:54px;height:54px}
-  #duck-svg{width:42px;height:50px}
+  .duck-logo{width:54px;height:54px}
   .duck-name{font-size:7px}
 }
+
+/* AI cube mascot */
+.cube-mascot{
+  width:82px !important; height:82px !important; border-radius:0 !important;
+  filter:drop-shadow(0 0 18px rgba(208,178,94,0.45)) drop-shadow(0 8px 16px rgba(0,0,0,0.4)) !important;
+  transition:transform .45s cubic-bezier(.2,.7,.2,1), filter .3s ease;
+}
+#schoozie-duck:hover .cube-mascot{
+  filter:drop-shadow(0 0 28px rgba(208,178,94,0.75)) drop-shadow(0 8px 16px rgba(0,0,0,0.4)) !important;
+  transform:scale(1.08) !important;
+}
+.cube-mascot.spin{ animation:cube-spin .95s cubic-bezier(.2,.7,.2,1); }
+@keyframes cube-spin{ 0%{ transform:rotate(0) scale(1) } 50%{ transform:rotate(180deg) scale(1.14) } 100%{ transform:rotate(360deg) scale(1) } }
+.duck-base{ display:none; }
+
+/* AI cube -> contact form popup */
+.cube-form{
+  position:absolute; bottom:80px; right:0; width:300px; z-index:20;
+  background:linear-gradient(160deg,#1b2015,#101309);
+  border:1px solid rgba(208,178,94,0.35); border-radius:16px; padding:18px;
+  box-shadow:0 22px 54px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05);
+  font-family:'Manrope',sans-serif;
+  opacity:0; transform:translateY(14px) scale(.95); transform-origin:bottom right; pointer-events:none;
+  transition:opacity .25s ease, transform .25s cubic-bezier(.2,.7,.2,1);
+}
+.cube-form.open{ opacity:1; transform:translateY(0) scale(1); pointer-events:auto; }
+.cube-form-head{ display:flex; align-items:center; justify-content:space-between; }
+.cube-form-head span{ color:#fff; font-weight:800; font-size:15px; display:flex; align-items:center; gap:8px; }
+.cube-form-head span i{ color:#D0B25E; }
+.cube-form-close{ background:none; border:none; color:#a9b3a0; font-size:22px; line-height:1; cursor:pointer; padding:0 2px; }
+.cube-form-close:hover{ color:#fff; }
+.cube-form p{ color:#a9b3a0; font-size:12.5px; margin:5px 0 13px; }
+.cube-form input, .cube-form textarea{
+  width:100%; margin-bottom:9px; padding:10px 12px; border-radius:9px;
+  background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.12);
+  color:#fff; font-size:13px; font-family:inherit; outline:none; transition:border-color .2s;
+}
+.cube-form input:focus, .cube-form textarea:focus{ border-color:rgba(208,178,94,0.55); }
+.cube-form input::placeholder, .cube-form textarea::placeholder{ color:#8a9382; }
+.cube-form textarea{ resize:none; height:62px; }
+.cube-form-send{
+  width:100%; padding:11px; border:none; border-radius:9px; cursor:pointer; font-family:inherit;
+  background:linear-gradient(135deg,#25d366,#128c7e); color:#fff; font-weight:700; font-size:13.5px;
+  display:flex; align-items:center; justify-content:center; gap:8px; transition:filter .2s, transform .2s;
+}
+.cube-form-send:hover{ filter:brightness(1.06); transform:translateY(-1px); }
+@media(max-width:520px){ .cube-form{ width:min(300px, calc(100vw - 36px)); } }
+
+/* callback form — professional refinements */
+.cube-form{ border-radius:14px !important; }
+.cube-form-head span i{ color:#D0B25E; }
+.cube-form-send{ background:linear-gradient(135deg,#4B5D3F,#3a4a30) !important; letter-spacing:.2px; }
+.cube-form-send:hover{ background:linear-gradient(135deg,#3a4a30,#2f3c26) !important; }
+.cube-form-send i{ font-size:12px; }
+.cube-form-note{ display:flex; align-items:center; justify-content:center; gap:7px; margin-top:12px;
+  font-size:11.5px; font-weight:600; color:#a9b3a0; }
+.cube-form-note i{ color:#D0B25E; font-size:11px; }
+
+/* callback form: fixed +91 country-code prefix on the phone field */
+.cf-phone{ display:flex; align-items:stretch; margin-bottom:9px; }
+.cf-phone-cc{ display:flex; align-items:center; padding:10px 11px; border-radius:9px 0 0 9px;
+  background:rgba(255,255,255,0.09); border:1px solid rgba(255,255,255,0.12); border-right:none;
+  color:#e8ecdf; font-size:13px; font-weight:700; letter-spacing:.3px; }
+.cf-phone input{ flex:1; width:auto !important; margin-bottom:0 !important; border-radius:0 9px 9px 0 !important; }
+
+/* callback form header */
+.cube-form{ padding-top:34px !important; overflow:visible; }
+.cube-form-close{ position:absolute; top:10px; right:12px; z-index:3; }
+.cube-form-head{ justify-content:center; }
+.cube-form-head span{ justify-content:center; font-family:'Source Serif 4',serif; font-size:17px; }
+.cube-form > p{ text-align:center; }
+
+/* floating mascot -> circular glass call badge (smaller, matches form badge) */
+.cube-mascot{
+  width:66px !important; height:66px !important;
+  border-radius:50% !important;
+  padding:7px !important; box-sizing:border-box;
+  object-fit:contain;
+  background:radial-gradient(circle at 32% 26%, #ffffff, #f4efe4 78%);
+  border:1px solid rgba(201,147,50,0.85);
+  box-shadow:0 10px 24px rgba(0,0,0,0.35), inset 0 2px 6px rgba(255,255,255,0.55), 0 0 18px rgba(208,178,94,0.45) !important;
+  filter:drop-shadow(0 2px 4px rgba(0,0,0,0.25)) !important;
+}
+#schoozie-duck:hover .cube-mascot{
+  filter:drop-shadow(0 2px 4px rgba(0,0,0,0.25)) !important;
+  box-shadow:0 12px 28px rgba(0,0,0,0.4), inset 0 2px 6px rgba(255,255,255,0.55), 0 0 26px rgba(208,178,94,0.7) !important;
+  transform:scale(1.08) !important;
+}
+
+/* call badge: simple phone icon instead of the handset image */
+.cube-mascot{ display:flex !important; align-items:center; justify-content:center; padding:0 !important; }
+.cube-mascot i{ font-size:25px; color:#4B5D3F; line-height:1; }
+
+/* call badge: standard size */
+.cube-mascot{ width:56px !important; height:56px !important; }
+.cube-mascot i{ font-size:21px; }
+
+/* call badge: rounded square instead of circle */
+.cube-mascot{ border-radius:15px !important; width:52px !important; height:52px !important; }
+.cube-mascot i{ font-size:20px; }
+
+/* call badge: smaller box, icon fills it better */
+.cube-mascot{ width:44px !important; height:44px !important; border-radius:13px !important; }
+.cube-mascot i{ font-size:20px; }
+
+/* callback form: sit closer to the (now smaller) call badge */
+.cube-form{ bottom:54px; }

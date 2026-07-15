@@ -1,207 +1,147 @@
-<?php require_once 'config.php'; ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<?php include '_analytics.php'; ?>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy | Schoozie - School Website & ERP Software</title>
-<meta name="description" content="Read Schoozie's privacy policy. Learn how we collect, use, and protect your personal information when you use our school website and ERP software services.">
-<meta name="keywords" content="schoozie privacy policy, school software privacy, data protection, school ERP privacy policy india">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://schoozie.com/privacy.php">
-
-<!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Privacy Policy - Schoozie">
-<meta property="og:description" content="Learn how Schoozie collects, uses, and protects your personal information.">
-<meta property="og:url" content="https://schoozie.com/privacy.php">
-<meta property="og:image" content="https://schoozie.com/assets/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:type" content="image/png">
-<meta property="og:image:alt" content="Schoozie - Privacy Policy">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Privacy Policy - Schoozie">
-<meta name="twitter:description" content="Learn how Schoozie collects, uses, and protects your personal information.">
-<meta name="twitter:image" content="https://schoozie.com/assets/og-image.png">
-
-<link rel="icon" type="image/png" href="assets/_fonts/logo.png">
-<link rel="icon" type="image/svg+xml" href="assets/svg/schoozie-logo.svg">
-<link rel="apple-touch-icon" href="assets/_fonts/logo.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="css/global.css?v=<?php echo filemtime('css/global.css'); ?>">
-<link rel="stylesheet" href="css/index-v2.css?v=<?php echo filemtime('css/index-v2.css'); ?>">
-<link rel="stylesheet" href="css/legal.css?v=<?php echo filemtime('css/legal.css'); ?>">
-</head>
-<body>
-
-<?php $active_page = ''; include '_header.php'; ?>
-
-<div class="inner-page">
-
-  <!-- HERO -->
-  <section class="legal-hero">
-    <span class="legal-hero-eyebrow"><i class="fa-solid fa-shield-halved"></i> &nbsp;Privacy Policy</span>
-    <h1>Your Privacy Matters to Us</h1>
-    <p>We believe in transparency. Here's exactly how we handle your data - no fine print, no surprises.</p>
-  </section>
-
-  <!-- CONTENT -->
-  <div class="legal-content">
-
-    <div class="legal-section">
-      <h2><i class="fa-solid fa-building"></i> Who We Are</h2>
-      <p>Schoozie ("we", "us", "our") is an Indian ed-tech company that builds school websites, dynamic CMS platforms, and school ERP software.</p>
-      <p>This Privacy Policy explains how we collect, use, store, and protect information when you visit our website (<strong>schoozie.com</strong>), use our products, or communicate with us.</p>
-    </div>
-
-    <div class="legal-section">
-      <h2><i class="fa-solid fa-database"></i> Information We Collect</h2>
-
-      <h3>Information You Provide</h3>
-      <ul>
-        <li>Name, email address, and phone number when you contact us or request a demo</li>
-        <li>School name, location, and requirements shared during consultations</li>
-        <li>Messages sent via WhatsApp, email, or our contact channels</li>
-      </ul>
-
-      <h3>Information Collected Automatically</h3>
-      <ul>
-        <li>Browser type, device type, and operating system</li>
-        <li>IP address and approximate geographic location</li>
-        <li>Pages visited, time spent, and referring URLs</li>
-        <li>Cookies and similar tracking technologies (see Cookies section below)</li>
-      </ul>
-
-      <h3>Information from Schools (ERP Clients)</h3>
-      <p>If your school uses our ERP software, we may process student records, attendance data, fee records, and other school management data on your behalf. This data is owned by the school and processed strictly according to the school's instructions.</p>
-    </div>
-
-    <div class="legal-section">
-      <h2><i class="fa-solid fa-gears"></i> How We Use Your Information</h2>
-      <ul>
-        <li>To respond to your enquiries and provide customer support</li>
-        <li>To deliver, maintain, and improve our products and services</li>
-        <li>To process payments and manage your account</li>
-        <li>To send service-related communications (updates, maintenance notices)</li>
-        <li>To understand how our website and products are used so we can improve them</li>
-        <li>To comply with legal obligations and protect our rights</li>
-      </ul>
-      <div class="legal-info-box">
-        <p><strong>We do not sell your personal data.</strong> We will never sell, rent, or trade your personal information to third parties for marketing purposes.</p>
+<?php $legal_title="Privacy & Data Policies"; $legal_desc="Schoozie's Privacy Policy, Cookie Policy, Children's Privacy and Grievance Redressal for our school-management platform."; require '_legal_top.php'; ?>
+      <p class="legal-lead">This page covers how Schoozie handles your data. Jump to a section below, or email <a href="mailto:hello@schoozie.com">hello@schoozie.com</a> for any request.</p>
+      <div class="legal-toc">
+        <p class="toc-h">On this page</p>
+        <ol>
+          <li><a href="#privacy">Privacy Policy</a></li>
+          <li><a href="#cookies">Cookie Policy</a></li>
+          <li><a href="#children">Children&rsquo;s Privacy</a></li>
+          <li><a href="#grievance">Grievance Redressal</a></li>
+        </ol>
       </div>
-    </div>
 
-    <div class="legal-section">
-      <h2><i class="fa-solid fa-share-nodes"></i> Information Sharing</h2>
-      <p>We may share your information only in the following limited circumstances:</p>
-      <ul>
-        <li><strong>Service Providers:</strong> Trusted third parties who help us operate our business (hosting, payment processing, analytics) - bound by confidentiality agreements</li>
-        <li><strong>Legal Requirements:</strong> When required by law, regulation, or legal process</li>
-        <li><strong>Business Transfers:</strong> In connection with a merger, acquisition, or sale of assets (you will be notified)</li>
-        <li><strong>With Your Consent:</strong> When you explicitly ask us to share your information</li>
-      </ul>
-    </div>
+      <section class="legal-section" id="privacy">
+        <h2>Privacy Policy</h2>
+        <p>This Privacy Policy explains what information we collect through the Services, how we use and protect it, and the choices you have. By using the Services you agree to this Policy. If you do not agree, please do not use the Services.</p>
 
-    <div class="legal-section">
-      <h2><i class="fa-solid fa-cookie-bite"></i> Cookies</h2>
-      <p>Our website uses cookies and similar technologies to enhance your browsing experience. These include:</p>
-      <ul>
-        <li><strong>Essential Cookies:</strong> Required for basic website functionality</li>
-        <li><strong>Analytics Cookies:</strong> Help us understand how visitors use our site so we can improve it</li>
-        <li><strong>Preference Cookies:</strong> Remember your settings and preferences</li>
-      </ul>
-      <p>You can control cookies through your browser settings. Disabling certain cookies may affect your experience on our website.</p>
-    </div>
+        <h3>1. Our role &ndash; schools and Schoozie</h3>
+        <p>Schoozie is used by schools to run their operations. For student records and related school data, the <strong>school is the data controller / data fiduciary</strong> and decides how that data is used; Schoozie acts as a <strong>data processor</strong> on the school&rsquo;s instructions. Schools are responsible for obtaining any consents (including parental consent) required for the data they enter. For your own account and the data you give us directly, Schoozie is the controller.</p>
 
-    <div class="legal-section">
-      <h2><i class="fa-solid fa-lock"></i> Data Security</h2>
-      <p>We take the security of your data seriously and implement appropriate technical and organisational measures to protect it, including:</p>
-      <ul>
-        <li>Encrypted data transmission (SSL/TLS) across all our platforms</li>
-        <li>Secure cloud hosting with regular backups</li>
-        <li>Access controls limiting who can view sensitive information</li>
-        <li>Regular security reviews of our systems and practices</li>
-      </ul>
-      <p>While we strive to protect your information, no method of transmission over the internet is 100% secure. We encourage you to use strong passwords and keep your login credentials confidential.</p>
-    </div>
+        <h3>2. Information we collect</h3>
+        <p><strong>a) Information you or your school provide</strong></p>
+        <ul>
+          <li><strong>Account details:</strong> name, unique login ID, role (parent, teacher, staff, driver, etc.), phone number, email and password (stored in encrypted / hashed form).</li>
+          <li><strong>Student records entered by the school:</strong> name, class/section, roll and admission number, attendance, marks and report cards, fees, library, transport and hostel details, and photographs.</li>
+          <li><strong>Parent / guardian details:</strong> name, relationship, contact number, email and, where a school collects it, occupation or income for fee-concession purposes.</li>
+          <li><strong>Communications:</strong> notices, messages and support requests you send or receive through the Services.</li>
+          <li><strong>Payment information:</strong> when fees or subscriptions are paid online, payments are processed by our payment gateway (Razorpay). We receive transaction status and reference numbers; we do not store your full card, UPI or bank credentials.</li>
+        </ul>
+        <p><strong>b) Information collected automatically</strong></p>
+        <ul>
+          <li><strong>Device and usage data:</strong> device model, operating system, app version, IP address, and basic usage/diagnostic logs used to keep the Services secure and working.</li>
+          <li><strong>Location data:</strong> only where a feature needs it &mdash; for example live school-bus tracking uses the driver&rsquo;s device location during a trip so parents can see the bus. Parents&rsquo; devices are not tracked.</li>
+          <li><strong>Push notification tokens:</strong> to deliver alerts you have opted into.</li>
+          <li>Cookies and similar technologies on our website (see the <a href="#cookies">Cookie Policy</a> below).</li>
+        </ul>
 
-    <div class="legal-section">
-      <h2><i class="fa-solid fa-clock-rotate-left"></i> Data Retention</h2>
-      <p>We retain your personal information only for as long as necessary to fulfil the purposes described in this policy, unless a longer retention period is required or permitted by law.</p>
-      <ul>
-        <li><strong>Enquiry Data:</strong> Retained for up to 2 years after last contact</li>
-        <li><strong>Client Data:</strong> Retained for the duration of the service agreement plus any legally required period</li>
-        <li><strong>School ERP Data:</strong> Owned by the school; deleted or returned upon contract termination as per the service agreement</li>
-      </ul>
-    </div>
+        <h3>3. How we use information</h3>
+        <ul>
+          <li>To provide, operate and maintain the Services for your school;</li>
+          <li>To authenticate logins and route you to the correct role and school;</li>
+          <li>To process fee and subscription payments and issue receipts;</li>
+          <li>To send notices, reminders and alerts (including overdue-book, attendance and fee reminders) through in-app, push, SMS or email channels a school has enabled;</li>
+          <li>To provide optional AI-assisted features (e.g. summaries, drafting help) strictly within a school&rsquo;s data and controls;</li>
+          <li>To keep the Services secure, prevent misuse and comply with law.</li>
+        </ul>
 
-    <div class="legal-section">
-      <h2><i class="fa-solid fa-children"></i> Children's Privacy</h2>
-      <p>Our website and marketing services are directed at schools and educational institutions, not at children directly. When schools use our ERP software to manage student data, the school is the data controller and is responsible for obtaining any necessary parental consents.</p>
-      <p>We do not knowingly collect personal information directly from children under the age of 18 without parental or school authorisation.</p>
-    </div>
+        <h3>4. Sharing of information</h3>
+        <p>We do not sell your personal information. We share it only as follows:</p>
+        <ul>
+          <li>With your school and authorised users of your school, as required to deliver the Services;</li>
+          <li>With service providers who help us operate &mdash; our payment gateway (Razorpay), SMS provider, cloud hosting, and push-notification services (Google/Apple) &mdash; bound to use it only for that purpose;</li>
+          <li>Where AI features are used, with the AI model provider that powers that feature, limited to the content needed to produce the result;</li>
+          <li>If required by law, court order or a lawful government request;</li>
+          <li>In connection with protecting our rights, users&rsquo; safety, or the security of the Services.</li>
+        </ul>
 
-    <div class="legal-section">
-      <h2><i class="fa-solid fa-user-check"></i> Your Rights</h2>
-      <p>Depending on your location and applicable law, you may have the following rights regarding your personal information:</p>
-      <ul>
-        <li><strong>Access:</strong> Request a copy of the personal data we hold about you</li>
-        <li><strong>Correction:</strong> Ask us to correct inaccurate or incomplete data</li>
-        <li><strong>Deletion:</strong> Request deletion of your personal data (subject to legal obligations)</li>
-        <li><strong>Objection:</strong> Object to our processing of your data in certain circumstances</li>
-        <li><strong>Portability:</strong> Request your data in a structured, commonly used format</li>
-      </ul>
-      <p>To exercise any of these rights, contact us at <a href="mailto:<?php echo $contact_email; ?>"><?php echo $contact_email; ?></a>.</p>
-    </div>
+        <h3>5. Children&rsquo;s data</h3>
+        <p>Schoozie is intended for use by schools and adults (parents, teachers and staff). It is not offered directly to children, and there is no student login. Student information is entered and controlled by the school, which is responsible for the necessary consents. See <a href="#children">Children&rsquo;s Privacy</a> below.</p>
 
-    <div class="legal-section">
-      <h2><i class="fa-solid fa-pen-to-square"></i> Changes to This Policy</h2>
-      <p>We may update this Privacy Policy from time to time. For significant changes, we will make reasonable efforts to notify you via email or a notice on our website.</p>
-    </div>
+        <h3>6. Where your data is stored</h3>
+        <p>Our servers are hosted in India. Where a service provider processes limited data outside India (for example a global push-notification or AI service), we take reasonable steps to ensure an adequate level of protection.</p>
 
-    <div class="legal-section">
-      <h2><i class="fa-solid fa-envelope"></i> Contact Us</h2>
-      <p>If you have any questions about this Privacy Policy or how we handle your data, please reach out at <a href="mailto:<?php echo $contact_email; ?>"><?php echo $contact_email; ?></a>.</p>
-    </div>
+        <h3>7. Data retention</h3>
+        <p>We keep personal information for as long as your school&rsquo;s account is active and as needed to provide the Services, and thereafter only as required to meet legal, accounting or dispute-resolution obligations. When no longer required, data is deleted or anonymised. See the <a href="data-deletion.php">Account &amp; Data Deletion Policy</a> for how to request deletion.</p>
 
-  </div>
+        <h3>8. Security</h3>
+        <p>We use reasonable technical and organisational measures &mdash; including encryption in transit, hashed passwords, access controls and tenant isolation between schools &mdash; to protect your information. No method of transmission or storage is completely secure, and we cannot guarantee absolute security.</p>
 
-  <!-- CTA -->
-  <section class="legal-cta">
-    <h2>Have Questions?</h2>
-    <p>We're always happy to clarify how we handle your data. Reach out anytime.</p>
-    <div class="legal-cta-actions">
-      <a href="contact.php" class="v2-btn-primary"><i class="fa-solid fa-envelope"></i> Contact Us</a>
-    </div>
-  </section>
+        <h3>9. Your rights and choices</h3>
+        <ul>
+          <li>Access or correct your account information (some data can be corrected only through your school);</li>
+          <li>Request deletion of your account and associated data (see the <a href="data-deletion.php">Account &amp; Data Deletion Policy</a>);</li>
+          <li>Opt out of non-essential notifications through your device or app settings;</li>
+          <li>Withdraw a consent you previously gave, without affecting processing already carried out.</li>
+        </ul>
+        <p>To exercise any right, or to raise a concern, contact us at <a href="mailto:hello@schoozie.com">hello@schoozie.com</a> or our Grievance Officer (see <a href="#grievance">Grievance Redressal</a> below).</p>
 
-</div><!-- end inner-page -->
+        <h3>10. Third-party links and services</h3>
+        <p>The Services may link to or rely on third-party services (such as the payment gateway or app stores). Their use of your information is governed by their own privacy policies.</p>
 
-<?php include '_footer.php'; ?>
+        <h3>11. Changes to this Policy</h3>
+        <p>We may update this Policy from time to time. Material changes will be notified through the Services or our website, and the &ldquo;Last updated&rdquo; date will change. Continued use after an update means you accept the revised Policy.</p>
+      </section>
 
-<!-- JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Privacy Policy",
-  "description": "Schoozie's privacy policy - how we collect, use, and protect your personal information.",
-  "url": "https://schoozie.com/privacy.php",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Schoozie",
-    "url": "https://schoozie.com",
-    "logo": "https://schoozie.com/assets/svg/schoozie-logo.svg",
-    "email": "<?php echo $contact_email; ?>"
-  }
-}
-</script>
+      <section class="legal-section" id="cookies">
+        <h2>Cookie Policy</h2>
+        <p>This Cookie Policy explains how Schoozie uses cookies and similar technologies on our website at <a href="https://schoozie.com">schoozie.com</a>. It should be read with the Privacy Policy above.</p>
+        <h3>1. What are cookies</h3>
+        <p>Cookies are small text files placed on your device when you visit a website. Similar technologies include local storage and tokens used by our web and mobile apps to keep you signed in.</p>
+        <h3>2. Types of cookies we use</h3>
+        <ul>
+          <li><strong>Strictly necessary:</strong> required for the site and app to work &mdash; for example to sign you in, keep your session secure, and remember your school/role. These cannot be switched off.</li>
+          <li><strong>Functional:</strong> remember your preferences (such as language) to improve your experience.</li>
+          <li><strong>Analytics / performance</strong> (if enabled): help us understand how the site is used so we can improve it. These are aggregated and not used to identify you.</li>
+        </ul>
+        <h3>3. Third-party cookies</h3>
+        <p>Some cookies may be set by third parties whose services we use (for example the payment gateway during checkout). Their use is governed by their own policies.</p>
+        <h3>4. Managing cookies</h3>
+        <p>You can control or delete cookies through your browser settings. Blocking strictly necessary cookies may prevent parts of the Services from working, including signing in.</p>
+      </section>
 
-</body>
-</html>
+      <section class="legal-section" id="children">
+        <h2>Children&rsquo;s Privacy Policy</h2>
+        <p>Because Schoozie is used by schools, information about children (students) is handled through the platform. This section explains how that data is handled and the protections that apply.</p>
+        <h3>1. No direct use by children</h3>
+        <p>Schoozie does not provide a student login and is not directed to children for their own use. Accounts are held by adults &mdash; schools, parents/guardians, teachers and staff.</p>
+        <h3>2. School as controller; parental consent</h3>
+        <p>Student data is entered and controlled by the school. The school is the data controller / data fiduciary for that data and is responsible for obtaining verifiable consent from a parent or guardian as required by applicable law (including India&rsquo;s Digital Personal Data Protection Act and, where relevant, laws such as COPPA and GDPR-K). Schoozie processes the data only on the school&rsquo;s instructions.</p>
+        <h3>3. Data minimisation</h3>
+        <p>We collect only the student information a school needs to run its operations &mdash; such as identity, class, attendance, academics, fees, transport, library and hostel details, and photographs used for identification within the school.</p>
+        <h3>4. No advertising or profiling of children</h3>
+        <p>We do not use children&rsquo;s data for behavioural advertising, and we do not sell it. Optional AI-assisted features operate only within a school&rsquo;s own data and controls and are not used to build advertising profiles.</p>
+        <h3>5. Parental rights</h3>
+        <p>Parents and guardians may, through their child&rsquo;s school, request access to, correction of, or deletion of their child&rsquo;s information, and may withdraw consent. You may also contact us at <a href="mailto:hello@schoozie.com">hello@schoozie.com</a> and we will work with the school to address your request.</p>
+        <h3>6. Security</h3>
+        <p>Children&rsquo;s data is protected with the same security measures described in the Privacy Policy, including encryption in transit, access controls and isolation between schools.</p>
+      </section>
+
+      <section class="legal-section" id="grievance">
+        <h2>Grievance Redressal Policy</h2>
+        <p>In line with India&rsquo;s Information Technology Act and rules and the Digital Personal Data Protection Act, this section tells you how to raise a grievance about your data or your use of the Services, and how we will respond.</p>
+        <h3>1. What you can raise</h3>
+        <ul>
+          <li>Concerns about how your personal data is collected, used, shared or protected;</li>
+          <li>Requests to access, correct or delete your data, or to withdraw consent;</li>
+          <li>Complaints about content, conduct or misuse within the Services;</li>
+          <li>Any other issue about the Services.</li>
+        </ul>
+        <h3>2. Grievance Officer</h3>
+        <p class="legal-def"><strong>Name:</strong> [Grievance Officer Name]<br><strong>Designation:</strong> Grievance Officer, Schoozie<br><strong>Email:</strong> <a href="mailto:hello@schoozie.com">hello@schoozie.com</a><br><strong>Address:</strong> Near Jeevandeep Ashram, Nand Vihar, Roorkee &ndash; 247667, Haridwar, Uttarakhand, India</p>
+        <h3>3. How to raise a grievance</h3>
+        <p>Email the Grievance Officer at <a href="mailto:hello@schoozie.com?subject=Grievance">hello@schoozie.com</a> with the subject &ldquo;Grievance&rdquo;. Please include your name, registered contact/login ID, your school (if applicable), and a clear description of the issue so we can act on it quickly.</p>
+        <h3>4. Our response timelines</h3>
+        <ul>
+          <li>We will acknowledge your grievance, ordinarily within forty-eight (48) hours;</li>
+          <li>We will make reasonable efforts to resolve it within fifteen (15) days, and in any case within the timeframe required by applicable law;</li>
+          <li>For data-related requests, we may first verify your identity before acting.</li>
+        </ul>
+        <h3>5. If your data is controlled by a school</h3>
+        <p>Where your grievance concerns data controlled by a school (such as a student record), we will coordinate with the school, which is the data controller, to resolve it.</p>
+      </section>
+
+      <section class="legal-section" id="contact">
+        <h2>Contact</h2>
+        <div class="legal-contact"><strong>Schoozie</strong><br>Near Jeevandeep Ashram, Nand Vihar, Roorkee &ndash; 247667, Haridwar, Uttarakhand, India<br>Email: <a href="mailto:hello@schoozie.com">hello@schoozie.com</a><br>Website: <a href="https://schoozie.com">schoozie.com</a></div>
+      </section>
+<?php require '_legal_bottom.php'; ?>

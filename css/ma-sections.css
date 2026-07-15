@@ -1,0 +1,97 @@
+/* ============================================================
+   MA-SECTIONS  —  reusable "Modern Academic" content sections
+   ported from the homepage (css/home.css) for use on other pages.
+
+   Everything is scoped under .ma-sections so it never collides
+   with a page's existing styles, and the theme variables are
+   scoped to the wrapper so page content is unaffected.
+   Fonts (Manrope + Source Serif 4) come from site-chrome.css.
+   ============================================================ */
+.ma-sections{
+  --bg:#fcfcfd;
+  --soft:#f5f6f7;
+  --surface:#ffffff;
+  --ink:#1c241a;
+  --muted:#5a6552;
+  --line:rgba(28,36,26,0.12);
+  --primary:#4B5D3F;
+  --primary-d:#3a4a30;
+  --accent:#b98d1e;
+  --accent-bright:#D0B25E;
+  --dark:#14170f;
+  --dark-line:rgba(208,178,94,0.18);
+  --on-dark:#eef1e7;
+  --on-dark-muted:#a9b3a0;
+  --radius:16px;
+  --font-head:'Source Serif 4',Georgia,'Times New Roman',serif;
+  --font-body:'Manrope',system-ui,-apple-system,sans-serif;
+
+  background:var(--bg);
+  font-family:var(--font-body);
+  color:var(--ink);
+}
+
+.ma-sections .wrap{ max-width:1140px; margin:0 auto; padding:0 24px; }
+.ma-sections .section{ padding:70px 0; }
+.ma-sections .section.soft{ background:var(--soft); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+
+.ma-sections .head{ text-align:center; margin-bottom:46px; }
+.ma-sections .head h2{ font-family:var(--font-head); font-weight:600; letter-spacing:-.3px; font-size:38px; color:var(--ink); margin:0 0 10px; }
+.ma-sections .head p{ font-family:var(--font-body); font-size:17px; color:var(--muted); margin:0; }
+.ma-sections .hl{ color:var(--accent); }
+
+/* ── Modules ("One brain. Every system.") ── */
+.ma-sections .mod-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+.ma-sections .mod-col{ background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:26px 22px; box-shadow:0 4px 14px rgba(28,36,26,0.05); }
+.ma-sections .mod-ic{ width:44px; height:44px; border-radius:12px; display:inline-flex; align-items:center; justify-content:center;
+  background:color-mix(in srgb,var(--primary) 12%,transparent); color:var(--primary); font-size:18px; margin-bottom:14px; }
+.ma-sections .mod-col h3{ font-family:var(--font-head); font-size:19px; color:var(--ink); margin:0 0 12px; }
+.ma-sections .mod-col ul{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; }
+.ma-sections .mod-col li{ font-size:12px; font-weight:700; letter-spacing:.8px; text-transform:uppercase; color:var(--muted); padding:9px 0; border-bottom:1px solid var(--line); transition:color .2s; }
+.ma-sections .mod-col li:last-child{ border-bottom:none; }
+.ma-sections .mod-col li:hover{ color:var(--primary); }
+.ma-sections .mod-bar{ margin-top:22px; display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap;
+  background:linear-gradient(160deg,#16180f,#0b0d08); border:1px solid var(--dark-line); border-radius:16px; padding:24px 28px; }
+.ma-sections .mod-bar strong{ display:block; font-family:var(--font-body); color:var(--accent-bright); font-size:14px; font-weight:800; margin-bottom:6px; }
+.ma-sections .mod-bar span{ color:var(--on-dark-muted); font-size:14px; line-height:1.5; max-width:660px; display:block; }
+.ma-sections .mod-btn{ flex-shrink:0; display:inline-flex; align-items:center; gap:9px; background:var(--accent-bright); color:#14170f;
+  font-weight:800; font-size:13.5px; padding:13px 22px; border-radius:10px; text-decoration:none; box-shadow:0 6px 16px rgba(208,178,94,0.3); transition:transform .2s; }
+.ma-sections .mod-btn:hover{ transform:translateY(-2px); }
+
+/* ── Plans ("Pick what you need") ── */
+.ma-sections .plan-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
+.ma-sections .plan{
+  position:relative; display:flex; flex-direction:column;
+  background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
+  padding:26px 22px; text-decoration:none; color:inherit;
+  box-shadow:0 4px 14px color-mix(in srgb, var(--ink) 5%, transparent);
+  transition:transform .2s, box-shadow .2s, border-color .2s;
+}
+.ma-sections .plan:hover{ transform:translateY(-4px); border-color:color-mix(in srgb,var(--primary) 40%,transparent); }
+.ma-sections .plan-icon{
+  width:48px; height:48px; border-radius:12px; margin-bottom:14px; font-size:20px;
+  display:inline-flex; align-items:center; justify-content:center;
+  background:color-mix(in srgb, var(--primary) 12%, transparent); color:var(--primary);
+}
+.ma-sections .plan h3{ font-family:var(--font-body); font-size:18px; font-weight:700; color:var(--ink); margin:0 0 6px; }
+.ma-sections .plan p{ font-size:14px; line-height:1.5; color:var(--muted); margin:0 0 16px; flex-grow:1; }
+.ma-sections .plan-price{ font-size:14px; color:var(--muted); padding-top:14px; border-top:1px solid var(--line); }
+.ma-sections .plan-price strong{ font-size:18px; font-weight:800; color:var(--primary); }
+.ma-sections .plan-link{ margin-top:14px; font-size:14px; font-weight:700; color:var(--primary); display:inline-flex; align-items:center; gap:6px; }
+.ma-sections .plan-soon{
+  position:absolute; top:16px; right:16px; font-size:10px; font-weight:800; letter-spacing:1px; text-transform:uppercase;
+  color:var(--accent); background:color-mix(in srgb, var(--accent) 16%, transparent);
+  border:1px solid color-mix(in srgb, var(--accent) 45%, transparent); padding:3px 9px; border-radius:999px;
+}
+
+/* ── responsive ── */
+@media(max-width:900px){
+  .ma-sections .mod-grid,
+  .ma-sections .plan-grid{ grid-template-columns:repeat(2,1fr); }
+  .ma-sections .head h2{ font-size:30px; }
+  .ma-sections .section{ padding:54px 0; }
+}
+@media(max-width:560px){
+  .ma-sections .mod-grid,
+  .ma-sections .plan-grid{ grid-template-columns:1fr; }
+}

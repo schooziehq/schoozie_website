@@ -1,0 +1,80 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Schoozie Favicon — visibility test</title>
+<style>
+  body{margin:0;font-family:'Manrope',system-ui,sans-serif;background:#f4f5f2;color:#1a1c1c}
+  .wrap{max-width:920px;margin:0 auto;padding:44px 24px 80px}
+  h1{font-family:'Source Serif 4',Georgia,serif;font-size:30px;margin:0 0 6px}
+  .sub{color:#6b7166;margin:0 0 34px}
+  /* fake chrome tab strip (light gray like real Chrome) */
+  .tabstrip{background:#d6dad2;padding:10px 10px 0;border-radius:12px 12px 0 0;display:flex;gap:6px;flex-wrap:wrap}
+  .tab{display:flex;align-items:center;gap:8px;background:#f6f7f4;padding:9px 13px;border-radius:9px 9px 0 0;font-size:13px;font-weight:600;color:#333}
+  .tab svg,.tab img{display:block;width:16px;height:16px;flex-shrink:0}
+  .panel{background:#fff;border:1px solid #e3e6df;border-top:none;border-radius:0 0 14px 14px;padding:22px 20px;margin-bottom:26px}
+  .sizes{display:flex;gap:26px;align-items:center;flex-wrap:wrap}
+  .sizes .cell{text-align:center}
+  .sizes svg,.sizes img{display:block}
+  .s16{width:16px;height:16px}.s24{width:24px;height:24px}.s32{width:32px;height:32px}.s48{width:48px;height:48px}
+  cap{display:block;font-size:11px;color:#6b7166;margin-top:7px}
+  h3{margin:34px 0 0;font-size:16px}
+  .lbl{font-size:12px;font-weight:700;color:#4B5D3F;background:#eaf0e4;border:1px solid #cddcc2;padding:3px 9px;border-radius:999px}
+</style></head>
+<body><div class="wrap">
+<h1>Favicon visibility test</h1>
+<p class="sub">Each candidate shown in a real Chrome-style tab, then at 16 / 24 / 32 / 48px. Judge the <b>16px tab</b>.</p>
+
+<!-- one tab strip with all candidates side by side, like your screenshot -->
+<div class="tabstrip">
+  <div class="tab"><img src="assets/icons/web/favicon.svg"> A · Current</div>
+  <div class="tab">
+    <svg viewBox="0 0 100 100"><rect width="100" height="100" rx="22" fill="#151810"/><path d="M50 50 C43 37,22 37,22 50 C22 63,43 63,50 50 C57 37,78 37,78 50 C78 63,57 63,50 50 Z" fill="none" stroke="#EAC85F" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    B · Bold ∞ / dark
+  </div>
+  <div class="tab">
+    <svg viewBox="0 0 100 100"><rect width="100" height="100" rx="22" fill="#4B5D3F"/><path d="M50 50 C43 37,22 37,22 50 C22 63,43 63,50 50 C57 37,78 37,78 50 C78 63,57 63,50 50 Z" fill="none" stroke="#F0D879" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    C · Bold ∞ / green
+  </div>
+  <div class="tab">
+    <svg viewBox="0 0 100 100"><rect width="100" height="100" rx="22" fill="#D8B24E"/><path d="M50 50 C43 37,22 37,22 50 C22 63,43 63,50 50 C57 37,78 37,78 50 C78 63,57 63,50 50 Z" fill="none" stroke="#1c2114" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    D · Inverted (gold tile)
+  </div>
+  <div class="tab">
+    <svg viewBox="0 0 100 100"><rect width="100" height="100" rx="22" fill="#151810"/><path d="M50 60 C43 47,22 47,22 60 C22 73,43 73,50 60 C57 47,78 47,78 60 C78 73,57 73,50 60 Z" fill="none" stroke="#EAC85F" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M50 14 l7 10 -7 9 -7 -9 z" fill="#EAC85F"/></svg>
+    E · ∞ + lotus dot
+  </div>
+</div>
+
+<h3>A · Current (baseline)</h3>
+<div class="panel"><div class="sizes">
+  <div class="cell"><img class="s16" src="assets/icons/web/favicon.svg"><cap>16</cap></div>
+  <div class="cell"><img class="s24" src="assets/icons/web/favicon.svg"><cap>24</cap></div>
+  <div class="cell"><img class="s32" src="assets/icons/web/favicon.svg"><cap>32</cap></div>
+  <div class="cell"><img class="s48" src="assets/icons/web/favicon.svg"><cap>48</cap></div>
+</div></div>
+
+<h3>B · Bold infinity on dark <span class="lbl">recommended</span></h3>
+<div class="panel"><div class="sizes" id="B"></div></div>
+<h3>C · Bold infinity on brand green</h3>
+<div class="panel"><div class="sizes" id="C"></div></div>
+<h3>D · Inverted — dark infinity on gold tile (max pop)</h3>
+<div class="panel"><div class="sizes" id="D"></div></div>
+<h3>E · Bold infinity + lotus dot</h3>
+<div class="panel"><div class="sizes" id="E"></div></div>
+
+<script>
+  const infin='<path d="M50 50 C43 37,22 37,22 50 C22 63,43 63,50 50 C57 37,78 37,78 50 C78 63,57 63,50 50 Z" fill="none" stroke="{S}" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>';
+  const infinLow='<path d="M50 60 C43 47,22 47,22 60 C22 73,43 73,50 60 C57 47,78 47,78 60 C78 73,57 73,50 60 Z" fill="none" stroke="{S}" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M50 14 l7 10 -7 9 -7 -9 z" fill="{S}"/>';
+  const defs={
+    B:{bg:'#151810',s:'#EAC85F',art:infin},
+    C:{bg:'#4B5D3F',s:'#F0D879',art:infin},
+    D:{bg:'#D8B24E',s:'#1c2114',art:infin},
+    E:{bg:'#151810',s:'#EAC85F',art:infinLow}
+  };
+  for(const k in defs){const d=defs[k];const el=document.getElementById(k);
+    [16,24,32,48].forEach(sz=>{
+      const svg='<svg viewBox="0 0 100 100" width="'+sz+'" height="'+sz+'"><rect width="100" height="100" rx="22" fill="'+d.bg+'"/>'+d.art.replace(/\{S\}/g,d.s)+'</svg>';
+      el.insertAdjacentHTML('beforeend','<div class="cell">'+svg+'<cap>'+sz+'</cap></div>');
+    });
+  }
+</script>
+</div></body></html>

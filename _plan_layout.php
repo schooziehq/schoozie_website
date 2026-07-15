@@ -6,9 +6,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title><?php echo $plan['name']; ?> - Schoozie</title>
-<link rel="icon" type="image/png" href="assets/_fonts/logo.png">
-<link rel="icon" type="image/svg+xml" href="assets/svg/schoozie-logo.svg">
-<link rel="apple-touch-icon" href="assets/_fonts/logo.png">
+<link rel="icon" href="assets/icons/web/favicon.ico" sizes="32x32">
+<link rel="icon" href="assets/icons/web/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/icons/web/apple-touch-icon.png">
+<link rel="manifest" href="assets/icons/web/site.webmanifest">
 <meta name="description" content="<?php echo htmlspecialchars($plan['description']); ?>">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://schoozie.com/<?php echo basename($_SERVER['PHP_SELF']); ?>">
@@ -16,15 +17,15 @@
 <meta property="og:title" content="<?php echo $plan['name']; ?> - Schoozie">
 <meta property="og:description" content="<?php echo $plan['description']; ?>">
 <meta property="og:url" content="https://schoozie.com/<?php echo basename($_SERVER['PHP_SELF']); ?>">
-<meta property="og:image" content="https://schoozie.com/assets/og-image.png">
+<meta property="og:image" content="https://schoozie.com/assets/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:type" content="image/png">
+<meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:alt" content="Schoozie - School Digital Solutions India">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="<?php echo $plan['name']; ?> - Schoozie">
 <meta name="twitter:description" content="<?php echo $plan['description']; ?>">
-<meta name="twitter:image" content="https://schoozie.com/assets/og-image.png">
+<meta name="twitter:image" content="https://schoozie.com/assets/og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
@@ -32,6 +33,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="css/global.css?v=<?php echo filemtime('css/global.css'); ?>">
 <link rel="stylesheet" href="css/plan.css?v=<?php echo filemtime('css/plan.css'); ?>">
+<link rel="stylesheet" href="css/site-chrome.css?v=<?php echo filemtime('css/site-chrome.css'); ?>">
 </head>
 <body>
 

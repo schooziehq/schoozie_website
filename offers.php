@@ -124,13 +124,15 @@ $ecosystems = [
 <meta name="description" content="The full Schoozie platform - OneID smart campus, smart academics, transport safety, parent connect, operations &amp; payroll, digital presence, and enterprise infrastructure for school groups.">
 <meta name="robots" content="noindex, nofollow"><!-- hidden until launch -->
 <link rel="canonical" href="https://schoozie.com/offers.php">
-<link rel="icon" type="image/png" href="assets/_fonts/logo.png">
-<link rel="icon" type="image/svg+xml" href="assets/svg/schoozie-logo.svg">
+<link rel="icon" href="assets/icons/web/favicon.ico" sizes="32x32">
+<link rel="icon" href="assets/icons/web/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/icons/web/apple-touch-icon.png">
+<link rel="manifest" href="assets/icons/web/site.webmanifest">
 <meta property="og:type" content="website">
 <meta property="og:title" content="What We Offer - Schoozie Platform Capabilities">
 <meta property="og:description" content="Every capability that powers Schoozie schools - identity, academics, transport, parent connect, operations, digital presence and enterprise infrastructure.">
 <meta property="og:url" content="https://schoozie.com/offers.php">
-<meta property="og:image" content="https://schoozie.com/assets/og-image.png">
+<meta property="og:image" content="https://schoozie.com/assets/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -139,6 +141,7 @@ $ecosystems = [
 <link rel="stylesheet" href="css/global.css?v=<?php echo filemtime('css/global.css'); ?>">
 <link rel="stylesheet" href="css/index-v2.css?v=<?php echo filemtime('css/index-v2.css'); ?>">
 <link rel="stylesheet" href="css/offers.css?v=<?php echo filemtime('css/offers.css'); ?>">
+<link rel="stylesheet" href="css/site-chrome.css?v=<?php echo filemtime('css/site-chrome.css'); ?>">
 </head>
 <body class="page-offers">
 
