@@ -7,7 +7,7 @@ require_once 'config.php';
    Pass the path WITHOUT extension; returns the first file that exists on
    disk. Falls back to the first extension so the markup still renders. */
 if (!function_exists('img_src')) {
-  function img_src(string $base, array $exts = ['png', 'jpg', 'jpeg']): string {
+  function img_src(string $base, array $exts = ['jpg', 'jpeg', 'png']): string {
     foreach ($exts as $ext) {
       if (is_file(__DIR__ . '/' . $base . '.' . $ext)) return $base . '.' . $ext;
     }
