@@ -275,6 +275,25 @@ $plan_dynamic = [
 </script>
 
 
+<!-- FAQ -->
+<?php
+require_once __DIR__ . '/_faq.php';
+sz_render_faq([
+  ['q' => 'What&rsquo;s the difference between a static and dynamic school website?',
+   'a' => 'A <strong>static website</strong> is a fast, professional set of fixed pages we design and maintain for you. A <strong>dynamic website</strong> adds a <strong>CMS</strong> so your staff can update notices, news, galleries, results and admissions themselves &mdash; no developer needed.'],
+  ['q' => 'Can we update the website ourselves?',
+   'a' => 'With the <strong>dynamic (CMS) plan</strong>, yes &mdash; post notices, news, photos, results and admission forms yourself from a simple dashboard. On the static plan, our team makes updates for you quickly whenever you need them.'],
+  ['q' => 'Do you include hosting, domain and SSL?',
+   'a' => 'Yes. <strong>Hosting and an SSL security certificate are included</strong>, and we guide you on your school&rsquo;s domain name. Your site loads fast, stays secure with https, and we handle the technical maintenance.'],
+  ['q' => 'Will the website work on mobiles and rank on Google?',
+   'a' => 'Yes. Every Schoozie site is <strong>mobile-responsive, fast and SEO-friendly</strong>, with clean structure and meta tags so parents find your school on Google and the site looks great on any phone or computer.'],
+  ['q' => 'How long does it take to build our website?',
+   'a' => 'Once you share your <strong>logo and content, a website is typically ready within a few working days</strong>. We keep you updated at every step on WhatsApp and only go live once you&rsquo;re happy with it.'],
+  ['q' => 'Can we add online admissions or fee payment to the website?',
+   'a' => 'Yes. Paired with the Schoozie ERP, your website can carry <strong>online admission enquiries and fee payment links</strong>, so parents can apply and pay directly &mdash; turning your site into a working part of the school, not just a brochure.'],
+], 'School websites &mdash; frequently asked questions', 'Websites FAQ');
+?>
+
 <?php include '_footer.php'; ?>
 
 <!-- JSON-LD STRUCTURED DATA -->

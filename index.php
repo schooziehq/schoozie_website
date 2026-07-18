@@ -566,6 +566,25 @@ if (!function_exists('img_src')) {
   </div>
 </section>
 
+<!-- FAQ -->
+<?php
+require_once __DIR__ . '/_faq.php';
+sz_render_faq([
+  ['q' => 'What is Schoozie?',
+   'a' => 'Schoozie is an <strong>AI-powered platform that runs an entire school from one app</strong> &mdash; website, fees, attendance, exams, transport and parent communication. Built for Indian schools, it replaces paper registers and disconnected tools with a single connected system that non-technical staff can run.'],
+  ['q' => 'Who is Schoozie for?',
+   'a' => 'Schoozie is built for <strong>Indian schools of every size</strong>, from small private schools to large institutions. Principals, office staff, teachers and parents each get a simple app, so the whole school works from one platform &mdash; no IT team required.'],
+  ['q' => 'Which languages does Schoozie support?',
+   'a' => 'Schoozie communicates with parents in <strong>English, Hindi, Tamil, Bengali and many other Indian languages</strong>. Fee reminders, attendance and results reach every parent in the language they are most comfortable with, so no family is left out by an English-only system.'],
+  ['q' => 'What does Schoozie include?',
+   'a' => 'Schoozie combines three things in one connected platform: a <strong>professional school website</strong> (static or dynamic CMS), <strong>full ERP software</strong> (fees, attendance, exams, staff, transport) and <strong>AI-powered parent communication</strong> &mdash; with setup, hosting, SSL, updates and WhatsApp support included.'],
+  ['q' => 'How much does Schoozie cost?',
+   'a' => 'Pricing is transparent and all-inclusive with <strong>no hidden fees</strong>. School websites are a one-time build plus a low yearly renewal, and ERP is billed per quarter with discounts for longer terms. See the <a href="pricing.php">pricing page</a> for current plans.'],
+  ['q' => 'How quickly can our school get started?',
+   'a' => 'Most schools go live within a <strong>few working days for a website and 1&ndash;2 weeks for full ERP onboarding</strong>. Share your logo, content and existing student and fee data, and our team handles setup, migration, hosting and staff training for you.'],
+], 'Schoozie — frequently asked questions', 'FAQ');
+?>
+
 <!-- FINAL CTA -->
 <section class="cta">
   <div class="wrap cta-inner">

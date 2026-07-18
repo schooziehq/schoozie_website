@@ -157,6 +157,27 @@ require_once 'config.php';
 </div><!-- .erpx -->
 
 
+<!-- FAQ -->
+<?php
+require_once __DIR__ . '/_faq.php';
+sz_render_faq([
+  ['q' => 'What can Schoozie&rsquo;s school ERP do?',
+   'a' => 'Schoozie&rsquo;s ERP runs your whole school in one place: <strong>fees, attendance, exams and results, staff, transport and parent communication</strong> &mdash; all connected, with AI that reconciles payments, flags issues and sends updates automatically instead of waiting for you to ask.'],
+  ['q' => 'How does online fee collection work?',
+   'a' => 'Parents pay fees online from the app and <strong>payments reconcile themselves automatically</strong> &mdash; receipts are generated, dues are tracked, and reminders go out in the parent&rsquo;s own language. Your office stops chasing cash and manual entries.'],
+  ['q' => 'Does Schoozie support biometric or automatic attendance?',
+   'a' => 'Yes. Attendance can be captured by <strong>biometric device or the app</strong>, and parents are <strong>notified automatically</strong> when their child is marked present or absent &mdash; no paper registers, no phone calls.'],
+  ['q' => 'Can parents use Schoozie on their phones?',
+   'a' => 'Yes. Parents get a <strong>simple mobile app in their own language</strong> &mdash; English, Hindi, Tamil, Bengali and more &mdash; showing fees, attendance, results, timetable and school notices, so every family stays informed.'],
+  ['q' => 'Will you migrate our existing student and fee data?',
+   'a' => 'Yes. Share your current records in <strong>Excel or any format</strong> and we import your students, classes, staff and fee history during onboarding &mdash; <strong>at no extra charge</strong> &mdash; so you start with everything already in place.'],
+  ['q' => 'Do we need technical staff or special hardware?',
+   'a' => 'No. Schoozie runs on <strong>any phone, tablet or computer</strong>, and our team handles hosting, security and updates. It is built for school staff, not engineers, so anyone in your office can use it from day one.'],
+  ['q' => 'How is the ERP priced?',
+   'a' => 'The ERP is billed <strong>per quarter</strong> across simple tiers, with discounts for half-yearly and yearly terms. See the <a href="pricing.php">pricing page</a> for current plans and what each tier includes.'],
+], 'School ERP &mdash; frequently asked questions', 'ERP FAQ');
+?>
+
 <?php include '_footer.php'; ?>
 
 <!-- JSON-LD -->

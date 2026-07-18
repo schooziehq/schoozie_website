@@ -422,6 +422,25 @@ if($erp_effs){
 echo "<script type=\"application/ld+json\">\n".json_encode($ld, JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT)."\n</script>\n";
 ?>
 
+<!-- FAQ -->
+<?php
+require_once __DIR__ . '/_faq.php';
+sz_render_faq([
+  ['q' => 'How is Schoozie priced?',
+   'a' => 'Schoozie has two parts. <strong>School websites</strong> are a one-time build plus a low yearly renewal, and the <strong>ERP is billed per quarter</strong>, with bigger discounts the longer the term you choose. Setup, hosting, SSL, updates and support are all included.'],
+  ['q' => 'Are there any hidden charges or setup fees?',
+   'a' => 'No. Schoozie pricing is <strong>all-inclusive and transparent</strong> &mdash; onboarding, data migration, hosting, SSL, updates and WhatsApp support are covered. There are no surprise setup fees and no sudden renewal hikes; you always know exactly what you pay.'],
+  ['q' => 'Is GST included in the listed prices?',
+   'a' => 'Listed prices are <strong>exclusive of 18% GST</strong>, which is added at billing as per Indian tax rules. The plan pages show the base price so you can compare clearly, and your invoice adds GST on top.'],
+  ['q' => 'Do longer plans cost less?',
+   'a' => 'Yes. The ERP rewards longer commitments &mdash; <strong>half-yearly and yearly plans carry increasing discounts</strong> versus paying quarterly &mdash; so a longer term gives your school the best effective monthly rate.'],
+  ['q' => 'Can we bundle a website and ERP together?',
+   'a' => 'Yes. The <strong>Website + ERP combo</strong> gives you a discount on the website when taken with the ERP, so schools going fully digital pay less than buying each separately. See the combo option above.'],
+  ['q' => 'Can we upgrade or add features later?',
+   'a' => 'You can start small and grow. Begin with a website or a lower ERP tier and <strong>upgrade whenever you&rsquo;re ready</strong> &mdash; we carry over all your existing data and content, and adjust your plan fairly with no penalty.'],
+], 'Pricing &mdash; frequently asked questions', 'Pricing FAQ');
+?>
+
 <?php include '_footer.php'; ?>
 </body>
 </html>
