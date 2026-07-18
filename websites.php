@@ -294,6 +294,17 @@ sz_render_faq([
 ], 'School websites &mdash; frequently asked questions', 'Websites FAQ');
 ?>
 
+<?php
+require_once __DIR__ . '/_schema.php';
+sz_page(
+  'School Websites (Static & Dynamic CMS) — Schoozie',
+  'Professional static and dynamic (CMS) school websites for Indian schools — mobile-friendly, SEO-ready, with hosting, SSL and support included.',
+  'https://schoozie.com/websites.php',
+  __FILE__,
+  [['name' => 'Home', 'url' => 'https://schoozie.com/'], ['name' => 'School Websites', 'url' => 'https://schoozie.com/websites.php']]
+);
+?>
+
 <?php include '_footer.php'; ?>
 
 <!-- JSON-LD STRUCTURED DATA -->

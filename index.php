@@ -711,6 +711,8 @@ sz_render_faq([
 })();
 </script>
 
+<?php require_once __DIR__ . '/_schema.php'; sz_site_entities(); ?>
+
 <?php include '_footer.php'; ?>
 
 <!-- hero image 3D tilt on hover -->

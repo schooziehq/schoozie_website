@@ -218,6 +218,17 @@
 
 </div><!-- .vz-page -->
 
+<?php
+require_once __DIR__ . '/_schema.php';
+sz_page(
+  'Our Vision — Schoozie',
+  'Schoozie\'s vision: make every Indian school digital and connected, with AI that speaks parents\' own language.',
+  'https://schoozie.com/vision.php',
+  __FILE__,
+  [['name' => 'Home', 'url' => 'https://schoozie.com/'], ['name' => 'Our Vision', 'url' => 'https://schoozie.com/vision.php']]
+);
+?>
+
 <?php include '_footer.php'; ?>
 
 <!-- JSON-LD -->

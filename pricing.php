@@ -441,6 +441,17 @@ sz_render_faq([
 ], 'Pricing &mdash; frequently asked questions', 'Pricing FAQ');
 ?>
 
+<?php
+require_once __DIR__ . '/_schema.php';
+sz_page(
+  'Plans & Pricing — Schoozie',
+  'Transparent, all-inclusive Schoozie pricing for school websites and ERP — one-time website build plus yearly renewal, and quarterly ERP with term discounts.',
+  'https://schoozie.com/pricing.php',
+  __FILE__,
+  [['name' => 'Home', 'url' => 'https://schoozie.com/'], ['name' => 'Plans & Pricing', 'url' => 'https://schoozie.com/pricing.php']]
+);
+?>
+
 <?php include '_footer.php'; ?>
 </body>
 </html>

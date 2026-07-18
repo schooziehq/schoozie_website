@@ -178,6 +178,17 @@ sz_render_faq([
 ], 'School ERP &mdash; frequently asked questions', 'ERP FAQ');
 ?>
 
+<?php
+require_once __DIR__ . '/_schema.php';
+sz_page(
+  'School ERP Software — Schoozie',
+  'Schoozie school ERP runs fees, attendance, exams, staff, transport and parent communication in one AI-powered platform for Indian schools.',
+  'https://schoozie.com/erp.php',
+  __FILE__,
+  [['name' => 'Home', 'url' => 'https://schoozie.com/'], ['name' => 'School ERP', 'url' => 'https://schoozie.com/erp.php']]
+);
+?>
+
 <?php include '_footer.php'; ?>
 
 <!-- JSON-LD -->

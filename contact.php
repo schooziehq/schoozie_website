@@ -254,6 +254,17 @@
 })();
 </script>
 
+<?php
+require_once __DIR__ . '/_schema.php';
+sz_page(
+  'Contact Schoozie',
+  'Contact Schoozie for a free demo or questions about school websites and ERP software. WhatsApp support included.',
+  'https://schoozie.com/contact.php',
+  __FILE__,
+  [['name' => 'Home', 'url' => 'https://schoozie.com/'], ['name' => 'Contact', 'url' => 'https://schoozie.com/contact.php']]
+);
+?>
+
 <?php include '_footer.php'; ?>
 
 <!-- JSON-LD -->
