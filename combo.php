@@ -487,6 +487,25 @@ $tc = [
   </div>
 </section>
 
+<!-- COMBO VALUE COMPARISON -->
+<?php
+require_once __DIR__ . '/_compare.php';
+sz_render_compare(
+  'Buying separately vs the Website + ERP Combo',
+  'What you save',
+  ['', 'Bought separately', 'Website + ERP Combo'],
+  [
+    ['School website', 'Full price', $combo_website_discount . '% OFF your chosen plan'],
+    ['School ERP', 'Standard price', 'Standard price'],
+    ['Onboarding', 'Set up each separately', 'One combined onboarding'],
+    ['Website &harr; ERP data', 'Kept in sync manually', 'Connected out of the box'],
+    ['Support', 'Standard support', 'Priority support'],
+    ['Billing', 'Two separate purchases', 'One simple bundle'],
+  ],
+  2
+);
+?>
+
 <!-- FINAL CTA -->
 <section class="v2-final-cta">
   <h2>Ready for the <span class="grad">full bundle?</span></h2>
