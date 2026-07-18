@@ -52,3 +52,4 @@ _scratch_*.php
 schoozie-deploy.bat
 *.bat
 *.lnk
+*.ps1
