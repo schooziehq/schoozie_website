@@ -394,25 +394,30 @@ foreach($plans as $p){
   $erp_effs[] = (int)round($p['base'] * (1 - $d5/100));   // effective monthly rate
 }
 
+$provider = ['@type'=>'Organization','@id'=>'https://schoozie.com/#organization','name'=>'Schoozie'];
+$area     = ['@type'=>'Country','name'=>'India'];
 $ld = ['@context'=>'https://schema.org', '@graph'=>[
   [
-    '@type'=>'Product', 'name'=>'Schoozie Static School Website',
+    '@type'=>'Service', 'name'=>'Schoozie Static School Website',
+    'serviceType'=>'School website design',
     'description'=>'Professionally designed, Schoozie-managed static school website with free SSL and first-year hosting included.',
-    'brand'=>['@type'=>'Brand','name'=>'Schoozie'],
+    'provider'=>$provider, 'areaServed'=>$area,
     'offers'=>['@type'=>'Offer','priceCurrency'=>'INR','price'=>$strip($sw),'availability'=>'https://schema.org/InStock','url'=>'https://schoozie.com/pricing.php'],
   ],
   [
-    '@type'=>'Product', 'name'=>'Schoozie Dynamic School Website',
+    '@type'=>'Service', 'name'=>'Schoozie Dynamic School Website',
+    'serviceType'=>'School website & CMS',
     'description'=>'Self-managed dynamic school website with an admin panel to post notices, news and photos any time.',
-    'brand'=>['@type'=>'Brand','name'=>'Schoozie'],
+    'provider'=>$provider, 'areaServed'=>$area,
     'offers'=>['@type'=>'Offer','priceCurrency'=>'INR','price'=>$strip($dw),'availability'=>'https://schema.org/InStock','url'=>'https://schoozie.com/pricing.php'],
   ],
 ]];
 if($erp_effs){
   $ld['@graph'][] = [
-    '@type'=>'Product', 'name'=>'Schoozie School ERP',
+    '@type'=>'Service', 'name'=>'Schoozie School ERP',
+    'serviceType'=>'School management software',
     'description'=>'AI-powered school ERP — fees, attendance, exams, transport, payroll and the parent app. Basic, Standard, Premium and Custom tiers.',
-    'brand'=>['@type'=>'Brand','name'=>'Schoozie'],
+    'provider'=>$provider, 'areaServed'=>$area,
     'offers'=>['@type'=>'AggregateOffer','priceCurrency'=>'INR',
       'lowPrice'=>(string)min($erp_effs), 'highPrice'=>(string)max($erp_effs),
       'offerCount'=>(string)count($erp_effs),
