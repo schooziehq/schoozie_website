@@ -157,6 +157,26 @@ require_once 'config.php';
 </div><!-- .erpx -->
 
 
+<!-- COMPARISON -->
+<?php
+require_once __DIR__ . '/_compare.php';
+sz_render_compare(
+  'Schoozie vs a traditional school ERP',
+  'Why schools switch',
+  ['', 'Traditional ERP', 'Schoozie'],
+  [
+    ['Fee collection', 'Manual entry, cash counters, chasing dues', 'Online payments, auto-reconciled by AI'],
+    ['Attendance', 'Paper registers or manual marking', 'Biometric or app &mdash; parents notified automatically'],
+    ['Parent updates', 'Phone calls and printed notices', 'Instant app alerts in Hindi, Tamil, Bengali and more'],
+    ['Modules', 'Separate, disconnected tools', 'One connected platform, every module linked'],
+    ['Who can run it', 'Trained operators and IT support', 'Simple enough for any school staff'],
+    ['Setup &amp; upkeep', 'You install, host and maintain it', 'We handle setup, hosting, security and updates'],
+    ['Intelligence', 'Reacts only when you ask', 'AI reconciles, flags issues and predicts what is next'],
+  ],
+  2
+);
+?>
+
 <!-- FAQ -->
 <?php
 require_once __DIR__ . '/_faq.php';

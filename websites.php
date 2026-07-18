@@ -275,6 +275,25 @@ $plan_dynamic = [
 </script>
 
 
+<!-- COMPARISON -->
+<?php
+require_once __DIR__ . '/_compare.php';
+sz_render_compare(
+  'Static vs Dynamic school website',
+  'Which one fits your school',
+  ['', 'Static', 'Dynamic (CMS)'],
+  [
+    ['Best for', 'A professional online presence', 'Schools that update content often'],
+    ['Update content yourself', 'No &mdash; we update it for you', 'Yes &mdash; via an easy CMS dashboard'],
+    ['Notices, news &amp; gallery', 'Updated on request', 'Post anytime yourself'],
+    ['Admissions', 'Enquiry form', 'Online admission forms &amp; enquiries'],
+    ['Pages', 'A set of designed pages', 'Add more as you grow'],
+    ['Hosting, SSL &amp; support', 'Included', 'Included'],
+  ],
+  -1
+);
+?>
+
 <!-- FAQ -->
 <?php
 require_once __DIR__ . '/_faq.php';
