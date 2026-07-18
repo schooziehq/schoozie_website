@@ -51,3 +51,4 @@ _scratch_*.php
 # Deploy helper (contains the webhook secret) - local only, never deploy
 schoozie-deploy.bat
 *.bat
+*.lnk
