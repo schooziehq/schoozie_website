@@ -47,3 +47,7 @@ env/
 # ── Test/scratch files ──
 _test_*.php
 _scratch_*.php
+
+# Deploy helper (contains the webhook secret) - local only, never deploy
+schoozie-deploy.bat
+*.bat
