@@ -141,7 +141,7 @@ require_once 'config.php';
   <section class="ex-logi">
     <div class="ex-wrap">
       <div class="ex-logi-visual">
-        <img src="assets/png/map.png?v=<?php echo @filemtime('assets/png/map.png'); ?>" alt="Live school bus route tracking on a map">
+        <img src="assets/png/map.jpg?v=<?php echo @filemtime('assets/png/map.jpg'); ?>" alt="Live school bus route tracking on a map" width="1024" height="1024" loading="lazy">
         <span class="ex-logi-pill"><i class="fa-solid fa-location-dot"></i> Live Transit Tracking</span>
         <span class="ex-logi-cap">Real-time visibility over all logistics.</span>
       </div>

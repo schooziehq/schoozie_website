@@ -56,7 +56,7 @@ $plan_dynamic = [
     ['fa-globe','#3b82f6','1 year hosting included'],
     ['fa-chalkboard-user','#10b981','Admin training included'],
   ],
-  'image'   => 'assets/png/section-2.png',
+  'image'   => 'assets/png/section-2.jpg',
   'wa_text' => 'Hi%2C+I%27m+interested+in+the+Dynamic+Website+plan.',
 ];
 

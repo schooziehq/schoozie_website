@@ -71,7 +71,7 @@ if (!function_exists('img_src')) {
       <p class="hero-note"><span><i class="fa-solid fa-circle-check"></i> Easy to learn</span> <span><i class="fa-solid fa-circle-check"></i> Works on any device</span></p>
     </div>
     <div class="hero-visual">
-      <img src="assets/png/hero-section-2.png" alt="Schoozie dashboard on a laptop with the parent, teacher and principal apps on phones" loading="eager">
+      <img src="assets/png/hero-section-2.jpg" alt="Schoozie dashboard on a laptop with the parent, teacher and principal apps on phones" width="1376" height="768" loading="eager" fetchpriority="high">
       <span class="hero-ai-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> Powered by AI</span>
     </div>
   </div>
