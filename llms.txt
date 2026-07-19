@@ -1,0 +1,21 @@
+# Schoozie
+
+> Schoozie is an all-in-one school management platform for Indian schools: professional school websites with a dynamic CMS, school ERP software (attendance, fees, payroll, transport, admissions), and dedicated parent, teacher and principal mobile apps — with multilingual parent communication (Hindi, Tamil, Bengali and more) and WhatsApp support. Get a school online in minutes.
+
+## Products
+
+- [School ERP](https://schoozie.com/erp.php): attendance, fees, payroll, transport, admissions, exams and reports for Indian schools.
+- [School Websites & CMS](https://schoozie.com/websites.php): professional, self-manageable school websites (static or dynamic).
+- [Website + ERP Combo](https://schoozie.com/combo.php): the complete digital package at a bundle discount.
+- [Pricing](https://schoozie.com/pricing.php): plans and pricing in INR — transparent and all-inclusive.
+
+## Company
+
+- [Vision](https://schoozie.com/vision.php)
+- [Contact](https://schoozie.com/contact.php): hello@schoozie.com
+
+## Policies
+
+- [Privacy Policy](https://schoozie.com/privacy.php)
+- [Terms of Use](https://schoozie.com/terms.php)
+- [Refund Policy](https://schoozie.com/refund.php)
