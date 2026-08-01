@@ -16,7 +16,8 @@
      );
 
    Self-contained styles (sz-cmp namespace), printed once. Cells may contain
-   HTML (e.g. Font Awesome icons, <strong>). Horizontally scrolls on mobile.
+   HTML (e.g. Font Awesome icons, <strong>). On mobile each row stacks into a
+   labelled card (no horizontal scroll).
    ───────────────────────────────────────────────────────────────────────── */
 
 if (!function_exists('sz_render_compare')) {
@@ -43,7 +44,22 @@ if (!function_exists('sz_render_compare')) {
 .sz-cmp-table td.is-hi strong{color:var(--primary-d,#3a4a30)}
 .sz-cmp .yes{color:var(--primary,#4B5D3F)}
 .sz-cmp .no{color:#b0472f}
-@media (max-width:520px){.sz-cmp{padding:48px 0}.sz-cmp-table th,.sz-cmp-table td{padding:12px 14px;font-size:14px}}
+/* Mobile: stack the table into one card per row (no horizontal scroll) */
+@media (max-width:600px){
+  .sz-cmp{padding:44px 0}
+  .sz-cmp .wrap{padding:0 16px}
+  .sz-cmp-scroll{overflow:visible}
+  .sz-cmp-table{min-width:0;display:block;border:none;background:none;border-radius:0}
+  .sz-cmp-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .sz-cmp-table tbody{display:block}
+  .sz-cmp-table tbody tr{display:block;background:var(--surface,#fff);border:1px solid var(--line,rgba(28,36,26,.12));border-radius:14px;box-shadow:0 4px 16px rgba(28,36,26,.05);margin-bottom:14px;overflow:hidden}
+  .sz-cmp-table tbody th,.sz-cmp-table tbody td{display:block;width:auto;white-space:normal;padding:12px 16px;border-bottom:1px solid var(--line,rgba(28,36,26,.08))}
+  .sz-cmp-table tbody th[scope="row"]{font-family:var(--font-head,'Source Serif 4',Georgia,serif);font-size:16px;font-weight:700;background:var(--soft,#f2f4f1)}
+  .sz-cmp-table tbody td::before{content:attr(data-col);display:block;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--accent,#a4791b);margin-bottom:3px}
+  .sz-cmp-table tbody td:last-child{border-bottom:none}
+  .sz-cmp-table tbody td.is-hi{background:rgba(75,93,63,.07)}
+  .sz-cmp-table tbody td.is-hi::before{color:var(--primary,#4B5D3F)}
+}
 </style>
     <?php
   }
@@ -68,8 +84,12 @@ if (!function_exists('sz_render_compare')) {
       echo '          <tr>';
       foreach (array_values($row) as $i => $cell) {
         $cls = ($i === $highlight) ? ' class="is-hi"' : '';
-        if ($i === 0) echo '<th scope="row">' . $cell . '</th>';
-        else echo '<td' . $cls . '>' . $cell . '</td>';
+        if ($i === 0) {
+          echo '<th scope="row">' . $cell . '</th>';
+        } else {
+          $lbl = htmlspecialchars(strip_tags((string)($headers[$i] ?? '')), ENT_QUOTES);
+          echo '<td' . $cls . ' data-col="' . $lbl . '">' . $cell . '</td>';
+        }
       }
       echo "</tr>\n";
     }
