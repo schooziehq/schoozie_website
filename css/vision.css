@@ -290,6 +290,16 @@
   .vz-hero-inner{ max-width:none; }
 }
 
+/* Big screens: keep the slanted hero panel inside the centred container
+   (max-width 1200px) instead of bleeding to the viewport's right edge — so the
+   vision hero follows the same centred-content rule as the rest of the site. */
+@media(min-width:901px){
+  .vz-hero-visual{ width:min(52%, 700px); }
+}
+@media(min-width:1200px){
+  .vz-hero-visual{ right:calc((100% - 1200px) / 2); }   /* right edge aligns with the 1200px container */
+}
+
 /* hero: trim overall height a bit */
 .vz-hero{ padding:114px 0 64px; }
 
@@ -460,3 +470,15 @@
   .vz-ai-grid{ grid-template-columns:1fr; gap:32px; }
   .vz-ai-photo{ order:-1; max-width:520px; margin:0 auto; }
 }
+
+/* ── Community CTA: the community image now carries the Schoozie logo (top-centre),
+   which the old text-over-image overlay was cropping + darkening. Split the card —
+   text sits in a solid band on top, and the FULL 16:9 image (uncut) shows below.
+   Applies to both desktop and mobile. ── */
+.vz-community .vz-circle{ padding:0 !important; min-height:0 !important; overflow:hidden;
+  display:flex; flex-direction:column; background:#14170f; }
+.vz-community .vz-circle-inner{ order:1; width:auto; max-width:820px; margin:0 auto;
+  padding:clamp(40px,6vw,62px) clamp(22px,5vw,52px); }
+.vz-community .vz-circle-bg{ order:2; position:relative; inset:auto; width:100%; z-index:0;
+  aspect-ratio:16/9; background-size:cover; background-position:center;
+  background-image:url('../assets/png/community-bg.jpg') !important; }

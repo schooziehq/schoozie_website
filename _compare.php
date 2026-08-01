@@ -44,21 +44,26 @@ if (!function_exists('sz_render_compare')) {
 .sz-cmp-table td.is-hi strong{color:var(--primary-d,#3a4a30)}
 .sz-cmp .yes{color:var(--primary,#4B5D3F)}
 .sz-cmp .no{color:#b0472f}
-/* Mobile: stack the table into one card per row (no horizontal scroll) */
+/* Mobile: a polished, compact real table that fits the screen (no scroll) */
 @media (max-width:600px){
-  .sz-cmp{padding:44px 0}
-  .sz-cmp .wrap{padding:0 16px}
-  .sz-cmp-scroll{overflow:visible}
-  .sz-cmp-table{min-width:0;display:block;border:none;background:none;border-radius:0}
-  .sz-cmp-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
-  .sz-cmp-table tbody{display:block}
-  .sz-cmp-table tbody tr{display:block;background:var(--surface,#fff);border:1px solid var(--line,rgba(28,36,26,.12));border-radius:14px;box-shadow:0 4px 16px rgba(28,36,26,.05);margin-bottom:14px;overflow:hidden}
-  .sz-cmp-table tbody th,.sz-cmp-table tbody td{display:block;width:auto;white-space:normal;padding:12px 16px;border-bottom:1px solid var(--line,rgba(28,36,26,.08))}
-  .sz-cmp-table tbody th[scope="row"]{font-family:var(--font-head,'Source Serif 4',Georgia,serif);font-size:16px;font-weight:700;background:var(--soft,#f2f4f1)}
-  .sz-cmp-table tbody td::before{content:attr(data-col);display:block;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--accent,#a4791b);margin-bottom:3px}
-  .sz-cmp-table tbody td:last-child{border-bottom:none}
-  .sz-cmp-table tbody td.is-hi{background:rgba(75,93,63,.07)}
-  .sz-cmp-table tbody td.is-hi::before{color:var(--primary,#4B5D3F)}
+  .sz-cmp{padding:40px 0}
+  .sz-cmp .wrap{padding:0 12px}
+  .sz-cmp-scroll{overflow-x:visible;border-radius:14px;box-shadow:0 12px 30px rgba(28,36,26,.09)}
+  .sz-cmp-table{min-width:0;width:100%;table-layout:fixed;border-radius:14px;overflow:hidden}
+  /* fixed column widths so 3 columns always fit */
+  .sz-cmp-table thead th:nth-child(1){width:26%}
+  .sz-cmp-table thead th:nth-child(2){width:37%}
+  .sz-cmp-table thead th:nth-child(3){width:37%}
+  .sz-cmp-table th,.sz-cmp-table td{padding:11px 9px;font-size:12.5px;line-height:1.45;
+    vertical-align:top;white-space:normal;overflow-wrap:break-word;border-bottom:1px solid var(--line,rgba(28,36,26,.08))}
+  .sz-cmp-table thead th{font-size:11px;font-weight:800;letter-spacing:.02em;padding:12px 9px}
+  .sz-cmp-table tbody th[scope="row"]{white-space:normal;font-size:12.5px;font-weight:700;line-height:1.35;color:var(--ink,#1c241a)}
+  .sz-cmp-table tbody td::before{display:none}   /* header row already labels the columns */
+  /* zebra rows for scannability */
+  .sz-cmp-table tbody tr:nth-child(odd) th[scope="row"],
+  .sz-cmp-table tbody tr:nth-child(odd) td{background:rgba(28,36,26,.022)}
+  /* Schoozie column: one continuous green highlight over the zebra */
+  .sz-cmp-table tbody td.is-hi{background:rgba(75,93,63,.10) !important;color:var(--ink,#1c241a);font-weight:600}
 }
 </style>
     <?php

@@ -152,12 +152,6 @@
         </div>
       </div>
 
-      <div class="ct-trust">
-        <span class="ct-trust-label"><i class="fa-solid fa-crown"></i> Institutional Trust</span>
-        <p>Join the exclusive circle of early adopters. As a founding school, your institutional pricing is <strong>Locked for Life</strong> &mdash; no surprise hikes, no hidden maintenance fees.</p>
-        <div class="ct-trust-foot"><i class="fa-solid fa-shield-halved"></i> Legacy Guaranteed</div>
-      </div>
-
     </aside>
 
   </div>

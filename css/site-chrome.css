@@ -257,15 +257,19 @@ header nav a.nav-active::after{ content:""; position:absolute; left:15px; right:
   .mobile-nav::before{ display:none; }
 
   /* top-level links: left-aligned rows with thin dividers + chevron */
-  .mobile-nav > a{ display:flex; align-items:center; justify-content:space-between;
-    text-align:left; padding:16px 2px; font-size:16px; font-weight:500; color:var(--ink);
-    border-bottom:1px solid rgba(28,36,26,0.07); }
-  .mobile-nav a::after{ display:none; }
+  /* mobile menu items: centred names, full-width divider, shiny gold diamond */
+  .mobile-nav > a{ display:block; text-align:center; position:relative;
+    padding:17px 2px; font-size:16px; font-weight:600; letter-spacing:.2px; color:var(--ink);
+    border-bottom:1px solid rgba(28,36,26,0.08); }
+  .mobile-nav > a:last-of-type{ border-bottom:none; }
   .mobile-nav a:hover, .mobile-nav a:active, .mobile-nav a.nav-active{ color:var(--primary); }
-  .mobile-nav > a:not(.mobile-nav-cta):not(.mobile-nav-demo)::after{
-    content:""; display:block; width:7px; height:7px;
-    border-right:2px solid rgba(28,36,26,0.30); border-top:2px solid rgba(28,36,26,0.30);
-    transform:rotate(45deg); opacity:.8; }
+  .mobile-nav > a::after{ display:none; }
+  /* shiny gold diamond centred on the divider line */
+  .mobile-nav > a:not(:last-of-type)::before{ content:""; position:absolute;
+    left:50%; bottom:-4.5px; transform:translateX(-50%) rotate(45deg);
+    width:9px; height:9px; border-radius:1.5px; border:1px solid rgba(255,255,255,0.35);
+    background:linear-gradient(135deg, #fbeeb0 0%, var(--accent-bright) 48%, #9c7016 100%);
+    box-shadow:0 0 8px rgba(208,178,94,0.70), inset 0 1px 1px rgba(255,255,255,0.55); }
 
   /* Plans group */
   .mobile-nav-group{ border-bottom:1px solid rgba(28,36,26,0.07); padding:4px 0; }

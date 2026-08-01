@@ -159,6 +159,9 @@
 @media(max-width:560px){
   .ex-pillars-grid, .ex-why-cards{ grid-template-columns:1fr; }
   .ex-hero{ padding-top:110px; }
+  /* the "Real-time Data" badge overlapped and hid too much of the hero image —
+     drop it below the image on mobile so the full image is visible */
+  .ex-float{ position:static; left:auto; right:auto; bottom:auto; max-width:none; margin:16px 0 0; }
 }
 
 /* hero: real image */

@@ -619,20 +619,19 @@ header nav a.nav-active::after{ content:""; position:absolute; left:15px; right:
     box-shadow:0 26px 46px -24px rgba(28,36,26,0.28); }
   .mobile-nav::before{ display:none; }
 
-  .mobile-nav > a{ display:flex; align-items:center; justify-content:space-between;
-    text-align:left; padding:15px 4px; font-size:16px; font-weight:600; color:var(--ink);
-    border-bottom:1px solid rgba(28,36,26,0.07); border-radius:0; transition:color .2s ease; }
-  .mobile-nav > a::after{ display:none; }
-  /* chevron indicator on each nav row */
-  .mobile-nav > a:not(.mobile-nav-demo){ position:relative; }
-  .mobile-nav > a:not(.mobile-nav-demo)::before{
-    content:""; position:absolute; right:5px; top:50%;
-    width:7px; height:7px; margin-top:-5px;
-    border-right:2px solid rgba(28,36,26,0.28); border-top:2px solid rgba(28,36,26,0.28);
-    transform:rotate(45deg); transition:border-color .2s ease; }
-  .mobile-nav > a:hover, .mobile-nav > a:active, .mobile-nav > a.nav-active{ color:var(--primary); }
-  .mobile-nav > a.nav-active::before, .mobile-nav > a:active::before{ border-color:var(--primary); }
+  /* mobile menu items: centred names, full-width divider, shiny gold diamond */
+  .mobile-nav > a{ display:block; text-align:center; position:relative;
+    padding:17px 2px; font-size:16px; font-weight:600; letter-spacing:.2px; color:var(--ink);
+    border-bottom:1px solid rgba(28,36,26,0.08); border-radius:0; transition:color .2s ease; }
   .mobile-nav > a:last-of-type{ border-bottom:none; }
+  .mobile-nav > a:hover, .mobile-nav > a:active, .mobile-nav > a.nav-active{ color:var(--primary); }
+  .mobile-nav > a::after{ display:none; }
+  /* shiny gold diamond centred on the divider line */
+  .mobile-nav > a:not(:last-of-type)::before{ content:""; position:absolute;
+    left:50%; bottom:-4.5px; transform:translateX(-50%) rotate(45deg);
+    width:9px; height:9px; border-radius:1.5px; border:1px solid rgba(255,255,255,0.35);
+    background:linear-gradient(135deg, #fbeeb0 0%, var(--accent-bright) 48%, #9c7016 100%);
+    box-shadow:0 0 8px rgba(208,178,94,0.70), inset 0 1px 1px rgba(255,255,255,0.55); }
 }
 
 @media(max-width:900px){
@@ -1469,3 +1468,49 @@ header nav a.nav-active::after{ content:""; position:absolute; left:15px; right:
 
 /* campus head: let the intro paragraph use the width (was capped at 640) */
 .twin-head > div{ max-width:860px; }
+
+/* ── Mobile chrome fix: the homepage carries its OWN (drifted) header/footer CSS.
+   Its footer kept 60px side gutters on phones (content squished into the middle)
+   and the header kept desktop gutters until 900px. Bring both in line with the
+   shared site-chrome.css mobile layout. Horizontal padding only — the homepage's
+   desktop look and vertical spacing are unchanged. ── */
+@media(max-width:1024px){
+  header{ padding:14px 20px; }        /* 14+32+14 = 60px so the header sits flush above the promo strip (fixed at top:60) — was ~57px, leaving a gap */
+  .logo-full{ height:32px; }
+}
+@media(max-width:700px){
+  .site-footer{ padding-left:22px !important; padding-right:22px !important; }  /* was 60px → squished footer on phones */
+}
+
+/* ── Mobile: remove the dark card box around the "digital twin" section — the
+   stats and phones sit directly on the page. Their size/layout/position are
+   unchanged; only the box (background, border, shadow, glow) is removed. ── */
+@media(max-width:560px){
+  .twin-card{ background:none !important; border:none !important; box-shadow:none !important;
+    padding:0 !important; overflow:visible !important; animation:none !important; }
+}
+
+/* ── Mobile: the "play aloud" speaker sat alone in an empty right-aligned row
+   above the answer. Tuck it into the top-right corner and let the answer text
+   wrap around it. Mobile only. ── */
+@media(max-width:560px){
+  .ask-answer-top{ float:right; margin:0 0 8px 14px; }
+}
+
+/* ── Mobile: 3-steps section as a connected vertical timeline — icon + a line
+   on the left, step text on the right, showing 1→2→3 as a sequence.
+   Desktop layout is untouched. ── */
+@media(max-width:560px){
+  .steps{ grid-template-columns:1fr !important; max-width:380px; gap:0 !important; margin:0 auto; }
+  .step{ display:grid; grid-template-columns:50px 1fr; column-gap:16px;
+    grid-template-areas:"ic idx" "ic title" "ic desc";
+    text-align:left; padding:0 0 30px; position:relative; }
+  .step:last-child{ padding-bottom:0; }
+  .step-ic{ grid-area:ic; align-self:start; margin:0 !important; position:relative; z-index:1; }
+  .step-idx{ grid-area:idx; margin:0 0 3px !important; text-align:left; }
+  .step h3{ grid-area:title; margin:0 0 5px !important; }
+  .step p{ grid-area:desc; margin:0 !important; }
+  /* connecting line from each icon down to the next */
+  .step:not(:last-child)::before{ content:""; position:absolute; left:24px; top:54px; bottom:0;
+    width:2px; background:linear-gradient(180deg, rgba(75,93,63,0.45), rgba(75,93,63,0.14)); z-index:0; }
+}
