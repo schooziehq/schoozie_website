@@ -44,6 +44,7 @@ if (!isset($show_back_btn)) $show_back_btn = false;
     */ ?>
     <a href="vision.php"     <?php if($active_page==='vision')  echo 'class="nav-active"'; ?>>Vision</a>
     <a href="contact.php"    <?php if($active_page==='contact') echo 'class="nav-active"'; ?>>Contact</a>
+    <a href="https://erp.schoozie.com/login" target="_blank" rel="noopener">Login</a>
   </nav>
   <div class="header-right">
     <a href="<?php echo $demo_url; ?>" target="_blank" rel="noopener" class="header-demo-btn">
@@ -69,6 +70,7 @@ if (!isset($show_back_btn)) $show_back_btn = false;
   */ ?>
   <a href="vision.php"   <?php if($active_page==='vision')   echo 'class="nav-active"'; ?>>Vision</a>
   <a href="contact.php"  <?php if($active_page==='contact')  echo 'class="nav-active"'; ?>>Contact</a>
+  <a href="https://erp.schoozie.com/login" target="_blank" rel="noopener">Login</a>
 </div>
 
 <script>

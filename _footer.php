@@ -29,6 +29,7 @@ $wa_footer_text = isset($plan)
           <li><a href="pricing.php"><i class="fa-solid fa-angle-right"></i> Plans &amp; Pricing</a></li>
           <li><a href="vision.php"><i class="fa-solid fa-angle-right"></i> Our Vision</a></li>
           <li><a href="contact.php"><i class="fa-solid fa-angle-right"></i> Contact Us</a></li>
+          <li><a href="https://erp.schoozie.com/login" target="_blank" rel="noopener"><i class="fa-solid fa-angle-right"></i> Login</a></li>
           <li><a href="<?php echo $demo_url; ?>" target="_blank" rel="noopener"><i class="fa-solid fa-angle-right"></i> Live Demo</a></li>
         </ul>
       </nav>
