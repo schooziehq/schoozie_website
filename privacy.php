@@ -1,5 +1,5 @@
-<?php $legal_title="Privacy & Data Policies"; $legal_desc="Schoozie's Privacy Policy, Cookie Policy, Children's Privacy and Grievance Redressal for our school-management platform."; require '_legal_top.php'; ?>
-      <p class="legal-lead">This page covers how Schoozie handles your data. Jump to a section below, or email <a href="mailto:hello@schoozie.com">hello@schoozie.com</a> for any request.</p>
+<?php $legal_title="Privacy & Data Policies"; $legal_desc="Schoozie's Privacy Policy, Cookie Policy, Children's Privacy and Grievance Redressal for our school-management platform and mobile apps."; require '_legal_top.php'; ?>
+      <p class="legal-lead">This page covers how Schoozie handles your data across our website and our Android and iOS apps. Jump to a section below, or email <a href="mailto:hello@schoozie.com">hello@schoozie.com</a> for any request.</p>
       <div class="legal-toc">
         <p class="toc-h">On this page</p>
         <ol>
@@ -13,6 +13,7 @@
       <section class="legal-section" id="privacy">
         <h2>Privacy Policy</h2>
         <p>This Privacy Policy explains what information we collect through the Services, how we use and protect it, and the choices you have. By using the Services you agree to this Policy. If you do not agree, please do not use the Services.</p>
+        <p><strong>What this Policy covers.</strong> The Schoozie school-management platform at <a href="https://schoozie.com">schoozie.com</a> and <a href="https://erp.schoozie.com">erp.schoozie.com</a>, and the Schoozie mobile app (package <code>com.schoozie.app</code>) published on Google Play and the Apple App Store. Together, the &ldquo;Services&rdquo;.</p>
 
         <h3>1. Our role &ndash; schools and Schoozie</h3>
         <p>Schoozie is used by schools to run their operations. For student records and related school data, the <strong>school is the data controller / data fiduciary</strong> and decides how that data is used; Schoozie acts as a <strong>data processor</strong> on the school&rsquo;s instructions. Schools are responsible for obtaining any consents (including parental consent) required for the data they enter. For your own account and the data you give us directly, Schoozie is the controller.</p>
@@ -25,11 +26,18 @@
           <li><strong>Parent / guardian details:</strong> name, relationship, contact number, email and, where a school collects it, occupation or income for fee-concession purposes.</li>
           <li><strong>Communications:</strong> notices, messages and support requests you send or receive through the Services.</li>
           <li><strong>Payment information:</strong> when fees or subscriptions are paid online, payments are processed by our payment gateway (Razorpay). We receive transaction status and reference numbers; we do not store your full card, UPI or bank credentials.</li>
+          <li><strong>Voice input:</strong> where you choose to speak to an assistant feature instead of typing, your device&rsquo;s speech recognition converts what you say into text. We receive the text, not a recording.</li>
         </ul>
         <p><strong>b) Information collected automatically</strong></p>
         <ul>
           <li><strong>Device and usage data:</strong> device model, operating system, app version, IP address, and basic usage/diagnostic logs used to keep the Services secure and working.</li>
-          <li><strong>Location data:</strong> only where a feature needs it &mdash; for example live school-bus tracking uses the driver&rsquo;s device location during a trip so parents can see the bus. Parents&rsquo; devices are not tracked.</li>
+          <li><strong>Location data:</strong> only where a feature needs it, never continuously, and never in the background except for the school bus. There are exactly three places in the app that read a location:
+            <ul>
+              <li><strong>School bus &mdash; crew only.</strong> Live bus tracking uses the driver&rsquo;s or conductor&rsquo;s device location so that parents can see the bus on its way. This is the only one collected in the background, so that tracking continues while the phone is locked, and only between the moment a trip is started and the moment it is ended. The crew member is told this in the app and must agree before it begins.</li>
+              <li><strong>Parent drop-off confirmation.</strong> If you tap to confirm that you have dropped your child at the stop, your device&rsquo;s location is read at that moment, to record where the drop-off took place. It is read once, only when you tap, and never in the background.</li>
+              <li><strong>Staff check-in.</strong> Where a school has switched on check-in at the school site, a staff member&rsquo;s location is read at the moment they check in, to confirm they are there. Once, at that moment, and never in the background.</li>
+            </ul>
+            <strong>No parent&rsquo;s or staff member&rsquo;s device is ever tracked continuously, and a student&rsquo;s location is never collected at all.</strong></li>
           <li><strong>Push notification tokens:</strong> to deliver alerts you have opted into.</li>
           <li>Cookies and similar technologies on our website (see the <a href="#cookies">Cookie Policy</a> below).</li>
         </ul>
@@ -43,6 +51,7 @@
           <li>To provide optional AI-assisted features (e.g. summaries, drafting help) strictly within a school&rsquo;s data and controls;</li>
           <li>To keep the Services secure, prevent misuse and comply with law.</li>
         </ul>
+        <p>We do not use your information for behavioural advertising, and the Services carry no advertising.</p>
 
         <h3>4. Sharing of information</h3>
         <p>We do not sell your personal information. We share it only as follows:</p>
@@ -69,7 +78,7 @@
         <h3>9. Your rights and choices</h3>
         <ul>
           <li>Access or correct your account information (some data can be corrected only through your school);</li>
-          <li>Request deletion of your account and associated data (see the <a href="data-deletion.php">Account &amp; Data Deletion Policy</a>);</li>
+          <li>Request deletion of your account and associated data &mdash; in the app under <strong>Settings &rarr; Delete my account</strong>, or through the <a href="data-deletion.php">Account &amp; Data Deletion Policy</a>. Because your school holds your child&rsquo;s records and is their controller, your school completes the deletion; we tell you when it is done;</li>
           <li>Opt out of non-essential notifications through your device or app settings;</li>
           <li>Withdraw a consent you previously gave, without affecting processing already carried out.</li>
         </ul>
@@ -127,12 +136,12 @@
           <li>Any other issue about the Services.</li>
         </ul>
         <h3>2. Grievance Officer</h3>
-        <p class="legal-def"><strong>Name:</strong> [Grievance Officer Name]<br><strong>Designation:</strong> Grievance Officer, Schoozie<br><strong>Email:</strong> <a href="mailto:hello@schoozie.com">hello@schoozie.com</a><br><strong>Address:</strong> Near Jeevandeep Ashram, Nand Vihar, Roorkee &ndash; 247667, Haridwar, Uttarakhand, India</p>
+        <p class="legal-def"><strong>Name:</strong> Chander Mohan Sharma<br><strong>Designation:</strong> Grievance Officer, Schoozie<br><strong>Email:</strong> <a href="mailto:hello@schoozie.com">hello@schoozie.com</a><br><strong>Address:</strong> Near Jeevandeep Ashram, Nand Vihar, Roorkee &ndash; 247667, Haridwar, Uttarakhand, India</p>
         <h3>3. How to raise a grievance</h3>
         <p>Email the Grievance Officer at <a href="mailto:hello@schoozie.com?subject=Grievance">hello@schoozie.com</a> with the subject &ldquo;Grievance&rdquo;. Please include your name, registered contact/login ID, your school (if applicable), and a clear description of the issue so we can act on it quickly.</p>
         <h3>4. Our response timelines</h3>
         <ul>
-          <li>We will acknowledge your grievance, ordinarily within forty-eight (48) hours;</li>
+          <li>We will acknowledge your grievance within twenty-four (24) hours of receiving it;</li>
           <li>We will make reasonable efforts to resolve it within fifteen (15) days, and in any case within the timeframe required by applicable law;</li>
           <li>For data-related requests, we may first verify your identity before acting.</li>
         </ul>
