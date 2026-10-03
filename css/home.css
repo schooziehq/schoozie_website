@@ -847,6 +847,10 @@ header nav a.nav-active::after{ content:""; position:absolute; left:15px; right:
 .cta-logo{ height:36px; margin:0 auto 18px; }
 .cta-inner h2{ font-size:37px; margin:0 0 12px; }
 .cta-inner p{ margin:0 auto 24px; }
+/* wordmark + tagline lockup */
+.cta-inner .cta-logo{ margin-bottom:8px; }
+.cta-inner .cta-tagline{ font-family:var(--font-body); font-size:16px; font-weight:700; letter-spacing:.4px;
+  color:var(--accent); margin:0 auto 22px; }
 
 /* shrink steps block height */
 #how{ padding:40px 0 22px; }

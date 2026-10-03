@@ -21,7 +21,7 @@ if (!function_exists('img_src')) {
 <?php include '_analytics.php'; ?>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Schoozie - Take Your School Digital in Minutes</title>
+<title>Schoozie: School, made easy.</title>
 <meta name="description" content="Schoozie helps Indian schools go digital with professional school websites, dynamic CMS, and school ERP software. WhatsApp support included.">
 <meta name="keywords" content="school website india, school ERP software india, school management software, dynamic school website, school CMS india, school website design india, urdu medium school website, hindi medium school website, school ERP roorkee, school website uttarakhand, affordable school website india">
 <meta name="robots" content="index, follow">
@@ -570,6 +570,7 @@ if (!function_exists('img_src')) {
 <section class="cta">
   <div class="wrap cta-inner">
     <img src="assets2/svg/schoozie-wordmark.svg?v=<?php echo @filemtime('assets2/svg/schoozie-wordmark.svg'); ?>" class="cta-logo" alt="Schoozie">
+    <p class="cta-tagline">School, made easy.</p>
     <h2>Ready to modernize your institution?</h2>
     <p>Join forward-thinking principals who choose simplicity over complexity. Transparent pricing, guided onboarding and dedicated support at every step.</p>
     <a class="btn" href="https://wa.me/<?php echo $contact_whatsapp; ?>?text=Hi%2C+I%27d+like+a+free+demo+of+Schoozie." target="_blank" rel="noopener">

@@ -93,7 +93,7 @@ $wa_footer_text = isset($plan)
   </div><!-- end footer-grid -->
 
   <div class="footer-bar">
-    <span>&copy; <?php echo date('Y'); ?> <strong>Schoozie</strong> - Beyond Education Systems. All Rights Reserved.</span>
+    <span>&copy; <?php echo date('Y'); ?> <strong>Schoozie</strong> &ndash; School, made easy. All Rights Reserved.</span>
     <div class="footer-bar-links">
       <a href="privacy.php">Privacy</a>
       <a href="terms.php">Terms</a>

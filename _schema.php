@@ -33,6 +33,7 @@ if (!function_exists('sz_schema_out')) {
         'width'  => 512,
         'height' => 512,
       ],
+      'slogan'      => 'School, made easy.',
       'description' => 'AI-powered school ERP, websites and CMS for Indian schools, with parent communication in Hindi, Tamil, Bengali and more.',
       'areaServed'  => ['@type' => 'Country', 'name' => 'India'],
     ];
