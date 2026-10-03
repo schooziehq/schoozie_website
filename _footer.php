@@ -16,6 +16,21 @@ $wa_footer_text = isset($plan)
     <div class="footer-col">
       <p class="footer-desc">Schoozie helps schools across India go digital - with professional school websites, dynamic CMS platforms, and powerful ERP software tailored for modern institutions.</p>
       <p class="footer-keywords" aria-hidden="true">school website design india · school management software · school ERP system · school CMS · digital school solutions</p>
+      <div class="footer-app-badges">
+        <a class="app-badge" href="<?php echo $app_store_url; ?>" target="_blank" rel="noopener" aria-label="Download Schoozie on the App Store">
+          <i class="fa-brands fa-apple" aria-hidden="true"></i>
+          <span><small>Download on the</small>App Store</span>
+        </a>
+        <a class="app-badge" href="<?php echo htmlspecialchars($play_store_url); ?>" target="_blank" rel="noopener" aria-label="Get Schoozie on Google Play">
+          <svg viewBox="0 0 24 26" width="20" height="22" aria-hidden="true">
+            <path fill="#00d7fe" d="M1.2.6C.9.9.7 1.4.7 2v22c0 .6.2 1.1.5 1.4l.1.1L13.6 13.2v-.3L1.3.5z"/>
+            <path fill="#ffce00" d="M17.7 17.3l-4.1-4.1v-.3l4.1-4.1.1.1 4.9 2.8c1.4.8 1.4 2.1 0 2.9l-4.9 2.8z"/>
+            <path fill="#ff3a44" d="M17.8 17.2L13.6 13 1.2 25.4c.5.5 1.2.5 2.1.1l14.5-8.3"/>
+            <path fill="#00f076" d="M17.8 8.8L3.3.5C2.4 0 1.7.1 1.2.6L13.6 13z"/>
+          </svg>
+          <span><small>Get it on</small>Google Play</span>
+        </a>
+      </div>
     </div>
 
     <!-- QUICK LINKS -->

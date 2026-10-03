@@ -14,6 +14,9 @@ $demo_url         = "https://schools.schoozie.com/aggarwal-public/";
 $contact_email    = "hello@schoozie.com";
 $contact_whatsapp = "919045109910";          // with country code, no +
 
+$app_store_url    = "https://apps.apple.com/in/app/id6811464536";
+$play_store_url   = "https://play.google.com/store/apps/details?id=com.schoozie.app";
+
 /* ─────────────────────────────────────────────
    SMTP (Hostinger) — for the Request-a-Callback form.
    The mailbox PASSWORD lives in config.local.php (gitignored).

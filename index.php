@@ -734,7 +734,7 @@ if (!function_exists('img_src')) {
         "addressRegion": "<?php echo $contact_region; ?>",
         "addressCountry": "IN"
       },
-      "sameAs": [],
+      "sameAs": ["<?php echo $app_store_url; ?>", "<?php echo $play_store_url; ?>"],
       "areaServed": "IN",
       "priceRange": "₹₹"
     },

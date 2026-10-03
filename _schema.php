@@ -20,7 +20,7 @@ if (!function_exists('sz_schema_out')) {
 
   /* WebSite + Organization — the site-wide entity anchors. Homepage only. */
   function sz_site_entities(): void {
-    global $contact_email;
+    global $contact_email, $app_store_url, $play_store_url;
 
     $org = [
       '@type' => 'Organization',
@@ -36,6 +36,8 @@ if (!function_exists('sz_schema_out')) {
       'description' => 'AI-powered school ERP, websites and CMS for Indian schools, with parent communication in Hindi, Tamil, Bengali and more.',
       'areaServed'  => ['@type' => 'Country', 'name' => 'India'],
     ];
+    $app_links = array_values(array_filter([$app_store_url ?? '', $play_store_url ?? '']));
+    if ($app_links) $org['sameAs'] = $app_links;
     if (!empty($contact_email)) {
       $org['contactPoint'] = [
         '@type'             => 'ContactPoint',

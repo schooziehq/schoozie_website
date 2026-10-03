@@ -438,6 +438,23 @@ header nav a.nav-active{color:#fff;font-weight:600}
 }
 .footer-wa-btn:hover::after{ opacity:1; }
 .footer-wa-btn i{ font-size:17px; position:relative; z-index:1; }
+/* ── Footer app-store badges ── */
+.footer-app-badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.app-badge{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:7px 14px 7px 12px;border-radius:9px;
+  background:#000;border:1px solid rgba(255,255,255,0.28);
+  color:#fff;text-decoration:none;line-height:1.1;
+  transition:transform .25s, border-color .25s, box-shadow .25s;
+}
+.app-badge:hover{
+  transform:translateY(-2px);border-color:rgba(255,255,255,0.55);
+  box-shadow:0 8px 20px rgba(0,0,0,0.35);
+}
+.app-badge i{font-size:22px}
+.app-badge svg{flex-shrink:0}
+.app-badge span{display:flex;flex-direction:column;font-size:15px;font-weight:600;letter-spacing:.2px}
+.app-badge small{font-size:9.5px;font-weight:400;letter-spacing:.3px;opacity:.85}
 .footer-bar{
   display:flex;align-items:center;justify-content:space-between;
   padding:18px 0;
