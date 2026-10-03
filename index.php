@@ -26,16 +26,16 @@ if (!function_exists('img_src')) {
 <meta name="keywords" content="school website india, school ERP software india, school management software, dynamic school website, school CMS india, school website design india, urdu medium school website, hindi medium school website, school ERP roorkee, school website uttarakhand, affordable school website india">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://schoozie.com/">
-<link rel="icon" href="assets/icons/web/favicon.ico" sizes="32x32">
-<link rel="icon" href="assets/icons/web/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="assets/icons/web/apple-touch-icon.png">
-<link rel="manifest" href="assets/icons/web/site.webmanifest">
+<link rel="icon" href="assets2/icons/web/favicon.ico" sizes="32x32">
+<link rel="icon" href="assets2/icons/web/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets2/icons/web/apple-touch-icon.png">
+<link rel="manifest" href="assets2/icons/web/site.webmanifest">
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Schoozie - School Website & ERP Software for Indian Schools">
 <meta property="og:description" content="Schoozie helps Indian schools go digital with professional school websites, dynamic CMS, and school ERP software.">
 <meta property="og:url" content="https://schoozie.com/">
-<meta property="og:image" content="https://schoozie.com/assets/og-image.jpg">
+<meta property="og:image" content="https://schoozie.com/assets2/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:type" content="image/jpeg">
@@ -43,7 +43,7 @@ if (!function_exists('img_src')) {
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Schoozie - School Website & ERP Software for Indian Schools">
 <meta name="twitter:description" content="Schoozie helps Indian schools go digital with professional school websites, dynamic CMS, and school ERP software.">
-<meta name="twitter:image" content="https://schoozie.com/assets/og-image.jpg">
+<meta name="twitter:image" content="https://schoozie.com/assets2/og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
@@ -569,7 +569,7 @@ if (!function_exists('img_src')) {
 <!-- FINAL CTA -->
 <section class="cta">
   <div class="wrap cta-inner">
-    <img src="assets/svg/schoozie-wordmark.svg?v=<?php echo @filemtime('assets/svg/schoozie-wordmark.svg'); ?>" class="cta-logo" alt="Schoozie">
+    <img src="assets2/svg/schoozie-wordmark.svg?v=<?php echo @filemtime('assets2/svg/schoozie-wordmark.svg'); ?>" class="cta-logo" alt="Schoozie">
     <h2>Ready to modernize your institution?</h2>
     <p>Join forward-thinking principals who choose simplicity over complexity. Transparent pricing, guided onboarding and dedicated support at every step.</p>
     <a class="btn" href="https://wa.me/<?php echo $contact_whatsapp; ?>?text=Hi%2C+I%27d+like+a+free+demo+of+Schoozie." target="_blank" rel="noopener">
@@ -725,7 +725,7 @@ if (!function_exists('img_src')) {
       "name": "Schoozie",
       "description": "Schoozie provides professional school websites, dynamic CMS platforms, and ERP software for schools across India.",
       "url": "https://schoozie.com",
-      "logo": "https://schoozie.com/assets/icons/web/icon-512.png",
+      "logo": "https://schoozie.com/assets2/icons/web/icon-512.png",
       "telephone": "+<?php echo $contact_whatsapp; ?>",
       "email": "<?php echo $contact_email; ?>",
       "address": {

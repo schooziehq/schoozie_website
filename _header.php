@@ -31,7 +31,7 @@ if (!isset($show_back_btn)) $show_back_btn = false;
 
 <header>
   <a href="index.php" class="logo">
-    <img src="assets/svg/schoozie-wordmark.svg?v=<?php echo @filemtime('assets/svg/schoozie-wordmark.svg'); ?>" class="logo-full" alt="Schoozie">
+    <img src="assets2/svg/schoozie-wordmark.svg?v=<?php echo @filemtime('assets2/svg/schoozie-wordmark.svg'); ?>" class="logo-full" alt="Schoozie">
   </a>
   <?php $plans_active = in_array($active_page, ['plans','websites','erp','pricing'], true); ?>
   <nav>

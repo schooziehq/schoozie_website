@@ -16,7 +16,7 @@
 <meta property="og:title" content="Contact Schoozie - Get a Free Demo for Your School">
 <meta property="og:description" content="Reach out on WhatsApp or email to get a free demo of Schoozie's school website and ERP solutions.">
 <meta property="og:url" content="https://schoozie.com/contact.php">
-<meta property="og:image" content="https://schoozie.com/assets/og-image.jpg">
+<meta property="og:image" content="https://schoozie.com/assets2/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:type" content="image/jpeg">
@@ -24,12 +24,12 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Contact Schoozie - Get a Free Demo for Your School">
 <meta name="twitter:description" content="Reach out on WhatsApp or email to get a free demo of Schoozie's school website and ERP solutions.">
-<meta name="twitter:image" content="https://schoozie.com/assets/og-image.jpg">
+<meta name="twitter:image" content="https://schoozie.com/assets2/og-image.jpg">
 
-<link rel="icon" href="assets/icons/web/favicon.ico" sizes="32x32">
-<link rel="icon" href="assets/icons/web/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="assets/icons/web/apple-touch-icon.png">
-<link rel="manifest" href="assets/icons/web/site.webmanifest">
+<link rel="icon" href="assets2/icons/web/favicon.ico" sizes="32x32">
+<link rel="icon" href="assets2/icons/web/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets2/icons/web/apple-touch-icon.png">
+<link rel="manifest" href="assets2/icons/web/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">

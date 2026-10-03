@@ -555,7 +555,7 @@ header nav a:hover, header nav a.nav-active{ color:var(--ink); }
    HEADER POLISH (homepage)
    ============================================================ */
 header{ padding:13px 48px; box-shadow:0 1px 0 rgba(28,36,26,0.06); }
-.logo-full{ height:clamp(34px,4.4vw,44px); }
+.logo-full{ height:50px; margin:-3px 0; }   /* desktop; negative margin keeps header height unchanged */
 
 header nav{ display:flex; align-items:center; gap:2px; }
 header nav a{ position:relative; margin:0 2px; padding:9px 15px; border-radius:9px;
@@ -1171,7 +1171,7 @@ header nav a.nav-active::after{ content:""; position:absolute; left:15px; right:
 .site-footer::after{
   content:""; position:absolute; left:50%; bottom:-110px; transform:translateX(-50%);
   z-index:0; pointer-events:none; width:min(1180px, 94%); height:270px;
-  background:url('../assets/svg/schoozie-wordmark-light.svg') center bottom / contain no-repeat;
+  background:url('../assets2/svg/schoozie-wordmark-light.svg') center bottom / contain no-repeat;
   opacity:0.055;
 }
 
@@ -1259,7 +1259,7 @@ header nav a.nav-active::after{ content:""; position:absolute; left:15px; right:
 .site-footer::after{
   display:block !important; content:""; position:absolute; left:50%; bottom:-9vw; transform:translateX(-50%);
   width:84vw; height:29vw; z-index:0; pointer-events:none;
-  background:url('../assets/svg/schoozie-wordmark-light.svg') center bottom/contain no-repeat;
+  background:url('../assets2/svg/schoozie-wordmark-light.svg') center bottom/contain no-repeat;
   opacity:0.08;
 }
 @media(max-width:700px){
@@ -1289,7 +1289,7 @@ header nav a.nav-active::after{ content:""; position:absolute; left:15px; right:
   transform:translate(-50%,-50%) !important;
   width:90vw !important; height:auto !important; aspect-ratio:1695/583;
   opacity:0.05 !important;
-  background:url('../assets/svg/schoozie-wordmark-light.svg') center/contain no-repeat !important;
+  background:url('../assets2/svg/schoozie-wordmark-light.svg') center/contain no-repeat !important;
 }
 .site-footer .footer-grid{ position:relative; z-index:2; }
 
@@ -1476,7 +1476,7 @@ header nav a.nav-active::after{ content:""; position:absolute; left:15px; right:
    desktop look and vertical spacing are unchanged. ── */
 @media(max-width:1024px){
   header{ padding:14px 20px; }        /* 14+32+14 = 60px so the header sits flush above the promo strip (fixed at top:60) — was ~57px, leaving a gap */
-  .logo-full{ height:32px; }
+  .logo-full{ height:32px; margin:0; }
 }
 @media(max-width:700px){
   .site-footer{ padding-left:22px !important; padding-right:22px !important; }  /* was 60px → squished footer on phones */

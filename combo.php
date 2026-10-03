@@ -276,15 +276,15 @@ $tc = [
 <meta name="keywords" content="school website and erp combo, school digital package, school management bundle, school website erp bundle india, complete school digital solution">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://schoozie.com/combo.php">
-<link rel="icon" href="assets/icons/web/favicon.ico" sizes="32x32">
-<link rel="icon" href="assets/icons/web/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="assets/icons/web/apple-touch-icon.png">
-<link rel="manifest" href="assets/icons/web/site.webmanifest">
+<link rel="icon" href="assets2/icons/web/favicon.ico" sizes="32x32">
+<link rel="icon" href="assets2/icons/web/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets2/icons/web/apple-touch-icon.png">
+<link rel="manifest" href="assets2/icons/web/site.webmanifest">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Website + ERP Combo - Best Value Bundle | Schoozie">
 <meta property="og:description" content="School website AND full ERP, <?php echo $combo_website_discount; ?>% off the website. One bundle, priority support.">
 <meta property="og:url" content="https://schoozie.com/combo.php">
-<meta property="og:image" content="https://schoozie.com/assets/og-image.jpg">
+<meta property="og:image" content="https://schoozie.com/assets2/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

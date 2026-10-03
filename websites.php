@@ -28,7 +28,6 @@ $plan_static = [
     ['fa-magnifying-glass','#a855f7','SEO-ready structure'],
     ['fa-gear','#9ca3af','Domain setup assistance'],
   ],
-  'image'   => 'assets/png/section-5.png',
   'wa_text' => 'Hi%2C+I%27m+interested+in+the+Static+Website+plan.',
 ];
 
@@ -56,7 +55,6 @@ $plan_dynamic = [
     ['fa-globe','#3b82f6','1 year hosting included'],
     ['fa-chalkboard-user','#10b981','Admin training included'],
   ],
-  'image'   => 'assets/png/section-2.jpg',
   'wa_text' => 'Hi%2C+I%27m+interested+in+the+Dynamic+Website+plan.',
 ];
 
@@ -72,15 +70,15 @@ $plan_dynamic = [
 <meta name="keywords" content="school website india, static school website, dynamic school website, school website with cms, school website design india, school website admin panel, affordable school website">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://schoozie.com/websites.php">
-<link rel="icon" href="assets/icons/web/favicon.ico" sizes="32x32">
-<link rel="icon" href="assets/icons/web/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="assets/icons/web/apple-touch-icon.png">
-<link rel="manifest" href="assets/icons/web/site.webmanifest">
+<link rel="icon" href="assets2/icons/web/favicon.ico" sizes="32x32">
+<link rel="icon" href="assets2/icons/web/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets2/icons/web/apple-touch-icon.png">
+<link rel="manifest" href="assets2/icons/web/site.webmanifest">
 <meta property="og:type" content="website">
 <meta property="og:title" content="School Websites - Static &amp; Dynamic Plans | Schoozie">
 <meta property="og:description" content="Choose between a Schoozie-managed Static school website or a Dynamic website with your own admin panel. Starting at Rs. <?php echo $static_offer_price; ?>.">
 <meta property="og:url" content="https://schoozie.com/websites.php">
-<meta property="og:image" content="https://schoozie.com/assets/og-image.jpg">
+<meta property="og:image" content="https://schoozie.com/assets2/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

@@ -97,7 +97,7 @@ header nav a:hover, header nav a.nav-active{ color:var(--ink); }
    HEADER POLISH
    ============================================================ */
 header{ padding:13px 48px; box-shadow:0 1px 0 rgba(28,36,26,0.06); }
-.logo-full{ height:clamp(34px,4.4vw,44px); }
+.logo-full{ height:50px; margin:-3px 0; }   /* desktop; negative margin keeps header height unchanged */
 
 header nav{ display:flex; align-items:center; gap:2px; }
 header nav a{ position:relative; margin:0 2px; padding:9px 15px; border-radius:9px;
@@ -209,7 +209,7 @@ header nav a.nav-active::after{ content:""; position:absolute; left:15px; right:
   transform:translate(-50%,-50%) !important;
   width:90vw !important; height:auto !important; aspect-ratio:1695/583;
   opacity:0.05 !important;
-  background:url('../assets/svg/schoozie-wordmark-light.svg') center/contain no-repeat !important;
+  background:url('../assets2/svg/schoozie-wordmark-light.svg') center/contain no-repeat !important;
 }
 .site-footer .footer-grid{ position:relative; z-index:2; padding-top:8px; }
 
@@ -240,7 +240,7 @@ header nav a.nav-active::after{ content:""; position:absolute; left:15px; right:
   header{ padding:14px 18px; background:rgba(250,251,249,0.82);
     -webkit-backdrop-filter:blur(20px) saturate(1.6); backdrop-filter:blur(20px) saturate(1.6);
     border-bottom:1px solid rgba(28,36,26,0.08); box-shadow:none; }
-  .logo-full{ height:32px; }
+  .logo-full{ height:32px; margin:0; }
   header nav{ display:none !important; }               /* hide desktop nav below 1024 */
   .header-right{ gap:12px; }
   .header-btn, .back-btn{ display:none !important; }

@@ -29,7 +29,7 @@ if (!function_exists('sz_schema_out')) {
       'url'   => 'https://schoozie.com/',
       'logo'  => [
         '@type'  => 'ImageObject',
-        'url'    => 'https://schoozie.com/assets/icons/web/icon-512.png',
+        'url'    => 'https://schoozie.com/assets2/icons/web/icon-512.png',
         'width'  => 512,
         'height' => 512,
       ],

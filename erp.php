@@ -15,15 +15,15 @@ require_once 'config.php';
 <meta name="keywords" content="school ERP software india, school management software, school ERP system, cloud school ERP, fee management software, school attendance software, parent portal india, school payroll software">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://schoozie.com/erp.php">
-<link rel="icon" href="assets/icons/web/favicon.ico" sizes="32x32">
-<link rel="icon" href="assets/icons/web/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="assets/icons/web/apple-touch-icon.png">
-<link rel="manifest" href="assets/icons/web/site.webmanifest">
+<link rel="icon" href="assets2/icons/web/favicon.ico" sizes="32x32">
+<link rel="icon" href="assets2/icons/web/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets2/icons/web/apple-touch-icon.png">
+<link rel="manifest" href="assets2/icons/web/site.webmanifest">
 <meta property="og:type" content="website">
 <meta property="og:title" content="School ERP Software - 4 Plans for Indian Schools | Schoozie">
 <meta property="og:description" content="Schoozie School ERP - fees, attendance, exams, library, transport, payroll. Four flexible plans for schools of every size.">
 <meta property="og:url" content="https://schoozie.com/erp.php">
-<meta property="og:image" content="https://schoozie.com/assets/og-image.jpg">
+<meta property="og:image" content="https://schoozie.com/assets2/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
